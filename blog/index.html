@@ -1,11 +1,30 @@
 ---
 layout: default
-title: Hank Quinlan's Blog
+title: Artwork
 ---
 	<h1>{{ page.title }}</h1>
-	<ul class="posts">
+	<head>
+<style>
+.floating-box {
+    float: left;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;  
+}
+</style>
+</head>
+<body>
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+<h2>Floating boxes</h2>
+
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+
+</body>

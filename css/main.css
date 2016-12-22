@@ -45,3 +45,11 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+art_thumbnail_box {
+	float: left;
+	width: 100px;
+	height: 200px;
+	margin: 10px;
+	border: 1px solid #000000;  
+}

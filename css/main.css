@@ -46,7 +46,7 @@ ul.posts li {
     list-style: none;
 }
 
-#art_thumbnail_box {
+div.art_thumbnail_box {
 	float: left;
 	width: 100px;
 	height: 200px;

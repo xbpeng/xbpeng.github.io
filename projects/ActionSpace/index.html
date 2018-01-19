@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter? 
+title: Learning Locomotion Skills Using DeepRL Does the Choice of Action Space Matter? 
 ---
 
 <center><h1>{{ page.title }}</h1></center>
@@ -22,18 +22,26 @@ title: Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space 
 <td>
 	<hr>
 	<h3>Abstract</h3>
-	Reinforcement learning offers a promising methodology for developing skills for simulated characters, but typically requires working with sparse hand-crafted features. Building on recent progress in deep reinforcement learning (DeepRL), we introduce a mixture of actor-critic experts (MACE) approach that learns terrain-adaptive dynamic locomotion skills using high-dimensional state and terrain descriptions as input, and parameterized leaps or steps as output actions. MACE learns more quickly than a single actor-critic approach and results in actor-critic experts that exhibit specialization. Additional elements of our solution that contribute towards efficient learning include Boltzmann exploration and the use of initial actor biases to encourage specialization. Results are demonstrated for multiple planar characters and terrain classes.	
+	The use of deep reinforcement learning allows for high-dimensional
+	state descriptors, but little is known about how the choice of action
+	representation impacts learning and the resulting performance.
+	We compare the impact of four different action parameterizations
+	(torques, muscle-activations, target joint angles, and target jointangle
+	velocities) in terms of learning time, policy robustness, motion
+	quality, and policy query rates. Our results are evaluated on a gaitcycle
+	imitation task for multiple planar articulated figures and
+	multiple gaits. We demonstrate that the local feedback provided by
+	higher-level action parameterizations can significantly impact the
+	learning, robustness, and motion quality of the resulting policies.
 </td>
 
 <td>
-	<h3> Paper: [<a href="2016_TOG_DeepTerrainRL.pdf">PDF</a>] </h3>
+	<h3> Paper: [<a href="2017_SCA_ActionSpace.pdf">PDF</a>] </h3>
 </td>
 
 <tr>
-		<h3>Videos</h3>
-		<iframe width="560" height="315" padding-bottom="51%" src="https://www.youtube.com/embed/KPfzRSBzNX4" frameborder="0" allowfullscreen></iframe>
-		<br><br>
-		<iframe width="560" height="315" padding-bottom="51%" src="https://www.youtube.com/embed/A0BmHoujP9k" frameborder="0" allowfullscreen></iframe>
+		<h3>Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/L3vDo3nLI98" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </tr>
 	
 <br>
@@ -41,14 +49,11 @@ title: Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space 
 
 <h3>Bibtex</h3>
 <pre>
-@article{
-	2016-TOG-deepRL,
-	title={Terrain-Adaptive Locomotion Skills Using Deep Reinforcement Learning},
-	author={Xue Bin Peng and Glen Berseth and Michiel van de Panne},
-	journal = {ACM Transactions on Graphics (Proc. SIGGRAPH 2016)},
-	volume = 35,
-	number = 4,
-	article = 81,
-	year={2016}
+@inproceedings{
+	2017-SCA-action,
+	title={Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter?},
+	author={Peng, Xue Bin and van de Panne, Michiel and Yin, KangKang},
+	booktitle = {Proc. ACM SIGGRAPH / Eurographics Symposium on Computer Animation},
+	year={2017}
 }
 </pre>

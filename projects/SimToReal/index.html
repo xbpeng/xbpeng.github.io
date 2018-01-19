@@ -1,0 +1,76 @@
+---
+layout: default
+title: Sim-to-Real Transfer of Robotic Control with Dynamics Randomization
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Xue Bin Peng(1,2) &emsp;&emsp; Marcin Andrychowicz(1) &emsp;&emsp; Wojciech Zaremba(1) &emsp;&emsp; Pieter Abbeel1(1,2)<br>
+		(1)OpenAI &emsp;&emsp; (2)University of California, Berkeley<br>
+		<br>
+		<img style="vertical-align:middle" src="simtoreal_teaser.png"  width="100%" height="inherit" title="Lucy - Elfen Lied" />		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3>Abstract</h3>
+	Simulations are attractive environments for training
+	agents as they provide an abundant source of data and
+	alleviate certain safety concerns during the training process.
+	But the behaviours developed by agents in simulation are often
+	specific to the characteristics of the simulator. Due to modeling
+	error, strategies that are successful in simulation may not
+	transfer to their real world counterparts. In this paper, we
+	demonstrate a simple method to bridge this “reality gap.” By
+	randomizing the dynamics of the simulator during training, we
+	are able to develop policies that are capable of adapting to
+	very different dynamics, including ones that differ significantly
+	from the dynamics on which the policies were trained. This
+	adaptivity enables the policies to generalize to the dynamics of
+	the real world without any training on the physical system. Our
+	approach is demonstrated on an object pushing task using a
+	robotic arm. Despite being trained exclusively in simulation, our
+	policies are able to maintain a similar level of performance when
+	deployed on a real robot, reliably moving an object to a desired
+	location from random initial configurations. We explore the
+	impact of various design decisions and show that the resulting
+	policies are robust to significant calibration error.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2018_SimToReal.pdf">PDF</a>] </h3>
+</td>
+
+<tr>
+		<h3>Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/HEhXX03KmE0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3>Bibtex</h3>
+<pre>
+@article{
+	DBLP:journals/corr/abs-1710-06537,
+	author = {Xue Bin Peng and
+               Marcin Andrychowicz and
+               Wojciech Zaremba and
+               Pieter Abbeel},
+	title = {Sim-to-Real Transfer of Robotic Control with Dynamics Randomization},
+	journal = {CoRR},
+	volume = {abs/1710.06537},
+	year = {2017},
+	url = {http://arxiv.org/abs/1710.06537},
+	archivePrefix = {arXiv},
+	eprint = {1710.06537},
+	timestamp = {Wed, 01 Nov 2017 19:05:42 +0100},
+	biburl = {http://dblp.org/rec/bib/journals/corr/abs-1710-06537},
+	bibsource = {dblp computer science bibliography, http://dblp.org}
+}
+</pre>

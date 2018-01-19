@@ -1,0 +1,72 @@
+---
+layout: default
+title: "DeepLoco: Dynamic Locomotion Skills Using Hierarchical Deep Reinforcement Learning"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Transactions on Graphics (Proc. ACM SIGGRAPH 2017) <br>
+		<br>
+		Xue Bin Peng(1) &emsp;&emsp; Glen Berseth(1) &emsp;&emsp; KangKang Yin(2) &emsp;&emsp; Michiel van de Panne(1)<br>
+		(1)University of British Columbia &emsp;&emsp; (2)National University of Singapore  <br>
+		<br>
+		<img style="vertical-align:middle" src="deeploco_teaser.png"  width="100%" height="inherit" title="Lucy - Elfen Lied" />		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3>Abstract</h3>
+	Learning physics-based locomotion skills is a difficult problem, leading
+	to solutions that typically exploit prior knowledge of various forms. In
+	this paper we aim to learn a variety of environment-aware locomotion
+	skills with a limited amount of prior knowledge. We adopt a two-level
+	hierarchical control framework. First, low-level controllers are learned that
+	operate at a fine timescale and which achieve robust walking gaits that
+	satisfy stepping-target and style objectives. Second, high-level controllers
+	are then learned which plan at the timescale of steps by invoking desired
+	step targets for the low-level controller. The high-level controller makes
+	decisions directly based on high-dimensional inputs, including terrain maps
+	or other suitable representations of the surroundings. Both levels of the
+	control policy are trained using deep reinforcement learning. Results are
+	demonstrated on a simulated 3D biped. Low-level controllers are learned for
+	a variety of motion styles and demonstrate robustness with respect to forcebased
+	disturbances, terrain variations, and style interpolation. High-level
+	controllers are demonstrated that are capable of following trails through
+	terrains, dribbling a soccer ball towards a target location, and navigating
+	through static or dynamic obstacles.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2017_TOG_DeepLoco.pdf">PDF</a>] </h3>
+</td>
+
+<tr>
+		<h3>Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/G4lT9CLyCNw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<br><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/hd1yvLWm6oA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<br><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/x-HrYko_MRU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3>Bibtex</h3>
+<pre>
+@article{
+	2017-TOG-deepLoco,
+	title={DeepLoco: Dynamic Locomotion Skills Using Hierarchical Deep Reinforcement Learning},
+	author={Xue Bin Peng and Glen Berseth and KangKang Yin and Michiel van de Panne},
+	journal = {ACM Transactions on Graphics (Proc. SIGGRAPH 2017)},
+	volume = 36,
+	number = 4,
+	article = 41,
+	year={2017}
+}
+</pre>

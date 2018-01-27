@@ -39,6 +39,7 @@ footer {
 pre {
 	background-color:#EBECE4;
 	border-radius:3px;
+	white-space: pre-wrap;
 }
 
 ul.posts { 

@@ -62,7 +62,7 @@ div.art_thumbnail_box {
 
 div.video-responsive{
     overflow:hidden;
-    margin-bottom:25px;
+    padding-bottom:56.25%;
     position:relative;
     height:0;
     width:100%;

@@ -66,6 +66,7 @@ div.video-responsive{
     position:relative;
     height:0;
 	max-width: 550px;
+	max-height: 340px;
 }
 
 div.video-responsive iframe{

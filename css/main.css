@@ -64,14 +64,15 @@ div.video-responsive{
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
-    max-width: 100%;
-    height: auto;
+    height:0;
+	max-width: 550px;
+	max-height: 340px;
 }
 
 div.video-responsive iframe{
     left:0;
     top:0;
-    max-width: 100%;
-    height: auto;
+    height:100%;
+    width:100%;
     position:absolute;
 }

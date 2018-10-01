@@ -1,0 +1,57 @@
+---
+layout: default
+title: "Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		<nobr>Xue Bin Peng</nobr> &emsp;&emsp; <nobr>Angjoo Kanazawa</nobr> &emsp;&emsp; <nobr>Sam Toyer</nobr> &emsp;&emsp; <nobr>Pieter Abbeel</nobr> &emsp;&emsp; <nobr>Sergey Levine</nobr><br>
+		<nobr>University of California, Berkeley</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="vdb_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Adversarial learning methods have been proposed for a wide range of applications, but 
+	the training of adversarial models can be notoriously unstable. Effectively balancing 
+	the performance of the generator and discriminator is critical, since a discriminator 
+	that achieves very high accuracy will produce relatively uninformative gradients. In 
+	this work, we propose a simple and general technique to constrain information flow in 
+	the discriminator by means of an information bottleneck. By enforcing a constraint on 
+	the mutual information between the observations and the discriminator's internal 
+	representation, we can effectively modulate the discriminator's accuracy and maintain 
+	useful and informative gradients. We demonstrate that our proposed variational 
+	discriminator bottleneck (VDB) leads to significant improvements across three distinct 
+	application areas for adversarial learning algorithms. Our primary evaluation studies 
+	the applicability of the VDB to imitation learning of dynamic continuous control skills, 
+	such as running. We show that our method can learn such skills directly from raw video 
+	demonstrations, substantially outperforming prior adversarial imitation learning methods. 
+	The VDB can also be combined with adversarial inverse reinforcement learning to learn 
+	parsimonious reward functions that can be transferred and re-optimized in new settings. 
+	Finally, we demonstrate that VDB can train GANs more effectively for image generation, 
+	improving upon a number of prior stabilization methods.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2018_VDB.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Preprint: [arXiv] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/0qTCNx4AtJU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+
+</pre>

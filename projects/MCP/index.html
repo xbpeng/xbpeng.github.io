@@ -1,0 +1,66 @@
+---
+layout: default
+title: "MCP: Learning Composable Hierarchical Control with Multiplicative Compositional Policies"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		arXiv Preprint 2019<br>
+		<br>
+		<nobr>Xue Bin Peng</nobr> &emsp;&emsp; <nobr>Michael Chang</nobr> &emsp;&emsp; <nobr>Grace Zhang</nobr> &emsp;&emsp; <nobr>Pieter Abbeel</nobr> &emsp;&emsp; <nobr>Sergey Levine</nobr><br>
+		<nobr>University of California, Berkeley</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="vdb_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Humans are able to perform a myriad of sophisticated tasks by drawing upon skills
+	acquired through prior experience. For autonomous agents to have this capability,
+	they must be able to extract reusable skills from past experience that can be 
+	recombined in new ways for subsequent tasks. Furthermore, when controlling complex
+	high-dimensional morphologies, such as humanoid bodies, tasks often require
+	coordination of multiple skills simultaneously.  Learning discrete primitives for
+	every combination of skills quickly becomes prohibitive. Composable primitives
+	that can be recombined to create a large variety of behaviors can be more suitable
+	for modeling this combinatorial explosion. In this work, we propose multiplicative
+	compositional policies (MCP), a method for learning reusable motor skills that
+	can be composed to produce a range of complex behaviors. Our method factorizes
+	an agent’s skills into a collection of primitives, where multiple primitives can be
+	activated simultaneously via multiplicative composition. This flexibility allows the
+	primitives to be transferred and recombined to elicit new behaviors as necessary
+	for novel tasks.  We demonstrate that MCP is able to extract composable skills
+	for highly complex simulated characters from pre-training tasks, such as motion
+	imitation, and then reuse these skills to solve challenging continuous control tasks,
+	such as dribbling a soccer ball to a goal, and picking up an object and transporting
+	it to a target location.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2019_MCP.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/1810.00821">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/0qTCNx4AtJU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	MCPPeng19,
+	title={MCP: Learning Composable Hierarchical Control with Multiplicative Compositional Policies},
+	author = {Peng, Xue Bin and Chang, Michael and Zhang, Grace and Abbeel, Pieter and Levine, Sergey},
+	journal={arXiv preprint arXiv:1810.00821},
+	year={2019}
+}
+</pre>

@@ -1,0 +1,77 @@
+---
+layout: default
+title: "On Learning Symmetric Locomotion"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Transactions on Graphics (Proc. ACM SIGGRAPH 2018)<br>
+		<br>
+		<nobr>Xue Bin Peng(1)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel(1)</nobr> &emsp;&emsp; <nobr>Sergey Levine(1)</nobr> &emsp;&emsp; <nobr>Michiel van de Panne(2)</nobr><br>
+		<br>
+		<nobr>(1) University of British Columbia</nobr> &emsp;&emsp; <nobr>(2) University of California, Berkeley</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="symloco_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Human and animal gaits are often symmetric in nature, which points to the use
+	of motion symmetry as a potentially useful source of structure that can be
+	exploited for learning. By encouraging symmetric motion, the learning may be
+	faster, converge to more efficient solutions, and be more aesthetically
+	pleasing. We describe, compare, and evaluate four practical methods for
+	encouraging motion symmetry. These are implemented via particular choices of
+	structure for the policy network, data duplication, or via the loss function.
+	We experimentally evaluate the methods in terms of learning performance and
+	achieved symmetry, and provide summary guidelines for the choice of symmetry
+	method. We further describe some practical and conceptual issues that arise.
+	Because similar implementation choices exist for other types of inductive
+	biases, the insights gained may also be relevant to other learning problems
+	with applicable symmetry abstractions.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2018_TOG_DeepMimic.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/xbpeng/DeepMimic">GitHub</a>] &nbsp; &nbsp; &nbsp; Blog: [<a href="http://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/">BAIR</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/1804.02717">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/vppFvq2quQ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<br><br>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/8KdDwRLtNHQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	2018-TOG-deepMimic,
+	author = {Peng, Xue Bin and Abbeel, Pieter and Levine, Sergey and van de Panne, Michiel},
+	title = {DeepMimic: Example-guided Deep Reinforcement Learning of Physics-based Character Skills},
+	journal = {ACM Trans. Graph.},
+	issue_date = {August 2018},
+	volume = {37},
+	number = {4},
+	month = jul,
+	year = {2018},
+	issn = {0730-0301},
+	pages = {143:1--143:14},
+	articleno = {143},
+	numpages = {14},
+	url = {http://doi.acm.org/10.1145/3197517.3201311},
+	doi = {10.1145/3197517.3201311},
+	acmid = {3201311},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	keywords = {motion control, physics-based character animation, reinforcement learning},
+} 
+</pre>

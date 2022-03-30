@@ -1,0 +1,66 @@
+---
+layout: default
+title: "Adversarial Motion Priors Make Good Substitutes for Complex Reward Functions"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		arXiv Preprint 2022<br>
+		<br>
+		<nobr>Alejandro Escontrela (1,2)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1)</nobr> &emsp;&emsp; <nobr>Wenhao Yu (2)</nobr> &emsp;&emsp; <nobr>Tingnan Zhang (2)</nobr> &emsp;&emsp; <nobr>Atil Iscen (2)</nobr> &emsp;&emsp; <nobr>Ken Goldberg (1)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1)</nobr> <br>
+		<br>
+		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) Google Brain</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="amp_locomotion_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Training a high-dimensional simulated agent with an under-specified
+	reward function often leads the agent to learn physically infeasible
+	strategies that are ineffective when deployed in the real world. To
+	mitigate these unnatural behaviors, reinforcement learning
+	practitioners often utilize complex reward functions that encourage
+	physically plausible behaviors. However, a tedious labor-intensive
+	tuning process is often required to create hand-designed rewards
+	which might not easily generalize across platforms and tasks. We
+	propose substituting complex reward functions with “style rewards”
+	learned from a dataset of motion capture demonstrations. A learned
+	style reward can be combined with an arbitrary task reward to train
+	policies that perform tasks using naturalistic strategies. These
+	natural strategies can also facilitate transfer to the real world.
+	We build upon Adversarial Motion Priors – an approach from the
+	computer graphics domain that encodes a style reward from a dataset
+	of reference motions – to demonstrate that an adversarial approach
+	to training policies can produce behaviors that transfer to a real
+	quadrupedal robot without requiring complex reward functions. We
+	also demonstrate that an effective style reward can be learned
+	from a few seconds of motion capture data gathered from a German
+	Shepherd and leads to energy-efficient
+</td>
+
+<td>
+	<h3> Paper: [<a href="2022_AMP_Locomotion.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://sites.google.com/berkeley.edu/amp-in-real/home">Link</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/Alescontrela/AMP_for_hardware">GitHub</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2203.15103">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Bo88rwUQbrM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{Escontrela22_amp_style_reward,
+    author = {Escontrela, Alejandro and Peng, Xue Bin and Yu, Wenhao and Zhang, Tingnan and Iscen, Atil and Goldberg, Ken and Abbeel, Pieter},
+    title = {Adversarial Motion Priors Make Good Substitutes for Complex Reward Functions}
+}
+</pre>

@@ -1,0 +1,61 @@
+---
+layout: default
+title: "CIC: Contrastive Intrinsic Control for Unsupervised Skill Discovery"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		arXiv Preprint 2022<br>
+		<br>
+		<nobr>Michael Laskin (1)</nobr> &emsp;&emsp; <nobr>Hao Liu (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1)</nobr> &emsp;&emsp; <nobr>Denis Yarats (2,3)</nobr> &emsp;&emsp; <nobr>Aravind Rajeswaran (3)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1,4)</nobr> <br>
+		<br>
+		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) New York University</nobr> &emsp;&emsp; <nobr>(3) MetaAI</nobr> &emsp;&emsp; <nobr>(4) Covariant.</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="cic_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	We introduce Contrastive Intrinsic Control (CIC), an algorithm for unsupervised
+	skill discovery that maximizes the mutual information between statetransitions
+	and latent skill vectors. CIC utilizes contrastive learning between 
+	state-transitions and skills to learn behavior embeddings and maximizes
+	the entropy of these embeddings as an intrinsic reward to encourage behavioral
+	diversity. We evaluate our algorithm on the Unsupervised Reinforcement Learning
+	Benchmark, which consists of a long reward-free pre-training phase followed by
+	a short adaptation phase to downstream tasks with extrinsic rewards. CIC
+	substantially improves over prior methods in terms of adaptation efficiency,
+	outperforming prior unsupervised skill discovery methods by 1.79X and the next
+	leading overall exploration algorithm by 1.18X.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2022_CIC.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://sites.google.com/view/cicrl/">Link</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/rll-research/cic">GitHub</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2202.00161">arXiv</a>] </h3>
+</td>
+
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	CICLaskin2022,
+	author = {Michael Laskin and Hao Liu and Xue Bin Peng and Denis Yarats and Aravind Rajeswaran and Pieter Abbeel},
+	title = {CIC: Contrastive Intrinsic Control for Unsupervised Skill Discovery},
+	journal = {CoRR},
+	volume = {abs/2202.00161},
+	year = {2022},
+	url = {https://arxiv.org/abs/2202.00161},
+	eprinttype = {arXiv},
+	eprint = {2202.00161},
+	timestamp = {Wed, 09 Feb 2022 15:43:35 +0100},
+	biburl = {https://dblp.org/rec/journals/corr/abs-2202-00161.bib},
+	bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+</pre>

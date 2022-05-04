@@ -1,0 +1,82 @@
+---
+layout: default
+title: "ASE: Large-Scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Transactions on Graphics (Proc. ACM SIGGRAPH 2022)<br>
+		<br>
+		<nobr>Xue Bin Peng* (1, 2)</nobr> &emsp;&emsp; <nobr>Yunrong Guo (2)</nobr> &emsp;&emsp; <nobr>Lina Halper (2)</nobr> &emsp;&emsp; <nobr>Sergey Levine (1)</nobr> &emsp;&emsp; <nobr>Sanja Fidler (2, 3)</nobr> <br>
+		<br>
+		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) NVIDIA </nobr> &emsp;&emsp; <nobr>(2) University of Toronto </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="ase_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	The incredible feats of athleticism demonstrated by humans are
+	made possible in part by a vast repertoire of general-purpose
+	motor skills, acquired through years of practice and experience.
+	These skills not only enable humans to perform complex tasks,
+	but also provide powerful priors for guiding their behaviors
+	when learning new tasks. This is in stark contrast to what is
+	common practice in physics-based character animation, where
+	control policies are most typically trained from scratch for
+	each task. In this work, we present a large-scale data-driven
+	framework for learning versatile and reusable skill embeddings
+	for physically simulated characters. Our approach combines
+	techniques from adversarial imitation learning and unsupervised
+	reinforcement learning to develop skill embeddings that produce
+	life-like behaviors, while also providing an easy to control
+	representation for use on new downstream tasks. Our models can
+	be trained using large datasets of unstructured motion clips,
+	without requiring any task-specific annotation or segmentation
+	of the motion data. By leveraging a massively parallel GPU-based
+	simulator, we are able to train skill embeddings using over a
+	decade of simulated experiences, enabling our model to learn a
+	rich and versatile repertoire of skills. We show that a single
+	pre-trained model can be effectively applied to perform a diverse
+	set of new tasks. Our system also allows users to specify tasks
+	through simple reward functions, and the skill embedding then
+	enables the character to automatically synthesize complex and
+	naturalistic strategies in order to achieve the task objectives.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2022_TOG_ASE.pdf">PDF</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/hmV4v_EnB0E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	2022-TOG-ASE,
+	author = {Peng, Xue Bin and Gup, Yunrong and Halper, Lina and Levine, Sergey and Fidler, Sanja},
+	title = {ASE: Large-scale Reusable Adversarial Skill Embeddings for Physically Simulated Characters},
+	journal = {ACM Trans. Graph.},
+	issue_date = {August 2022},
+	volume = {41},
+	number = {4},
+	month = jul,
+	year = {2022},
+	articleno = {94},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	keywords = {motion control, physics-based character animation, reinforcement learning}
+}
+</pre>

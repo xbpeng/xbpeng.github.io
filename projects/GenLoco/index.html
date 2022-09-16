@@ -1,0 +1,66 @@
+---
+layout: default
+title: "GenLoco: Generalized Locomotion Controllers for Quadrupedal Robots"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Conference on Robot Learning (CORL 2022)<br>
+		<br>
+		<nobr>Gilbert Feng (1)</nobr> &emsp;&emsp; <nobr>Hongbo Zhang (2)</nobr> &emsp;&emsp; <nobr>Zhongyu Li (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1)</nobr> &emsp;&emsp; <nobr>Bhuvan Basireddy (1)</nobr> &emsp;&emsp; <nobr>Linzhu Yue (2)</nobr> &emsp;&emsp; <nobr>Zhitao Song (2)</nobr> &emsp;&emsp; <nobr>Lizhi Yang (1)</nobr> &emsp;&emsp; <nobr>Yunhui Liu (2)</nobr> &emsp;&emsp; <nobr>Koushil Sreenath (1)</nobr> &emsp;&emsp; <nobr>Sergey Levine (1)</nobr> <br>
+		<br>
+		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) The Chinese University of Hong Kong </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="gen_loco_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Recent years have seen a surge in commercially-available and affordable
+	quadrupedal robots, with many of these platforms being actively used in
+	research and industry. As the availability of legged robots grows, so
+	does the need for controllers that enable these robots to perform useful
+	skills. However, most learning-based frameworks for controller
+	development focus on training robot-specific controllers, a process that
+	needs to be repeated for every new robot. In this work, we introduce a
+	framework for training generalized locomotion (GenLoco) controllers for
+	quadrupedal robots. Our framework synthesizes general-purpose locomotion
+	controllers that can be deployed on a large variety of quadrupedal robots
+	with similar morphologies. We present a simple but effective morphology
+	randomization method that procedurally generates a diverse set of
+	simulated robots for training. We show that by training a controller on
+	this large set of simulated robots, our models acquire more general
+	control strategies that can be directly transferred to novel simulated
+	and real-world robots with diverse morphologies, which were not observed
+	during training.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2022_CORL_GenLoco.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/HybridRobotics/GenLoco">GitHub</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2209.05309">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/5QUs32MjNu4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	GenLoco2022,
+	title={GenLoco: Generalized Locomotion Controllers for Quadrupedal Robots},
+	author={Gilbert Feng and Hongbo Zhang and Zhongyu Li and Xue Bin Peng and Bhuvan Basireddy and Linzhu Yue and ZHITAO SONG and Lizhi Yang and Yunhui Liu and Koushil Sreenath and Sergey Levine},
+	booktitle={6th Annual Conference on Robot Learning},
+	year={2022},
+	url={https://openreview.net/forum?id=mqry_xMzvCM}
+}
+</pre>

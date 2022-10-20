@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Creating a Dynamic Quadrupedal Robotic Goalkeeper with Reinforcement Learning"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		arXiv Preprint 2022<br>
+		<br>
+		<nobr>Xiaoyu Huang (2) </nobr> &emsp;&emsp; <nobr> Zhongyu Li (1) </nobr> &emsp;&emsp; <nobr> Yanzhen Xiang (1) </nobr> &emsp;&emsp; <nobr> Yiming Ni (1) </nobr> &emsp;&emsp; <nobr> Yufeng Chi (1) </nobr> &emsp;&emsp; <nobr> Yunhao Li (1) </nobr> &emsp;&emsp; <nobr> Lizhi Yang (1) </nobr> &emsp;&emsp; <nobr> Xue Bin Peng (3) </nobr> &emsp;&emsp; <nobr> and Koushil Sreenath (1) </nobr><br>
+		<br>
+		<nobr>(1) Georgia Institute of Tecnology</nobr> &emsp;&emsp; <nobr>(2) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(3) Simon Fraser University</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="a1_goalkeeping_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	We present a reinforcement learning (RL) framework that enables quadrupedal
+	robots to perform soccer goalkeeping tasks in the real world. Soccer
+	goalkeeping using quadrupeds is a challenging problem, that combines highly
+	dynamic locomotion with precise and fast non-prehensile object (ball)
+	manipulation. The robot needs to react to and intercept a potentially flying
+	ball using dynamic locomotion maneuvers in a very short amount of time,
+	usually less than one second. In this paper, we propose to address this
+	problem using a hierarchical model-free RL framework. The first component
+	of the framework contains multiple control policies for distinct locomotion
+	skills, which can be used to cover different regions of the goal. Each
+	control policy enables the robot to track random parametric endeffector
+	trajectories while performing one specific locomotion skill, such as jump,
+	dive, and sidestep. These skills are then utilized by the second part of
+	the framework which is a high-level planner to determine a desired skill
+	and end-effector trajectory in order to intercept a ball flying to different
+	regions of the goal. We deploy the proposed framework on a Mini Cheetah
+	quadrupedal robot and demonstrate the effectiveness of our framework for
+	various agile interceptions of a fast-moving ball in the real world.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2022_A1Goalkeeping.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Media: [<a href="https://spectrum.ieee.org/football-robot-mini-cheetah">IEEE Spectrum</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2210.04435">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/iX6OgG67-ZQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	A1GoalkeepingHuang2022,
+	doi = {10.48550/ARXIV.2210.04435},
+	url = {https://arxiv.org/abs/2210.04435},
+	author = {Huang, Xiaoyu and Li, Zhongyu and Xiang, Yanzhen and Ni, Yiming and Chi, Yufeng and Li, Yunhao and Yang, Lizhi and Peng, Xue Bin and Sreenath, Koushil},
+	keywords = {Robotics (cs.RO), Artificial Intelligence (cs.AI), Systems and Control (eess.SY), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering},
+	title = {Creating a Dynamic Quadrupedal Robotic Goalkeeper with Reinforcement Learning},
+	publisher = {arXiv},
+	year = {2022},
+	copyright = {arXiv.org perpetual, non-exclusive license}
+}
+</pre>

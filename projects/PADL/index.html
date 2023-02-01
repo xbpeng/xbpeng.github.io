@@ -1,0 +1,86 @@
+---
+layout: default
+title: "PADL: Language-Directed Physics-Based Character Control"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH Asia 2022<br>
+		<br>
+		<nobr>Jordan Juravsky (1, 4)</nobr> &emsp;&emsp; <nobr>Yunrong Guo (1)</nobr> &emsp;&emsp; <nobr>Sanja Fidler (1, 2, 3)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 5)</nobr> <br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) University of Toronto </nobr> &emsp;&emsp; <nobr>(3) Vector Institute </nobr> &emsp;&emsp; <nobr>(4) University of Waterloo </nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="padl_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Developing systems that can synthesize natural and life-like
+	motions for simulated characters has long been a focus for
+	computer animation. But in order for these systems to be
+	useful for downstream applications, they need not only
+	produce high-quality motions, but must also provide an
+	accessible and versatile interface through which users can
+	direct a character's behaviors. Natural language provides a
+	simple-to-use and expressive medium for specifying a user's
+	intent. Recent breakthroughs in natural language processing
+	(NLP) have demonstrated effective use of language-based
+	interfaces for applications such as image generation and
+	program synthesis. In this work, we present PADL, which
+	leverages recent innovations in NLP in order to take steps
+	towards developing language-directed controllers for
+	physics-based character animation. PADL allows users to
+	issue natural language commands for specifying both
+	high-level tasks and low-level skills that a character
+	should perform. We present an adversarial imitation
+	learning approach for training policies to map high-level
+	language commands to low-level controls that enable a
+	character to perform the desired task and skill specified
+	by a user's commands. Furthermore, we propose a multi-task
+	aggregation method that leverages a language-based
+	multiple-choice question-answering approach to determine
+	high-level task objectives from language commands. We show
+	that our framework can be applied to effectively direct a
+	simulated humanoid character to perform a diverse array
+	of complex motor skills.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2022_SA_PADL.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://nv-tlabs.github.io/PADL/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2301.13868">arXiv</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/CJnUlpxOEdg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	2022-SA-PADL,
+	author = {Juravsky, Jordan and Guo, Yunrong and Fidler, Sanja and Peng, Xue Bin},
+	title = {PADL: Language-Directed Physics-Based Character Control},
+	year = {2022},
+	isbn = {9781450394703},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3550469.3555391},
+	doi = {10.1145/3550469.3555391},
+	booktitle = {SIGGRAPH Asia 2022 Conference Papers},
+	articleno = {19},
+	numpages = {9},
+	keywords = {reinforcement learning, character animation, language commands, adversarial imitation learning},
+	location = {Daegu, Republic of Korea},
+	series = {SA '22}
+}
+</pre>

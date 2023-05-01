@@ -1,0 +1,77 @@
+---
+layout: default
+title: "Learning Physically Simulated Tennis Skills from Broadcast Videos"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Transactions on Graphics (Proc. ACM SIGGRAPH 2023)<br>
+		<br>
+		<nobr>Haotian Zhang (1)</nobr> &emsp;&emsp; <nobr>Ye Yuan (2)</nobr> &emsp;&emsp; <nobr>Viktor Makoviychuk (2)</nobr> &emsp;&emsp; <nobr>Yunrong Guo (2)</nobr> &emsp;&emsp; <nobr>Sanja Fidler (2, 3, 4)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (2, 5)</nobr> &emsp;&emsp; <nobr>Kayvon Fatahalian (1)</nobr> <br>
+		<br>
+		<nobr>(1) Stanford University</nobr> &emsp;&emsp; <nobr>(2) NVIDIA </nobr> &emsp;&emsp; <nobr>(3) University of Toronto </nobr> &emsp;&emsp; <nobr>(4) Vector Institute </nobr> &emsp;&emsp; <nobr>(5) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="vid2player3d_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	We present a system that learns diverse, physically simulated 
+	tennis skills from large-scale demonstrations of tennis play 
+	harvested from broadcast videos. Our approach is built upon 
+	hierarchical models, combining a low-level imitation policy 
+	and a high-level motion planning policy to steer the character 
+	in a motion embedding learned from broadcast videos. When 
+	deployed at scale on large video collections that encompass a 
+	vast set of examples of real-world tennis play, our approach 
+	can learn complex tennis shotmaking skills and realistically 
+	chain together multiple shots into extended rallies, using 
+	only simple rewards and without explicit annotations of 
+	stroke types. To address the low quality of motions extracted 
+	from broadcast videos, we correct estimated motion with 
+	physics-based imitation, and use a hybrid control policy that 
+	overrides erroneous aspects of the learned motion embedding 
+	with corrections predicted by the high-level policy. We 
+	demonstrate that our system produces controllers for 
+	physically-simulated tennis players that can hit the incoming 
+	ball to target positions accurately using a diverse array of 
+	strokes (serves, forehands, and backhands), spins (topspins 
+	and slices), and playing styles (one/two-handed backhands, 
+	left/right-handed play). Overall, our system can synthesize 
+	two physically simulated characters playing extended tennis 
+	rallies with simulated racket and ball dynamics.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2023_TOG_Vid2Player3D.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://research.nvidia.com/labs/toronto-ai/vid2player3d/">Link</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ZZVKrNs7_mk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	zhang2023vid2player3d,
+	author = {Zhang, Haotian and Yuan, Ye and Makoviychuk, Viktor and Guo, Yunrong and Fidler, Sanja and Peng, Xue Bin and Fatahalian, Kayvon},
+	title = {Learning Physically Simulated Tennis Skills from Broadcast Videos},
+	journal = {ACM Trans. Graph.},
+	issue_date = {August 2023},
+	numpages = {14},
+	doi = {10.1145/3592408},
+	publisher = {ACM},
+	address = {New York, NY, USA},
+	keywords = {physics-based character animation, imitation learning, reinforcement learning},
+} 
+</pre>

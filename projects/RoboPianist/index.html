@@ -1,0 +1,68 @@
+---
+layout: default
+title: "RoboPianist: A Benchmark for High-Dimensional Robot Control"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		arXiv Preprint 2023<br>
+		<br>
+		<nobr> Kevin Zakka (1, 2)</nobr> &emsp;&emsp; <nobr>Laura Smith (1)</nobr> &emsp;&emsp; <nobr>Nimrod Gileadi (3)</nobr> &emsp;&emsp; <nobr>Taylor Howell (4)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (5)</nobr> &emsp;&emsp; <nobr>Sumeet Singh (2)</nobr> &emsp;&emsp; <nobr>Yuval Tassa (3)</nobr> &emsp;&emsp; <nobr>Pete Florence (2)</nobr> &emsp;&emsp; <nobr>Andy Zeng (2)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1)</nobr> <br>
+		<br>
+		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) Robotics at Google</nobr> &emsp;&emsp; <nobr>(3) DeepMind</nobr> &emsp;&emsp; <nobr>(4) Stanford University</nobr> &emsp;&emsp; <nobr>(5) Simon Fraser University</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="robo_pianist_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	We introduce a new benchmarking suite for highdimensional control,
+	targeted at testing high spatial and temporal precision,
+	coordination, and planning, all with an underactuated system
+	frequently making-and-breaking contacts. The proposed challenge
+	is mastering the piano through bi-manual dexterity, using a pair
+	of simulated anthropomorphic robot hands. We call it ROBOPIANIST,
+	and the initial version covers a broad set of 150 variable-
+	difficulty songs. We investigate both modelfree and model-based
+	methods on the benchmark, characterizing their performance
+	envelopes. We observe that while certain existing methods, when
+	well-tuned, can achieve impressive levels of performance in
+	certain aspects, there is significant room for improvement.
+	ROBOPIANIST provides a rich quantitative benchmarking environment,
+	with human-interpretable results, high ease of expansion by simply
+	augmenting the repertoire with new songs, and opportunities for
+	further research, including in multi-task learning, zero-shot
+	generalization, multimodal (sound, vision, touch) learning, and
+	imitation.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2023_RoboPianist.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/google-research/robopianist">GitHub</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://kzakka.com/robopianist/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2304.04150">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/VBFn_Gg0yD8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	RoboPianistZakka2023,
+	title={RoboPianist: A Benchmark for High-Dimensional Robot Control}, 
+	author={Kevin Zakka and Laura Smith and Nimrod Gileadi and Taylor Howell and Xue Bin Peng and Sumeet Singh and Yuval Tassa and Pete Florence and Andy Zeng and Pieter Abbeel},
+	year={2023},
+	eprint={2304.04150},
+	archivePrefix={arXiv},
+	primaryClass={cs.RO}
+}
+</pre>

@@ -1,0 +1,79 @@
+---
+layout: default
+title: "Synthesizing Physical Character-Scene Interactions"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		arXiv Preprint 2023<br>
+		<br>
+		<nobr> Mohamed Hassan (1)</nobr> &emsp;&emsp; <nobr>Yunrong Guo (2)</nobr> &emsp;&emsp; <nobr>Tingwu Wang (2)</nobr> &emsp;&emsp; <nobr>Michael Black (3)</nobr> &emsp;&emsp; <nobr>Sanja Fidler (4, 2)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (5, 2)</nobr> <br>
+		<br>
+		<nobr>(1) Electronic Arts</nobr> &emsp;&emsp; <nobr>(2) NVIDIA </nobr> &emsp;&emsp; <nobr>(3) Max-Planck-Institute for Intelligent Systems</nobr> &emsp;&emsp; <nobr>(4) University of Toronto </nobr> &emsp;&emsp; <nobr>(5) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="inter_phys_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Movement is how people interact with and affect their environment.
+	For realistic character animation, it is necessary to synthesize
+	such interactions between virtual characters and their surroundings.
+	Despite recent progress in character animation using machine
+	learning, most systems focus on controlling an agent’s movements in
+	fairly simple and homogeneous environments, with limited
+	interactions with other objects. Furthermore, many previous
+	approaches that synthesize human-scene interactions require
+	significant manual labeling of the training data. In contrast, we
+	present a system that uses adversarial imitation learning and
+	reinforcement learning to train physically-simulated characters that
+	perform scene interaction tasks in a natural and life-like manner.
+	Our method learns scene interaction behaviors from large unstructured
+	motion datasets, without manual annotation of the motion data. These
+	scene interactions are learned using an adversarial discriminator
+	that evaluates the realism of a motion within the context of a scene.
+	The key novelty involves conditioning both the discriminator and the
+	policy networks on scene context. We demonstrate the effectiveness
+	of our approach through three challenging scene interaction tasks:
+	carrying, sitting, and lying down, which require coordination of a
+	character’s movements in relation to objects in the environment. Our
+	policies learn to seamlessly transition between different behaviors
+	like idling, walking, and sitting. By randomizing the properties of
+	the objects and their placements during training, our method is able
+	to generalize beyond the objects and scenarios depicted in the
+	training dataset, producing natural character-scene interactions
+	for a wide variety of object shapes and placements. The approach
+	takes physics-based character motion generation a step closer to
+	broad applicability.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2023_InterPhys.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2302.00883">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/q3hyQdaElQQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	InterPhysHassan2023,
+	title={Synthesizing Physical Character-Scene Interactions}, 
+	author={Mohamed Hassan and Yunrong Guo and Tingwu Wang and Michael Black and Sanja Fidler and Xue Bin Peng},
+	year={2023},
+	eprint={2302.00883},
+	archivePrefix={arXiv},
+	primaryClass={cs.GR}
+}
+</pre>

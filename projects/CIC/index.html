@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "CIC: Contrastive Intrinsic Control for Unsupervised Skill Discovery"
+title: "Unsupervised Reinforcement Learning with Contrastive Intrinsic Control"
 ---
 
 <center><h1>{{ page.title }}</h1></center>
 
 <td>
 	<center>
-		arXiv Preprint 2022<br>
+		Neural Information Processing Systems (NeurIPS 2022)<br>
 		<br>
 		<nobr>Michael Laskin (1)</nobr> &emsp;&emsp; <nobr>Hao Liu (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1)</nobr> &emsp;&emsp; <nobr>Denis Yarats (2,3)</nobr> &emsp;&emsp; <nobr>Aravind Rajeswaran (3)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1,4)</nobr> <br>
 		<br>
@@ -22,21 +22,23 @@ title: "CIC: Contrastive Intrinsic Control for Unsupervised Skill Discovery"
 <td>
 	<hr>
 	<h3 style="margin-bottom:10px;">Abstract</h3>
-	We introduce Contrastive Intrinsic Control (CIC), an algorithm for unsupervised
-	skill discovery that maximizes the mutual information between statetransitions
-	and latent skill vectors. CIC utilizes contrastive learning between 
-	state-transitions and skills to learn behavior embeddings and maximizes
-	the entropy of these embeddings as an intrinsic reward to encourage behavioral
-	diversity. We evaluate our algorithm on the Unsupervised Reinforcement Learning
-	Benchmark, which consists of a long reward-free pre-training phase followed by
-	a short adaptation phase to downstream tasks with extrinsic rewards. CIC
-	substantially improves over prior methods in terms of adaptation efficiency,
-	outperforming prior unsupervised skill discovery methods by 1.79X and the next
-	leading overall exploration algorithm by 1.18X.
+	We introduce Contrastive Intrinsic Control (CIC), an unsupervised
+	reinforcement learning (RL) algorithm that maximizes the mutual
+	information between statetransitions and latent skill vectors.
+	CIC utilizes contrastive learning between state-transitions and
+	skills vectors to learn behaviour embeddings and maximizes the
+	entropy of these embeddings as an intrinsic reward to encourage
+	behavioural diversity. We evaluate our algorithm on the
+	Unsupervised RL Benchmark (URLB) in the asymptotic state-based
+	setting, which consists of a long reward-free pretraining phase
+	followed by a short adaptation phase to downstream tasks with
+	extrinsic rewards. We find that CIC improves over prior
+	exploration algorithms in terms of adaptation efficiency to
+	downstream tasks on state-based URLB.
 </td>
 
 <td>
-	<h3> Paper: [<a href="2022_CIC.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://sites.google.com/view/cicrl/">Link</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/rll-research/cic">GitHub</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2202.00161">arXiv</a>] </h3>
+	<h3> Paper: [<a href="2022_CIC.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://sites.google.com/view/cicneurips2022/">Link</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/rll-research/cic">GitHub</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2202.00161">arXiv</a>] </h3>
 </td>
 
 <br>
@@ -46,16 +48,14 @@ title: "CIC: Contrastive Intrinsic Control for Unsupervised Skill Discovery"
 <pre>
 @article{
 	CICLaskin2022,
-	author = {Michael Laskin and Hao Liu and Xue Bin Peng and Denis Yarats and Aravind Rajeswaran and Pieter Abbeel},
-	title = {CIC: Contrastive Intrinsic Control for Unsupervised Skill Discovery},
-	journal = {CoRR},
-	volume = {abs/2202.00161},
-	year = {2022},
-	url = {https://arxiv.org/abs/2202.00161},
-	eprinttype = {arXiv},
-	eprint = {2202.00161},
-	timestamp = {Wed, 09 Feb 2022 15:43:35 +0100},
-	biburl = {https://dblp.org/rec/journals/corr/abs-2202-00161.bib},
-	bibsource = {dblp computer science bibliography, https://dblp.org}
+	author = {Laskin, Michael and Liu, Hao and Peng, Xue Bin and Yarats, Denis and Rajeswaran, Aravind and Abbeel, Pieter},
+	booktitle = {Advances in Neural Information Processing Systems},
+	editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho and A. Oh},
+	pages = {34478--34491},
+	publisher = {Curran Associates, Inc.},
+	title = {Unsupervised Reinforcement Learning with Contrastive Intrinsic Control},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2022/file/debf482a7dbdc401f9052dbe15702837-Paper-Conference.pdf},
+	volume = {35},
+	year = {2022}
 }
 </pre>

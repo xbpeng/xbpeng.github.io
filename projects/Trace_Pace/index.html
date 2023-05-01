@@ -1,0 +1,55 @@
+---
+layout: default
+title: "Trace and Pace: Controllable Pedestrian Animation via Guided Trajectory Diffusion"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Conference on Computer Vision and Pattern Recognition (CVPR 2023)<br>
+		<br>
+		<nobr> Davis Rempe (1, 2)</nobr> &emsp;&emsp; <nobr>Zhengyi Luo (1, 3)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 4)</nobr> &emsp;&emsp; <nobr>Ye Yuan (1)</nobr> &emsp;&emsp; <nobr>Kris Kitani (3)</nobr> &emsp;&emsp; <nobr>Karsten Kreis (1)</nobr> &emsp;&emsp; <nobr>Sanja Fidler (1, 5, 6)</nobr> &emsp;&emsp; <nobr>Or Litany (1)</nobr> <br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) Stanford University</nobr> &emsp;&emsp; <nobr>(3) Carnegie Mellon University</nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(5) University of Toronto</nobr> &emsp;&emsp; <nobr>(6) Vector Institute</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="trace_pace_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	We introduce a method for generating realistic pedestrian trajectories
+	and full-body animations that can be controlled to meet user-defined
+	goals. We draw on recent advances in guided diffusion modeling to
+	achieve test-time controllability of trajectories, which is normally
+	only associated with rule-based systems. Our guided diffusion model
+	allows users to constrain trajectories through target waypoints, speed,
+	and specified social groups while accounting for the surrounding
+	environment context. This trajectory diffusion model is integrated
+	with a novel physics-based humanoid controller to form a closed-loop,
+	full-body pedestrian animation system capable of placing large crowds
+	in a simulated environment with varying terrains. We further propose
+	utilizing the value function learned during RL training of the
+	animation controller to guide diffusion to produce trajectories better
+	suited for particular scenarios such as collision avoidance and
+	traversing uneven terrain
+</td>
+
+<td>
+	<h3> Paper: [<a href="2023_CVPR_Trace_Pace.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Website: [<a href="https://research.nvidia.com/labs/toronto-ai/trace-pace/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2304.01893">arXiv</a>] </h3>
+</td>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	rempeluo2023tracepace,
+    author={Rempe, Davis and Luo, Zhengyi and Peng, Xue Bin and Yuan, Ye and Kitani, Kris and Kreis, Karsten and Fidler, Sanja and Litany, Or},
+    title={Trace and Pace: Controllable Pedestrian Animation via Guided Trajectory Diffusion},
+    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2023}
+}
+</pre>

@@ -1,0 +1,61 @@
+---
+layout: default
+title: "CALM: Conditional Adversarial Latent Models for Directable Virtual Characters"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH 2023<br>
+		<br>
+		<nobr>Chen Tessler (1)</nobr> &emsp;&emsp; <nobr>Yoni Kasten (1)</nobr> &emsp;&emsp; <nobr>Yunrong Guo (1)</nobr> &emsp;&emsp; <nobr>Shie Mannor (1, 2)</nobr> &emsp;&emsp; <nobr>Gal Chechik (1, 3)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 4)</nobr> <br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) Technion - Israel Institute of Technology </nobr> &emsp;&emsp; <nobr>(3) Bar-Ilan University </nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="calm_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	In this work, we present Conditional Adversarial Latent Models (CALM), 
+	an approach for generating diverse and directable behaviors for 
+	user-controlled interactive virtual characters. Using imitation 
+	learning, CALM learns a representation of movement that captures the 
+	complexity and diversity of human motion, and enables direct control 
+	over character movements. The approach jointly learns a control policy 
+	and a motion encoder that reconstructs key characteristics of a given 
+	motion without merely replicating it. The results show that CALM 
+	learns a semantic motion representation, enabling control over the 
+	generated motions and style-conditioning for higher-level task 
+	training. Once trained, the character can be controlled using intuitive 
+	interfaces, akin to those found in video games.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2023_SIGGRAPH_CALM.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://research.nvidia.com/labs/par/calm/">Link</a>]</h3>
+</td>
+
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	tessler2023calm,
+	author={Tessler, Chen and Kasten, Yoni and Guo, Yunrong and Mannor, Shie and Chechik, Gal and Peng, Xue Bin},
+	title = {CALM: Conditional Adversarial Latent Models for Directable Virtual Characters},
+	year = {2023},
+	isbn = {9798400701597},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3588432.3591541},
+	doi = {10.1145/3588432.3591541},
+	booktitle = {ACM SIGGRAPH 2023 Conference Proceedings},
+	keywords = {reinforcement learning, animated character control, adversarial training, motion capture data},
+	location = {Los Angeles, CA, USA},
+	series = {SIGGRAPH '23}
+}
+</pre>

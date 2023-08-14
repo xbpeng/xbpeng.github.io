@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Robust and Versatile Bipedal Jumping Control Through Multi-Task Reinforcement Learning"
+title: "Robust and Versatile Bipedal Jumping Control through Reinforcement Learning"
 ---
 
 <center><h1>{{ page.title }}</h1></center>
 
 <td>
 	<center>
-		arXiv Preprint 2023<br>
+		Robotics: Science and Systems (RSS 2023)<br>
 		<br>
 		<nobr> Zhongyu Li (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (2)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1)</nobr> &emsp;&emsp; <nobr>Sergey Levine (1)</nobr> &emsp;&emsp; <nobr>Glen Berseth (3)</nobr> &emsp;&emsp; <nobr>Koushil Sreenath (1)</nobr> <br>
 		<br>
@@ -22,28 +22,26 @@ title: "Robust and Versatile Bipedal Jumping Control Through Multi-Task Reinforc
 <td>
 	<hr>
 	<h3 style="margin-bottom:10px;">Abstract</h3>
-	This work aims to push the limits of agility for bipedal robots
-	by enabling a torque-controlled bipedal robot to perform robust
-	and versatile dynamic jumps in the real world. We present a
-	multi-task reinforcement learning framework to train the robot
-	to accomplish a large variety of jumping tasks, such as jumping
-	to different locations and directions. To improve performance
-	on these challenging tasks, we develop a new policy structure
-	that encodes the robot's long-term input/output (I/O) history
-	while also providing direct access to its short-term I/O
-	history. In order to train a versatile multi-task policy, we
-	utilize a multi-stage training scheme that includes different
-	training stages for different objectives. After multi-stage
-	training, the multi-task policy can be directly transferred
-	to Cassie, a physical bipedal robot. Training on different
-	tasks and exploring more diverse scenarios leads to highly
-	robust policies that can exploit the diverse set of learned
-	skills to recover from perturbations or poor landings during
-	real-world deployment. Such robustness in the proposed
-	multi-task policy enables Cassie to succeed in completing a
-	variety of challenging jump tasks in the real world, such as
-	standing long jumps, jumping onto elevated platforms, and
-	multi-axis jumps.
+	This work aims to push the limits of agility for
+	bipedal robots by enabling a torque-controlled bipedal robot to
+	perform robust and versatile dynamic jumps in the real world.
+	We present a reinforcement learning framework for training
+	a robot to accomplish a large variety of jumping tasks, such
+	as jumping to different locations and directions. To improve
+	performance on these challenging tasks, we develop a new policy
+	structure that encodes the robot’s long-term input/output (I/O)
+	history while also providing direct access to a short-term I/O
+	history. In order to train a versatile jumping policy, we utilize
+	a multi-stage training scheme that includes different training
+	stages for different objectives. After multi-stage training, the
+	policy can be directly transferred to a real bipedal Cassie robot.
+	Training on different tasks and exploring more diverse scenarios
+	lead to highly robust policies that can exploit the diverse set
+	of learned maneuvers to recover from perturbations or poor
+	landings during real-world deployment. Such robustness in the
+	proposed policy enables Cassie to succeed in completing a variety
+	of challenging jump tasks in the real world, such as standing long
+	jumps, jumping onto elevated platforms, and multi-axes jumps.
 </td>
 
 <td>
@@ -60,13 +58,14 @@ title: "Robust and Versatile Bipedal Jumping Control Through Multi-Task Reinforc
 
 <h3 style="margin-bottom:0px;">Bibtex</h3>
 <pre>
-@article{
+@inproceedings{
 	CassieJumpLi2023,
-	title={Robust and Versatile Bipedal Jumping Control through Multi-Task Reinforcement Learning}, 
 	author={Zhongyu Li and Xue Bin Peng and Pieter Abbeel and Sergey Levine and Glen Berseth and Koushil Sreenath},
+	editor={Kostas E. Bekris and Kris Hauser and Sylvia L. Herbert and Jingjin Yu},
+	title={Robust and Versatile Bipedal Jumping Control through Reinforcement Learning},
+	booktitle={Robotics: Science and Systems XIX, Daegu, Republic of Korea, July 10-14, 2023},
 	year={2023},
-	eprint={2302.09450},
-	archivePrefix={arXiv},
-	primaryClass={cs.RO}
+	url={https://doi.org/10.15607/RSS.2023.XIX.052},
+	doi={10.15607/RSS.2023.XIX.052}
 }
 </pre>

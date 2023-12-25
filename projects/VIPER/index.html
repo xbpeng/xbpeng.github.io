@@ -1,0 +1,63 @@
+---
+layout: default
+title: "Video Prediction Models as Rewards for Reinforcement Learning"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Neural Information Processing Systems (NeurIPS 2023)<br>
+		<br>
+		<nobr> Alejandro Escontrela</nobr> &emsp;&emsp; <nobr>Ademi Adeniji</nobr> &emsp;&emsp; <nobr>Wilson Yan</nobr> &emsp;&emsp; <nobr>Ajay Jain</nobr> &emsp;&emsp; <nobr>Xue Bin Peng</nobr> &emsp;&emsp; <nobr>Ken Goldberg</nobr> &emsp;&emsp; <nobr>Youngwoon Lee</nobr> &emsp;&emsp; <nobr>Danijar Hafner</nobr> &emsp;&emsp; <nobr>Pieter Abbeel</nobr> <br>
+		<br>
+		<nobr>University of California, Berkeley</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="viper_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Specifying reward signals that allow agents to learn complex behaviors is
+	a longstanding challenge in reinforcement learning. A promising approach is
+	to extract preferences for behaviors from unlabeled videos, which are
+	widely available on the internet. We present Video Prediction Rewards (VIPER),
+	an algorithm that leverages pretrained video prediction models as action-free
+	reward signals for reinforcement learning. Specifically, we first train an
+	autoregressive transformer on expert videos and then use the video prediction
+	likelihoods as reward signals for a reinforcement learning agent. VIPER
+	enables expert-level control without programmatic task rewards across a wide
+	range of DMC, Atari, and RLBench tasks. Moreover, generalization of the video
+	prediction model allows us to derive rewards for an out-of-distribution
+	environment where no expert data is available, enabling cross-embodiment
+	generalization for tabletop manipulation. We see our work as starting point
+	for scalable reward specification from unlabeled videos that will benefit
+	from the rapid advances in generative modeling.
+</td>
+
+<td>
+	<h3> Paper: [<a href="2023_VIPER.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/Alescontrela/viper_rl">GitHub</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://www.escontrela.me/viper/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2305.14343">arXiv</a>] </h3>
+</td>
+
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{VIPEREscontrela2023,
+  journal = {Neural Information Processing Systems},
+  author = {Escontrela, Alejandro and Adeniji, Ademi and Yan, Wilson and Jain, Ajay and Peng, Xue Bin and Goldberg, Ken and Lee, Youngwoon and Hafner, Danijar and Abbeel, Pieter},
+  keywords = {Artificial Intelligence (cs.AI)},
+  title = {Video Prediction Models as Rewards for Reinforcement Learning},
+  publisher = {arXiv},
+  copyright = {Creative Commons Attribution 4.0 International},
+  year = {2023},
+  eprint = {2305.14343},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.LG},
+}
+</pre>

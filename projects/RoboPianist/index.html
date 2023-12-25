@@ -1,17 +1,17 @@
 ---
 layout: default
-title: "RoboPianist: A Benchmark for High-Dimensional Robot Control"
+title: "RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning"
 ---
 
 <center><h1>{{ page.title }}</h1></center>
 
 <td>
 	<center>
-		arXiv Preprint 2023<br>
+		Conference on Robot Learning (CoRL 2023)<br>
 		<br>
-		<nobr> Kevin Zakka (1, 2)</nobr> &emsp;&emsp; <nobr>Laura Smith (1)</nobr> &emsp;&emsp; <nobr>Nimrod Gileadi (3)</nobr> &emsp;&emsp; <nobr>Taylor Howell (4)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (5)</nobr> &emsp;&emsp; <nobr>Sumeet Singh (2)</nobr> &emsp;&emsp; <nobr>Yuval Tassa (3)</nobr> &emsp;&emsp; <nobr>Pete Florence (2)</nobr> &emsp;&emsp; <nobr>Andy Zeng (2)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1)</nobr> <br>
+		<nobr> Kevin Zakka (1, 2)</nobr> &emsp;&emsp; <nobr>Philipp Wu (1)</nobr> &emsp;&emsp; <nobr>Laura Smith (1)</nobr> &emsp;&emsp; <nobr>Nimrod Gileadi (2)</nobr> &emsp;&emsp; <nobr>Taylor Howell (3)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (4)</nobr> &emsp;&emsp; <nobr>Sumeet Singh (2)</nobr> &emsp;&emsp; <nobr>Yuval Tassa (2)</nobr> &emsp;&emsp; <nobr>Pete Florence (2)</nobr> &emsp;&emsp; <nobr>Andy Zeng (2)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1)</nobr> <br>
 		<br>
-		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) Robotics at Google</nobr> &emsp;&emsp; <nobr>(3) DeepMind</nobr> &emsp;&emsp; <nobr>(4) Stanford University</nobr> &emsp;&emsp; <nobr>(5) Simon Fraser University</nobr><br>
+		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) Google DeepMind</nobr> &emsp;&emsp; <nobr>(3) Stanford University</nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University</nobr><br>
 		<br>
 		<img style="vertical-align:middle" src="robo_pianist_teaser.png"  width="100%" height="inherit"/>		
 	</center>
@@ -22,24 +22,19 @@ title: "RoboPianist: A Benchmark for High-Dimensional Robot Control"
 <td>
 	<hr>
 	<h3 style="margin-bottom:10px;">Abstract</h3>
-	We introduce a new benchmarking suite for highdimensional control,
-	targeted at testing high spatial and temporal precision,
-	coordination, and planning, all with an underactuated system
-	frequently making-and-breaking contacts. The proposed challenge
-	is mastering the piano through bi-manual dexterity, using a pair
-	of simulated anthropomorphic robot hands. We call it ROBOPIANIST,
-	and the initial version covers a broad set of 150 variable-
-	difficulty songs. We investigate both modelfree and model-based
-	methods on the benchmark, characterizing their performance
-	envelopes. We observe that while certain existing methods, when
-	well-tuned, can achieve impressive levels of performance in
-	certain aspects, there is significant room for improvement.
-	ROBOPIANIST provides a rich quantitative benchmarking environment,
-	with human-interpretable results, high ease of expansion by simply
-	augmenting the repertoire with new songs, and opportunities for
-	further research, including in multi-task learning, zero-shot
-	generalization, multimodal (sound, vision, touch) learning, and
-	imitation.
+	Replicating human-like dexterity in robot hands represents one of the
+	largest open problems in robotics. Reinforcement learning is a promising
+	approach that has achieved impressive progress in the last few years; however, the
+	class of problems it has typically addressed corresponds to a rather narrow
+	definition of dexterity as compared to human capabilities. To address this gap, we
+	investigate piano-playing, a skill that challenges even the human limits of 
+	dexterity, as a means to test high-dimensional control, and which requires high spatial
+	and temporal precision, and complex finger coordination and planning. We 
+	introduce ROBOPIANIST, a system that enables simulated anthropomorphic hands to
+	learn an extensive repertoire of 150 piano pieces where traditional model-based
+	optimization struggles. We additionally introduce an open-sourced environment,
+	benchmark of tasks, interpretable evaluation metrics, and open challenges for
+	future study.
 </td>
 
 <td>
@@ -56,13 +51,19 @@ title: "RoboPianist: A Benchmark for High-Dimensional Robot Control"
 
 <h3 style="margin-bottom:0px;">Bibtex</h3>
 <pre>
-@article{
+@InProceedings{
 	RoboPianistZakka2023,
-	title={RoboPianist: A Benchmark for High-Dimensional Robot Control}, 
-	author={Kevin Zakka and Laura Smith and Nimrod Gileadi and Taylor Howell and Xue Bin Peng and Sumeet Singh and Yuval Tassa and Pete Florence and Andy Zeng and Pieter Abbeel},
+	title={RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning},
+	author={Zakka, Kevin and Wu, Philipp and Smith, Laura and Gileadi, Nimrod and Howell, Taylor and Peng, Xue Bin and Singh, Sumeet and Tassa, Yuval and Florence, Pete and Zeng, Andy and Abbeel, Pieter},
+	booktitle={Proceedings of The 7th Conference on Robot Learning},
+	pages={2975--2994},
 	year={2023},
-	eprint={2304.04150},
-	archivePrefix={arXiv},
-	primaryClass={cs.RO}
+	editor={Tan, Jie and Toussaint, Marc and Darvish, Kourosh},
+	volume={229},
+	series={Proceedings of Machine Learning Research},
+	month={06--09 Nov},
+	publisher={PMLR},
+	pdf={https://proceedings.mlr.press/v229/zakka23a/zakka23a.pdf},
+	url={https://proceedings.mlr.press/v229/zakka23a.html}
 }
 </pre>

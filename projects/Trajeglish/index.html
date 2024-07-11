@@ -1,0 +1,66 @@
+---
+layout: default
+title: "Trajeglish: Traffic Modeling as Next-Token Prediction"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		International Conference on Learning Representations (ICLR 2024)<br>
+		<br>
+		<nobr>Jonah Philion (1, 2, 3)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 4)</nobr> &emsp;&emsp; <nobr>Sanja Fidler (1, 2, 3)</nobr> <br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) University of Toronto </nobr> &emsp;&emsp; <nobr>(3) Vector Institute </nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="trajeglish_teaser0.gif"  width="49%" height="inherit"/>	
+		<img style="vertical-align:middle" src="trajeglish_teaser1.gif"  width="49%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	A longstanding challenge for self-driving development is simulating dynamic
+	driving scenarios seeded from recorded driving logs. In pursuit of this functionality,
+	we apply tools from discrete sequence modeling to model how vehicles,
+	pedestrians and cyclists interact in driving scenarios. Using a simple data-driven
+	tokenization scheme, we discretize trajectories to centimeter-level resolution using
+	a small vocabulary. We then model the multi-agent sequence of discrete motion
+	tokens with a GPT-like encoder-decoder that is autoregressive in time and takes
+	into account intra-timestep interaction between agents. Scenarios sampled from
+	our model exhibit state-of-the-art realism; our model tops theWaymo Sim Agents
+	Benchmark, surpassing prior work along the realism meta metric by 3.3% and
+	along the interaction metric by 9.9%. We ablate our modeling choices in full autonomy
+	and partial autonomy settings, and show that the representations learned
+	by our model can quickly be adapted to improve performance on nuScenes. We
+	additionally evaluate the scalability of our model with respect to parameter count
+	and dataset size, and use density estimates from our model to quantify the saliency
+	of context length and intra-timestep interaction for the traffic modeling task.
+</td>
+
+<td>
+	<h3> Paper: [<a href="Trajeglish_2024.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2312.04535">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/Bk1v_Qct3i8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	philion2024trajeglish,
+	title={Trajeglish: Traffic Modeling as Next-Token Prediction},
+	author={Jonah Philion and Xue Bin Peng and Sanja Fidler},
+	booktitle={The Twelfth International Conference on Learning Representations},
+	year={2024},
+	url={https://openreview.net/forum?id=Z59Rb5bPPP}
+}
+</pre>

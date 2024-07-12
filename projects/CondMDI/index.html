@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Generating Human Interaction Motions in Scenes with Text Control"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH 2024<br>
+		<br>
+		<nobr>Setareh Cohan (1)</nobr> &emsp;&emsp; <nobr>Guy Tevet (1, 2)</nobr> &emsp;&emsp; <nobr>Daniele Reda (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (3, 4)</nobr> &emsp;&emsp; <nobr>Michiel van de Panne (1)</nobr> <br>
+		<br>
+		<nobr>(1) University of British Columbia</nobr> &emsp;&emsp; <nobr>(2) Tel-Aviv University</nobr> &emsp;&emsp; <nobr>(3) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(4) NVIDIA</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="CondMDI_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Motion in-betweening, a fundamental task in character animation,
+	consists of generating motion sequences that plausibly interpolate
+	user-provided keyframe constraints. It has long been recognized
+	as a labor-intensive and challenging process. We investigate the
+	potential of diffusion models in generating diverse human motions
+	guided by keyframes. Unlike previous inbetweening methods, we
+	propose a simple unified model capable of generating precise and
+	diverse motions that conform to a flexible range of user-specified
+	spatial constraints, as well as text conditioning. To this end, we
+	propose Conditional Motion Diffusion In-betweening (CondMDI)
+	which allows for arbitrary dense-or-sparse keyframe placement and
+	partial keyframe constraints while generating high-quality motions
+	that are diverse and coherent with the given keyframes.We evaluate
+	the performance of CondMDI on the text-conditioned HumanML3D
+	dataset and demonstrate the versatility and efficacy of diffusion
+	models for keyframe in-betweening. We further explore the use
+	of guidance and imputation-based approaches for inference-time
+	keyframing and compare CondMDI against these methods.
+</td>
+
+<td>
+	<h3> Paper: [<a href="CondMDI_2024.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/setarehc/diffusion-motion-inbetweening">GitHub</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://setarehc.github.io/CondMDI/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2405.11126">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/rRgeOXOVzGQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	CondMDICohan2024,
+	author = {Setareh, Cohan and Tevet, Guy and Reda, Daniele and Peng, Xue Bin and van de Panne, Michiel},
+	title = {Generating Human Interaction Motions in Scenes with Text Control},
+	year = {2024},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	booktitle = {ACM SIGGRAPH 2024 Conference Proceedings},
+	location = {Los Angeles, CA, USA},
+	series = {SIGGRAPH '24}
+}
+</pre>

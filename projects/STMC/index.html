@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Multi-Track Timeline Control for Text-Driven 3D Human Motion Generation"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		CVPR Workshop on Human Motion Generation (CVPR Workshop 2024)<br>
+		<br>
+		<nobr>Mathis Petrovich (1, 2)</nobr> &emsp;&emsp; <nobr>Or Litany (3, 4)</nobr> &emsp;&emsp; <nobr>Umar Iqbal (3)</nobr> &emsp;&emsp; <nobr>Michael J. Black (2)</nobr> &emsp;&emsp; <nobr>Gul Varol (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (3, 5)</nobr> &emsp;&emsp; <nobr>Davis Rempe (3)</nobr> <br>
+		<br>
+		<nobr>(1) LIGM, École des Ponts, Univ Gustave Eiffel, CNRS</nobr> &emsp;&emsp; <nobr>(2) Max Planck Institute for Intelligent Systems, Tübingen</nobr> &emsp;&emsp; <nobr>(3) NVIDIA</nobr> &emsp;&emsp; <nobr>(4) Technion</nobr> &emsp;&emsp; <nobr>(5) Simon Fraser University</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="STMC_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Recent advances in generative modeling have led to promising
+	progress on synthesizing 3D human motion from text, with
+	methods that can generate character animations from short
+	prompts and specified durations. However, using a single text
+	prompt as input lacks the fine-grained control needed by animators,
+	such as composing multiple actions and defining precise
+	durations for parts of the motion. To address this, we introduce
+	the new problem of timeline control for text-driven motion
+	synthesis, which provides an intuitive, yet fine-grained, input
+	interface for users. Instead of a single prompt, users can specify
+	a multi-track timeline of multiple prompts organized in temporal
+	intervals that may overlap. This enables specifying the
+	exact timings of each action and composing multiple actions
+	in sequence or at overlapping intervals. To generate composite
+	animations from a multi-track timeline, we propose a new
+	test-time denoising method. This method can be integrated with
+	any pre-trained motion diffusion model to synthesize realistic
+	motions that accurately reflect the timeline. At every step of
+	denoising, our method processes each timeline interval (text
+	prompt) individually, subsequently aggregating the predictions
+	with consideration for the specific body parts engaged in each
+	action. Experimental comparisons and ablations validate that
+	our method produces realisticmotions that respect the semantics
+	and timing of given text prompts.
+</td>
+
+<td>
+	<h3> Paper: [<a href="STMC_2024.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/nv-tlabs/stmc">GitHub</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://mathis.petrovich.fr/stmc/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2401.08559">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/_UXhDp0o4HI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	petrovich24stmc,
+    title = {Multi-Track Timeline Control for Text-Driven 3D Human Motion Generation},
+    author = {Petrovich, Mathis and Litany, Or and Iqbal, Umar and Black, Michael J. and Varol, G{\"u}l and Peng, Xue Bin and Rempe, Davis},
+    booktitle = {CVPR Workshop on Human Motion Generation},
+    year = {2024}
+}
+</pre>

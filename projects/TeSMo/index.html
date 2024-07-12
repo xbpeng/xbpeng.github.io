@@ -1,0 +1,65 @@
+---
+layout: default
+title: "Generating Human Interaction Motions in Scenes with Text Control"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		European Conference on Computer Vision (ECCV 2024)<br>
+		<br>
+		<nobr>Hongwei Yi (1, 2)</nobr> &emsp;&emsp; <nobr>Justus Thies (2, 3)</nobr> &emsp;&emsp; <nobr>Michael J. Black (2)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 4), Davis Rempe (1)</nobr> <br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) Max Planck Institute for Intelligent Systems, Tubingen, Germany</nobr> &emsp;&emsp; <nobr>(3) Technical University of Darmstadt</nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="TeSMo_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	We present TeSMo, a method for text-controlled scene-aware
+	motion generation based on denoising diffusion models. Previous textto-
+	motion methods focus on characters in isolation without considering
+	scenes due to the limited availability of datasets that include motion,
+	text descriptions, and interactive scenes. Our approach begins with
+	pre-training a scene-agnostic text-to-motion diffusion model, emphasizing
+	goal-reaching constraints on large-scale motion-capture datasets. We
+	then enhance this model with a scene-aware component, fine-tuned using
+	data augmented with detailed scene information, including ground plane
+	and object shapes. To facilitate training, we embed annotated navigation
+	and interaction motions within scenes. The proposed method produces
+	realistic and diverse human-object interactions, such as navigation and
+	sitting, in different scenes with various object shapes, orientations, initial
+	body positions, and poses. Extensive experiments demonstrate that
+	our approach surpasses prior techniques in terms of the plausibility of
+	human-scene interactions, as well as the realism and variety of the generated
+	motions.
+</td>
+
+<td>
+	<h3> Paper: [<a href="TeSMo_2024.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://research.nvidia.com/labs/toronto-ai/tesmo/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2404.10685">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/_3e5LRh9jVc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	petrovich24stmc,
+    title = {Multi-Track Timeline Control for Text-Driven 3D Human Motion Generation},
+    author = {Petrovich, Mathis and Litany, Or and Iqbal, Umar and Black, Michael J. and Varol, G{\"u}l and Peng, Xue Bin and Rempe, Davis},
+    booktitle = {CVPR Workshop on Human Motion Generation},
+    year = {2024}
+}
+</pre>

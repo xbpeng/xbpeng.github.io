@@ -1,0 +1,74 @@
+---
+layout: default
+title: "Interactive Character Control with Auto-Regressive Motion Diffusion Models"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM Transactions on Graphics (Proc. SIGGRAPH 2024)<br>
+		<br>
+		<nobr>Yi Shi (1, 2), Jingbo Wang (2), Xuekun Jiang (2), Bingkun Lin (3), Bo Dai (2), Xue Bin Peng (1, 4)</nobr> <br>
+		<br>
+		<nobr>(1) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(2) Shanghai AI Lab</nobr> &emsp;&emsp; <nobr>(3) Xmov</nobr> &emsp;&emsp; <nobr>(4) NVIDIA </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="AMDM_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Real-time character control is an essential component for interactive experiences,
+	with a broad range of applications, including physics simulations,
+	video games, and virtual reality. The success of diffusion models for image
+	synthesis has led to the use of these models for motion synthesis. However,
+	the majority of these motion diffusion models are primarily designed for
+	offline applications, where space-time models are used to synthesize an
+	entire sequence of frames simultaneously with a pre-specified length. To
+	enable real-time motion synthesis with diffusion model that allows timevarying
+	controls, we propose A-MDM (Auto-regressive Motion Diffusion
+	Model). Our conditional diffusion model takes an initial pose as input, and
+	auto-regressively generates successive motion frames conditioned on the
+	previous frame. Despite its streamlined network architecture, which uses
+	simple MLPs, our framework is capable of generating diverse, long-horizon,
+	and high-fidelity motion sequences. Furthermore, we introduce a suite of
+	techniques for incorporating interactive controls into A-MDM, such as taskoriented
+	sampling, in-painting, and hierarchical reinforcement learning (See
+	Figure 1). These techniques enable a pre-trained A-MDM to be efficiently
+	adapted for a variety of new downstream tasks. We conduct a comprehensive
+	suite of experiments to demonstrate the effectiveness of A-MDM, and
+	compare its performance against state-of-the-art auto-regressive methods.
+</td>
+
+<td>
+	<h3> Paper: [<a href="AMDM_2024.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://yi-shi94.github.io/amdm_page/">Link</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/5WE9hy0xCI4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+        shi2024amdm,
+        author = {Shi, Yi and Wang, Jingbo and Jiang, Xuekun and Lin, Bingkun and Dai, Bo and Peng, Xue Bin},
+        title = {Interactive Character Control with Auto-Regressive Motion Diffusion Models},
+        year = {2024},
+        issue_date = {August 2024},
+        publisher = {Association for Computing Machinery},
+        address = {New York, NY, USA},
+        volume = {43},
+        journal = {ACM Trans. Graph.},
+        month = {jul},
+        keywords = {motion synthesis, diffusion model, reinforcement learning}
+}
+</pre>

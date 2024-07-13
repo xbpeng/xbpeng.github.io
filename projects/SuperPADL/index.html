@@ -1,0 +1,71 @@
+---
+layout: default
+title: "SuperPADL: Scaling Language-Directed Physics-Based Control with Progressive Supervised Distillation"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH 2024<br>
+		<br>
+		<nobr>Jordan Juravsky (1, 2)</nobr> &emsp;&emsp; <nobr>Yunrong Guo (2)</nobr> &emsp;&emsp; <nobr>Sanja Fidler (2, 3)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (2, 4)</nobr> <br>
+		<br>
+		<nobr>(1) Stanford</nobr> &emsp;&emsp; <nobr>(2) NVIDIA</nobr> &emsp;&emsp; <nobr>(3) University of Toronto</nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="SuperPADL_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Physically-simulated models for human motion can generate highquality
+	responsive character animations, often in real-time. Natural
+	language serves as a flexible interface for controlling these models,
+	allowing expert and non-expert users to quickly create and
+	edit their animations. Many recent physics-based animation methods,
+	including those that use text interfaces, train control policies
+	using reinforcement learning (RL). However, scaling these methods
+	beyond several hundred motions has remained challenging.
+	Meanwhile, kinematic animation models are able to successfully
+	learn from thousands of diverse motions by leveraging supervised
+	learning methods. Inspired by these successes, in this work we
+	introduce SuperPADL, a scalable framework for physics-based textto-
+	motion that leverages both RL and supervised learning to train
+	controllers on thousands of diverse motion clips. SuperPADL is
+	trained in stages using progressive distillation, starting with a large
+	number of specialized experts using RL. These experts are then
+	iteratively distilled into larger, more robust policies using a combination
+	of reinforcement learning and supervised learning. Our
+	final SuperPADL controller is trained on a dataset containing over
+	5000 skills and runs in real time on a consumer GPU. Moreover, our
+	policy can naturally transition between skills, allowing for users
+	to interactively craft multi-stage animations. We experimentally
+	demonstrate that SuperPADL significantly outperforms RL-based
+	baselines at this large data scale.
+</td>
+
+<td>
+	<h3> Paper: [<a href="SuperPADL_2024.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://research.nvidia.com/labs/toronto-ai/super_padl/">Link</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/0yXTX0FLXaE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+	juravsky2024superpadl,
+    title = {SuperPADL: Scaling Language-Directed Physics-Based Control with Progressive Supervised Distillation},
+    author = {Jordan Juravsky and Yunrong Guo and Sanja Fidler and Xue Bin Peng},
+    booktitle = {SIGGRAPH 2024 Conference Papers (SIGGRAPH '24 Conference Papers),},
+    year = {2024}
+</pre>

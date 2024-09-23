@@ -1,0 +1,70 @@
+---
+layout: default
+title: "MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH Asia 2024<br>
+		<br>
+		<nobr>Chen Tessler (1)</nobr> &emsp;&emsp; <nobr>Yunrong Guo (1)</nobr> &emsp;&emsp; <nobr>Ofir Nabati (1)</nobr> &emsp;&emsp; <nobr>Gal Chechik (1, 2)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 3)</nobr> <br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) Bar-Ilan University </nobr> &emsp;&emsp; <nobr>(3) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="MaskedMimic_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Crafting a single, versatile physics-based controller that can breathe life into 
+	interactive characters across a wide spectrum of scenarios represents an exciting 
+	frontier in character animation. An ideal controller should support diverse 
+	control modalities, such as sparse target keyframes, text instructions, and scene 
+	information. While previous works have proposed physically simulated, scene-aware 
+	control models, these systems have predominantly focused on developing controllers 
+	that each specializes in a narrow set of tasks and control modalities. This work 
+	presents MaskedMimic, a novel approach that formulates physics-based character 
+	control as a general motion inpainting problem. Our key insight is to train a 
+	single unified model to synthesize motions from partial (masked) motion 
+	descriptions, such as masked keyframes, objects, text descriptions, or any 
+	combination thereof. This is achieved by leveraging motion tracking data and 
+	designing a scalable training method that can effectively utilize diverse motion 
+	descriptions to produce coherent animations. Through this process, our approach 
+	learns a physics-based controller that provides an intuitive control interface 
+	without requiring tedious reward engineering for all behaviors of interest. The 
+	resulting controller supports a wide range of control modalities and enables 
+	seamless transitions between disparate tasks. By unifying character control 
+	through motion inpainting, MaskedMimic creates versatile virtual characters. 
+	These characters can dynamically adapt to complex scenes and compose diverse 
+	motions on demand, enabling more interactive and immersive experiences.
+</td>
+
+<td>
+	<h3> Paper: [<a href="MaskedMimic_2024.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://research.nvidia.com/labs/par/maskedmimic/">Link</a>]</h3>
+</td>
+
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<video width="560px" height="315px" 
+			controls="controls">
+			<source src="https://research.nvidia.com/labs/par/maskedmimic/assets/MaskedMimic.mp4" type="video/mp4" />
+		</video>
+</tr>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{tessler2024maskedmimic,
+    author = {Tessler, Chen and Guo, Yunrong and Nabati, Ofir and Chechik, Gal and Peng, Xue Bin},
+    title = {MaskedMimic: Unified Physics-Based Character Control Through Masked Motion Inpainting},
+    year = {2024},
+    journal={ACM Transactions on Graphics (TOG)},
+    publisher={ACM New York, NY, USA}
+}
+</pre>

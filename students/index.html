@@ -8,28 +8,64 @@ title: Students
 <hr>
 
 <h2>Ph.D.</h2>
-<table border="0" cellpadding="3" cellspacing="10">
-	<tr>
-		<td><a href="https://michaelx.io/"><img style="vertical-align:middle" src="photos/michael_xu.png"  width="100" height="inherit" border="1px" alt="" /></a></td>
-		<td>
-			<b>Michael Xu</b> <br>
-			<em> 2023 -  present </em> <br>
-		</td>
-	</tr>
-	<tr>
-		<td><a href="https://yi-shi94.github.io/"><img style="vertical-align:middle" src="photos/yi_shi.png"  width="100" height="inherit" border="1px" alt="" /></a></td>
-		<td>
-			<b>Yi Shi</b> <br>
-			<em> 2023 -  present </em> <br>
-		</td>
-	</tr>
-	<tr>
-		<td><a href="https://yxmu.foo/"><img style="vertical-align:middle" src="photos/yuxuan_mu.png"  width="100" height="inherit" border="1px" alt="" /></a></td>
-		<td>
-			<b>Yuxuan Mu</b> <br>
-			<em> 2024 -  present </em> <br>
-		</td>
-	</tr>
-</table>
+
+<style>
+  .students-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .student {
+    display: flex;
+    align-items: center;
+    width: 48%; /* Ensures two columns */
+    gap: 15px;
+  }
+  
+  .student img {
+    width: 100px;
+    height: auto;
+    border: 1px solid black;
+  }
+
+  @media (max-width: 600px) {
+    .student {
+      width: 100%; /* Stacks on smaller screens */
+    }
+  }
+</style>
+
+<div class="students-container">
+  <div class="student">
+    <a href="https://michaelx.io/">
+      <img src="photos/michael_xu.png" alt="Michael Xu" />
+    </a>
+    <div>
+      <b>Michael Xu</b> <br>
+      <em>2023 - present</em>
+    </div>
+  </div>
+
+  <div class="student">
+    <a href="https://yi-shi94.github.io/">
+      <img src="photos/yi_shi.png" alt="Yi Shi" />
+    </a>
+    <div>
+      <b>Yi Shi</b> <br>
+      <em>2023 - present</em>
+    </div>
+  </div>
+
+  <div class="student">
+    <a href="https://yxmu.foo/">
+      <img src="photos/yuxuan_mu.png" alt="Yuxuan Mu" />
+    </a>
+    <div>
+      <b>Yuxuan Mu</b> <br>
+      <em>2024 - present</em>
+    </div>
+  </div>
+</div>
 
 <hr>

@@ -11,16 +11,17 @@ title: Students
 
 <style>
   .students-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactly two columns */
+    gap: 30px; /* Fixed spacing between columns */
+    max-width: 700px; /* Prevents excessive spacing */
+    justify-content: start; /* Aligns columns to the left */
   }
   
   .student {
     display: flex;
     align-items: center;
-    width: 48%; /* Ensures two columns */
-    gap: 15px;
+    gap: 10px;
   }
   
   .student img {
@@ -29,9 +30,10 @@ title: Students
     border: 1px solid black;
   }
 
-  @media (max-width: 600px) {
-    .student {
-      width: 100%; /* Stacks on smaller screens */
+  /* Switch to single column on smaller screens */
+  @media (max-width: 750px) {
+    .students-container {
+      grid-template-columns: 1fr; /* Single column */
     }
   }
 </style>

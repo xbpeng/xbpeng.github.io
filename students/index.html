@@ -13,7 +13,8 @@ title: Students
   .students-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Exactly two columns */
-    gap: 30px; /* Fixed spacing between columns */
+    column-gap: 40px; /* Keeps increased spacing between columns */
+    row-gap: 20px; /* Reduced spacing between rows */
     max-width: 700px; /* Prevents excessive spacing */
     justify-content: start; /* Aligns columns to the left */
   }

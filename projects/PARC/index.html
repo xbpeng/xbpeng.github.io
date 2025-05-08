@@ -1,0 +1,70 @@
+---
+layout: default
+title: "PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH 2025<br>
+		<br>
+		<nobr>Michael Xu (1)</nobr> &emsp;&emsp; <nobr>Yi Shi (1)</nobr> &emsp;&emsp; <nobr>KangKang Yin (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 2)</nobr> <br>
+		<br>
+		<nobr>(1) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(2) NVIDIA</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="PARC_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Humans excel in navigating diverse, complex environments with agile motor
+	skills, exemplified by parkour practitioners performing dynamic maneuvers,
+	such as climbing up walls and jumping across gaps. Reproducing these agile
+	movements with simulated characters remains challenging, in part due to
+	the scarcity of motion capture data for agile terrain traversal behaviors
+	and the high cost of acquiring such data. In this work, we introduce PARC
+	(Physics-based Augmentation with Reinforcement Learning for Character
+	Controllers), a framework that leverages machine learning and physicsbased
+	simulation to iteratively augment motion datasets and expand the
+	capabilities of terrain traversal controllers. PARC begins by training a motion
+	generator on a small dataset consisting of core terrain traversal skills. The
+	motion generator is then used to produce synthetic data for traversing new
+	terrains. However, these generated motions often exhibit artifacts, such as
+	incorrect contacts or discontinuities. To correct these artifacts, we train a
+	physics-based tracking controller to imitate the motions in simulation. The
+	corrected motions are then added to the dataset, which is used to continue
+	training the motion generator in the next iteration. PARC’s iterative process
+	jointly expands the capabilities of the motion generator and tracker, creating
+	agile and versatile models for interacting with complex environments.
+	PARC provides an effective approach to develop controllers for agile terrain
+	traversal, which bridges the gap between the scarcity of motion data and
+	the need for versatile character controllers.
+</td>
+
+<td>
+	<h3> Paper: [<a href="PARC_2025.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://michaelx.io/parc/index.html">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2505.04002">arXiv</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/49sq6jFA29s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+    xu2025parc,
+    author = {Xu, Michael and Shi, Yi and Yin, KangKang and Peng, Xue Bin},
+    title = {PARC: Physics-based Augmentation with Reinforcement Learning for Character Controllers},
+    year = {2025},
+    booktitle = {SIGGRAPH 2025 Conference Papers (SIGGRAPH '25 Conference Papers)}
+}
+</pre>

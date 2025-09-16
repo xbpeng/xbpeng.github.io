@@ -1,0 +1,75 @@
+---
+layout: default
+title: "StableMotion: Training Motion Cleanup Models with Unpaired Corrupted Data"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH Asia 2025<br>
+		<br>
+		<nobr>Yuxuan Mu (1)</nobr> &emsp;&emsp; Hung Yu Ling (2)</nobr> &emsp;&emsp; Yi Shi (1)</nobr> &emsp;&emsp; Ismael Baira Ojeda (2)</nobr> &emsp;&emsp; Pengcheng Xi (3)</nobr> &emsp;&emsp; Chang Shu (3)</nobr> &emsp;&emsp; Fabio Zinno (2)</nobr> &emsp;&emsp; Xue Bin Peng (1,4)</nobr> <br>
+		<br>
+		<nobr>(1) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(2) Electronic Arts</nobr> &emsp;&emsp; <nobr>(3) National Research Council Canada</nobr> &emsp;&emsp; <nobr>(4) NVIDIA</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="StableMotion_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Motion capture (mocap) data often exhibits visually jarring artifacts due to 
+	inaccurate sensors and post-processing. Cleaning this corrupted data can 
+	require substantial manual effort from human experts, which can be a costly 
+	and time-consuming process. Previous data-driven motion cleanup methods offer 
+	the promise of automating this cleanup process, but often require in-domain 
+	paired corrupted-to-clean training data. Constructing such paired datasets 
+	requires access to high-quality, relatively artifact-free motion clips, 
+	which often necessitates laborious manual cleanup. In this work, we present 
+	StableMotion, a simple yet effective method for training motion cleanup 
+	models directly from unpaired corrupted datasets that need cleanup. The 
+	core component of our method is the introduction of motion quality 
+	indicators, which can be easily annotated— through manual labeling or 
+	heuristic algorithms—and enable training of quality-aware motion generation 
+	models on raw motion data with mixed quality. At test time, the model can 
+	be prompted to generate high-quality motions using the quality indicators. 
+	Our method can be implemented through a simple diffusion-based framework, 
+	leading to a unified motion generate-discriminate model, which can be used 
+	to both identify and fix corrupted frames. We demonstrate that our proposed 
+	method is effective for training motion cleanup models on raw mocap data in 
+	production scenarios by applying StableMotion to SoccerMocap, a 245-hour 
+	soccer mocap dataset containing real-world motion artifacts. The trained 
+	model effectively corrects a wide range of motion artifacts, reducing motion 
+	pops and frozen frames by 68% and 81%, respectively. On our benchmark dataset, 
+	we further show that cleanup models trained with our method on unpaired 
+	corrupted data outperform state-of-the-art methods trained on clean or paired 
+	data, while also achieving comparable performance in preserving the content of 
+	the original motion clips.
+</td>
+
+<td>
+	<h3> Paper: [<a href="StableMotion_2025.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/Murrol/StableMotion">GitHub</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://yxmu.foo/stablemotion-page/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2505.03154">arXiv</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/XftDYsxZs64" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+    mu2025StableMotion,
+    author={Mu, Yuxuan and Ling, Hung Yu and Shi, Yi and Ojeda, Ismael Baira and Xi, Pengcheng and Shu, Chang and Zinno, Fabio and Peng, Xue Bin},
+    title = {StableMotion: Training Motion Cleanup Models with Unpaired Corrupted Data},
+    year = {2025},
+    booktitle = {SIGGRAPH Asia 2025 Conference Papers (SIGGRAPH Asia '25 Conference Papers)}
+}
+</pre>

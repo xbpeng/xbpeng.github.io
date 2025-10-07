@@ -1,0 +1,68 @@
+---
+layout: default
+title: "Physics-Based Motion Imitation with Adversarial Differential Discriminators"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH Asia 2025<br>
+		<br>
+		<nobr>Ziyu Zhang* (1)</nobr> &emsp;&emsp; <nobr>Sergey Bashkirov* (2)</nobr> &emsp;&emsp; <nobr>Dun Yang (1)</nobr> &emsp;&emsp; <nobr>Michael Taylor (2)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1,3)</nobr> <br>
+		<br>
+		<nobr>(1) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(2) Sony Playstation</nobr> &emsp;&emsp; <nobr>(3) NVIDIA</nobr><br>
+		<br>
+		<nobr>*Joint first authors.</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="ADD_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Multi-objective optimization problems, which require the simultaneous optimization 
+	of multiple objectives, are prevalent across numerous applications. Existing 
+	multi-objective optimization methods often rely on manually-tuned aggregation 
+	functions to formulate a joint optimization objective. The performance of such 
+	hand-tuned methods is heavily dependent on careful weight selection, a 
+	time-consuming and laborious process. These limitations also arise in the setting 
+	of reinforcement-learning-based motion tracking methods for physically simulated 
+	characters, where intricately crafted reward functions are typically used to achieve 
+	high-fidelity results. Such solutions not only require domain expertise and 
+	significant manual tuning, but also limit the applicability of the resulting reward 
+	function across diverse skills. To bridge this gap, we present a novel adversarial 
+	multi-objective optimization technique that is broadly applicable to a range of 
+	multi-objective reinforcement-learning tasks, including motion tracking. Our proposed 
+	Adversarial Differential Discriminator (ADD) receives a single positive sample, yet 
+	is still effective at guiding the optimization process. We demonstrate that our 
+	technique can enable characters to closely replicate a variety of acrobatic and agile 
+	behaviors, achieving comparable quality to state-of-the-art motion-tracking methods, 
+	without relying on manually-designed reward functions.
+</td>
+
+<td>
+	<h3> Paper: [<a href="ADD_2025.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/xbpeng/MimicKit">GitHub</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://add-moo.github.io/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2505.04961">arXiv</a>]</h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/SZpQfXNDulo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{
+    zhang2025ADD,
+    author={Zhang, Ziyu and Bashkirov, Sergey and Yang, Dun and Shi, Yi and Taylor, Michael and Peng, Xue Bin},
+    title = {Physics-Based Motion Imitation with Adversarial Differential Discriminators},
+    year = {2025},
+    booktitle = {SIGGRAPH Asia 2025 Conference Papers (SIGGRAPH Asia '25 Conference Papers)}
+}
+</pre>

@@ -1,0 +1,62 @@
+---
+layout: default
+title: "MaskedManipulator: Versatile Whole-Body Manipulation"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM SIGGRAPH Asia 2025<br>
+		<br>
+		<nobr>Chen Tessler (1)</nobr> &emsp;&emsp; <nobr> Yifeng Jiang (1)</nobr> &emsp;&emsp; <nobr> Erwin Coumans (1)</nobr> &emsp;&emsp; <nobr> Zhengyi Luo (1)</nobr> &emsp;&emsp; <nobr> Gal Chechik (1)</nobr> &emsp;&emsp; <nobr> Xue Bin Peng (1, 2)</nobr> <br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="MaskedManipulator_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	We tackle the challenges of synthesizing versatile, physically 
+	simulated human motions for full-body object manipulation. 
+	Unlike prior methods that are focused on detailed motion 
+	tracking, trajectory following, or teleoperation, our framework 
+	enables users to specify versatile high-level objectives such 
+	as target object poses or body poses. To achieve this, we 
+	introduce MaskedManipulator, a generative control policy 
+	distilled from a tracking controller trained on large-scale 
+	human motion capture data. This two-stage learning process 
+	allows the system to perform complex interaction behaviors, 
+	while providing intuitive user control over both character 
+	and object motions. MaskedManipulator produces goal-directed 
+	manipulation behaviors that expand the scope of interactive 
+	animation systems beyond task-specific solutions.
+</td>
+
+<td>
+	<h3> Paper: [<a href="MaskedManipulator_2026.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://research.nvidia.com/labs/par/maskedmanipulator/">Link</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/NVlabs/ProtoMotions">GitHub</a>]</h3>
+</td>
+
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<video width="560px" height="315px" 
+			controls="controls">
+			<source src="https://research.nvidia.com/labs/par/maskedmanipulator/assets/MaskedManipulator.mp4" type="video/mp4" />
+		</video>
+</tr>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@inproceedings{tessler2025maskedmanipulator,
+    author = {Tessler, Chen and Jiang, Yifeng and Coumans, Erwin and Luo, Zhengyi and Chechik, Gal and Peng, Xue Bin},
+    title = {MaskedManipulator: Versatile Whole-Body Manipulation},
+    year = {2025},
+    booktitle={ACM SIGGRAPH Asia 2025 Conference Proceedings}
+}
+</pre>

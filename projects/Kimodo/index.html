@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Kimodo: Scaling Controllable Human Motion Generation"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		arXiv Preprint 2026<br>
+		<br>
+		<nobr>Davis Rempe*</nobr> &emsp;&emsp; <nobr>Mathis Petrovich*</nobr> &emsp;&emsp; <nobr>Ye Yuan</nobr> &emsp;&emsp; <nobr>Haotian Zhang</nobr> &emsp;&emsp; <nobr>Xue Bin Peng</nobr> &emsp;&emsp; <nobr>Yifeng Jiang</nobr> &emsp;&emsp; <nobr>Tingwu Wang</nobr> &emsp;&emsp; <nobr>Umar Iqbal</nobr> &emsp;&emsp; <nobr>David Minor</nobr> &emsp;&emsp; <nobr>Michael de Ruyter</nobr> &emsp;&emsp; <nobr>Jiefeng Li</nobr> &emsp;&emsp; <nobr>Chen Tessler</nobr> &emsp;&emsp; <nobr>Edy Lim</nobr> &emsp;&emsp; <nobr>Eugene Jeong</nobr> &emsp;&emsp; <nobr>Sam Wu</nobr> &emsp;&emsp; <nobr>Ehsan Hassani</nobr> &emsp;&emsp; <nobr>Michael Huang</nobr> &emsp;&emsp; <nobr>Jin-Bey Yu</nobr> &emsp;&emsp; <nobr>Chaeyeon Chung</nobr> &emsp;&emsp; <nobr>Lina Song</nobr> &emsp;&emsp; <nobr>Olivier Dionne</nobr> &emsp;&emsp; <nobr>Jan Kautz</nobr> &emsp;&emsp; <nobr>Simon Yuen</nobr> &emsp;&emsp; <nobr>Sanja Fidler</nobr><br>
+		<br>
+		<nobr>NVIDIA</nobr><br><br>
+		<nobr>*Joint first authors.</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="Kimodo_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	High-quality human motion data is becoming increasingly important for 
+	applications in robotics, simulation, and entertainment. Recent generative 
+	models offer a potential data source, enabling human motion synthesis
+	through intuitive inputs like text prompts or kinematic constraints on
+	poses. However, the small scale of public mocap datasets has limited the
+	motion quality, control accuracy, and generalization of these models. In
+	this work, we introduce Kimodo, an expressive and controllable kinematic
+	motion diffusion model trained on 700 hours of optical motion capture data.
+	Our model generates high-quality motions while being easily controlled
+	through text and a comprehensive suite of kinematic constraints including
+	full-body keyframes, sparse joint positions/rotations, 2D waypoints, and
+	dense 2D paths. This is enabled through a carefully designed motion
+	representation and two-stage denoiser architecture that decomposes root
+	and body prediction to minimize motion artifacts while allowing for
+	flexible constraint conditioning. Experiments on the large-scale mocap
+	dataset justify key design decisions and analyze how the scaling of dataset
+	size and model size affect performance.
+</td>
+
+<td>
+	<h3> Paper: [<a href="Kimodo_2026.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/nv-tlabs/kimodo">GitHub</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://research.nvidia.com/labs/sil/projects/kimodo/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2603.15546">arXiv</a>] </h3>
+</td>
+
+<br>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Video</h3>
+		<video width="560px" height="315px" 
+			controls="controls">
+			<source src="https://research.nvidia.com/labs/sil/projects/kimodo/assets/videos/teaser.mp4" type="video/mp4" />
+		</video>
+</tr>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{rempeKimodo2026,
+      title={Kimodo: Scaling Controllable Human Motion Generation}, 
+      author={Davis Rempe and Mathis Petrovich and Ye Yuan and Haotian Zhang and Xue Bin Peng and Yifeng Jiang and Tingwu Wang and Umar Iqbal and David Minor and Michael de Ruyter and Jiefeng Li and Chen Tessler and Edy Lim and Eugene Jeong and Sam Wu and Ehsan Hassani and Michael Huang and Jin-Bey Yu and Chaeyeon Chung and Lina Song and Olivier Dionne and Jan Kautz and Simon Yuen and Sanja Fidler},
+      year={2026},
+      eprint={2603.15546},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.15546}, 
+}
+</pre>

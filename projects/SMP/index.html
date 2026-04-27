@@ -1,0 +1,75 @@
+---
+layout: default
+title: "SMP: Reusable Score-Matching Motion Priors for Physics-Based Character Control"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Transactions on Graphics (Proc. ACM SIGGRAPH 2026)<br>
+		<br>
+		<nobr>Yuxuan Mu* (1)</nobr> &emsp;&emsp; <nobr>Ziyu Zhang* (1)</nobr> &emsp;&emsp; <nobr>Yi Shi* (1)</nobr> &emsp;&emsp; <nobr>Dun Yang (1)</nobr> &emsp;&emsp; <nobr>Minami Matsumoto (2)</nobr> &emsp;&emsp; <nobr>Kotaro Imamura (2)</nobr> &emsp;&emsp; <nobr>Guy Tevet (3)</nobr> &emsp;&emsp; <nobr>Chuan Guo (4)</nobr> &emsp;&emsp; <nobr>Michael Taylor (2)</nobr> &emsp;&emsp; <nobr>Chang Shu (5)</nobr> &emsp;&emsp; <nobr>Pengcheng Xi (5)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 6)</nobr> <br>
+		<br>
+		<nobr>(1) Simon Fraser University </nobr> &emsp;&emsp; <nobr>(2) Sony Interactive Enterntainment </nobr> &emsp;&emsp; <nobr>(3) Stanford </nobr> &emsp;&emsp; <nobr>(4) Snap Inc. </nobr> &emsp;&emsp; <nobr>(5) National Research Council Canada </nobr> &emsp;&emsp; <nobr>(6) NVIDIA </nobr><br>
+		<br>
+		<nobr>*Joint first authors.</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="smp_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Data-driven motion priors that can guide agents toward producing 
+	naturalistic behaviors play a pivotal role in creating life-like 
+	virtual characters. Adversarial imitation learning has been a 
+	highly effective method for learning motion priors from reference 
+	motion data. However, adversarial priors, with few exceptions, 
+	need to be retrained for each new controller, thereby limiting 
+	their reusability and necessitating the retention of the 
+	reference motion data when applied to downstream tasks. In this 
+	work, we present Score-Matching Motion Priors (SMP), which 
+	leverages pre-trained motion diffusion models and score 
+	distillation sampling (SDS) to create reusable task-agnostic 
+	motion priors. SMPs can be pre-trained on a motion dataset, 
+	independent of any control policy or task. Once trained, SMPs 
+	can be kept frozen and reused as general-purpose reward 
+	functions to train new policies to produce naturalistic 
+	behaviors for downstream tasks. We show that a general motion 
+	prior trained on large-scale datasets can be repurposed into 
+	a variety of style-specific priors. Furthermore, SMP can 
+	compose different styles to synthesize new styles not present 
+	in the original dataset. Our method can create reusable and 
+	modular motion priors that produce high-quality motions 
+	comparable to state-of-the-art adversarial imitation learning 
+	methods. In our experiments, we demonstrate the effectiveness 
+	of SMP across a diverse suite of control tasks with physically 
+	simulated humanoid characters.
+</td>
+
+<td>
+	<h3> Paper: [<a href="SMP_2026.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/xbpeng/MimicKit">MimicKit</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://yxmu.foo/smp-page/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/jBA2tWk6vzU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+  mu2025smp,
+  title={SMP: Reusable Score-Matching Motion Priors for Physics-Based Character Control},
+  author={Mu, Yuxuan and Zhang, Ziyu and Shi, Yi and Yang, Dun and Matsumoto, Minami and Imamura, Kotaro and Tevet, Guy and Guo, Chuan and Taylor, Michael and Shu, Chang and Xi, Pengcheng and Peng, Xue Bin},
+  journal={arXiv preprint arXiv:2512.03028},
+  year={2025}
+}
+</pre>

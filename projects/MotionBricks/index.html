@@ -1,0 +1,88 @@
+---
+layout: default
+title: "MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		Transactions on Graphics (Proc. ACM SIGGRAPH 2026)<br>
+		<br>
+		<nobr>Tingwu Wang* (1)</nobr> &emsp;&emsp; <nobr>Olivier Dionne* (1)</nobr> &emsp;&emsp; <nobr>Michael De Ruyter (1)</nobr> &emsp;&emsp; <nobr>David Minor (1)</nobr> &emsp;&emsp; <nobr>Davis Rempe (1)</nobr> &emsp;&emsp; <nobr>Kaifeng Zhao (1, 2)</nobr> &emsp;&emsp; <nobr>Mathis Petrovich (1)</nobr> &emsp;&emsp; <nobr>Ye Yuan (1)</nobr> &emsp;&emsp; <nobr>Chenran Li (1)</nobr> &emsp;&emsp; <nobr>Zhengyi Luo (1)</nobr> &emsp;&emsp; <nobr>Brian Robison (1)</nobr> &emsp;&emsp; <nobr>Xavier Blackwell (1)</nobr> &emsp;&emsp; <nobr>Bernardo Antoniazzi (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1, 3)</nobr> &emsp;&emsp; <nobr>Yuke Zhu (1, 4)</nobr> &emsp;&emsp; <nobr>Simon Yuen (1)</nobr><br>
+		<br>
+		<nobr>(1) NVIDIA</nobr> &emsp;&emsp; <nobr>(2) ETH Zürich</nobr> &emsp;&emsp; <nobr>(3) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(4) The University of Texas at Austin</nobr><br>
+		<br>
+		<nobr>*Joint first authors.</nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="MotionBricks_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Despite transformative advances in generative motion synthesis, 
+	real-time interactive motion control remains dominated by 
+	traditional techniques. In this work, we identify two key 
+	challenges in bridging research and production: 1) Real-time 
+	scalability: Industry applications demand real-time generation 
+	of a vast repertoire of motion skills, while generative methods 
+	exhibit significant degradation in quality and scalability 
+	under real-time computation constraints, and 2) Integration: 
+	Industry applications demand fine-grained multi-modal control 
+	involving velocity commands, style selection, and precise 
+	keyframes, a need largely unmet by existing text- or tag-driven 
+	models. To overcome these limitations, we introduce 
+	MotionBricks: a large-scale, real-time generative framework 
+	with a two-fold solution. First, we propose a large-scale 
+	modular latent generative backbone tailored for robust 
+	real-time motion generation, effectively modeling a dataset of 
+	over 350,000 motion clips with a single model. Second, we 
+	introduce smart primitives that provide a unified, robust, and 
+	intuitive interface for authoring both navigation and object 
+	interaction. Applications can be designed in a plug-and-play 
+	manner like assembling bricks without expert animation 
+	knowledge. Quantitatively, we show that MotionBricks produces 
+	state-of-the-art motion quality on open-source and proprietary 
+	datasets of various scales, while also achieving a real-time 
+	throughput of 15,000 FPS with 2ms latency. We demonstrate the 
+	flexibility and robustness of MotionBricks in a complete 
+	production-level animation demo, covering navigation and 
+	object-scene interaction across various styles with a unified 
+	model. To showcase our framework's application beyond 
+	animation, we deploy MotionBricks on the Unitree G1 humanoid 
+	robot to demonstrate its flexibility and generalization for 
+	real-time robotic control.
+</td>
+
+<td>
+	<h3> Paper: [<a href="MotionBricks_2026.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://nvlabs.github.io/motionbricks/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2604.24833">arXiv</a>] </h3>
+</td>
+
+<tr>
+	<h3 style="margin-bottom:10px;">Video</h3>
+	<video width="560px" height="315px" 
+		controls="controls">
+		<source src="https://research.nvidia.com/labs/gear/motionbricks/videos/motionbricks_demo_1080p30f.mp4" type="video/mp4" />
+	</video>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@misc{
+	wang2026motionbricksscalablerealtimemotions,
+	title={MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives},
+	author={Tingwu Wang and Olivier Dionne and Michael De Ruyter and David Minor and Davis Rempe and Kaifeng Zhao and Mathis Petrovich and Ye Yuan and Chenran Li and Zhengyi Luo and Brian Robison and Xavier Blackwell and Bernardo Antoniazzi and Xue Bin Peng and Yuke Zhu and Simon Yuen},
+	year={2026},
+	eprint={2604.24833},
+	archivePrefix={arXiv},
+	primaryClass={cs.RO},
+	url={https://arxiv.org/abs/2604.24833},
+}
+</pre>

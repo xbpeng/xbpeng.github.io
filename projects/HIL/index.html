@@ -1,0 +1,73 @@
+---
+layout: default
+title: "HIL: Hybrid Imitation Learning for Dynamic Athletic Control"
+---
+
+<center><h1>{{ page.title }}</h1></center>
+
+<td>
+	<center>
+		ACM Transactions on Graphics (TOG 2026)<br>
+		<br>
+		<nobr>Jiashun Wang (1)</nobr> &emsp;&emsp; <nobr>Yifeng Jiang (2)</nobr> &emsp;&emsp; <nobr>Haotian Zhang (2)</nobr> &emsp;&emsp; <nobr>Chen Tessler (2)</nobr> &emsp;&emsp; <nobr>Davis Rempe (2)</nobr> &emsp;&emsp; <nobr>Jessica Hodgins (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (2, 3)</nobr><br>
+		<br>
+		<nobr>(1) Carnegie Mellon University </nobr> &emsp;&emsp; <nobr>(2) NVIDIA </nobr> &emsp;&emsp; <nobr>(3) Simon Fraser University </nobr><br>
+		<br>
+		<img style="vertical-align:middle" src="HIL_teaser.png"  width="100%" height="inherit"/>		
+	</center>
+</td>
+
+<br>
+	
+<td>
+	<hr>
+	<h3 style="margin-bottom:10px;">Abstract</h3>
+	Data-driven methods leveraging deep reinforcement learning have 
+	become the dominant paradigm for developing controllers that 
+	enable physically simulated characters to produce natural 
+	human-like behaviors. However, these data-driven methods often 
+	struggle to adapt to novel environments and compose diverse 
+	skills to perform more complex interaction tasks with the 
+	environment. To address these challenges, we propose a hybrid 
+	imitation learning (HIL) framework that combines motion 
+	tracking, for precise skill replication, with adversarial 
+	imitation learning, to enhance adaptability and skill 
+	composition, enabling robust dynamic control for highly 
+	athletic behaviors. This hybrid learning framework is 
+	implemented through parallel multi-task environments and a 
+	unified observation space, utilizing a goal-conditioned 
+	representation to facilitate knowledge-sharing across the 
+	hybrid parallel environments. We demonstrate the 
+	effectiveness of HIL on a parkour-style obstacle traversal 
+	task and a heading control task. Our framework enables a 
+	unified controller that not only preserves the naturalness 
+	of reference motion data, but also generalizes effectively 
+	to challenging new environments. Evaluations across 
+	procedurally generated tasks and baselines show that our 
+	method improves motion quality, increases skill diversity, 
+	and achieves competitive task completion compared to 
+	previous learning-based approaches.
+</td>
+
+<td>
+	<h3> Paper: [<a href="HIL_2026.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://jiashunwang.github.io/HIL">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2505.12619">arXiv</a>] </h3>
+</td>
+
+<tr>
+		<h3 style="margin-bottom:10px;">Videos</h3>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/q8LadPsNsgY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</tr>
+	
+<br>
+<br>
+
+<h3 style="margin-bottom:0px;">Bibtex</h3>
+<pre>
+@article{
+	wang2026hil,
+	title={{HIL:} Hybrid Imitation Learning for Dynamic Athletic Control},
+	author={Wang, Jiashun and Jiang, Yifeng and Zhang, Haotian and Tessler, Chen and Rempe, Davis and Hodgins, Jessica and Peng, Xue Bin},
+	journal={{ACM} Trans. Graph.},
+	year={2026}
+}
+</pre>

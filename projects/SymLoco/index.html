@@ -1,70 +1,61 @@
 ---
-layout: default
+layout: project
+
 title: "On Learning Symmetric Locomotion"
+
+venue: "ACM SIGGRAPH Conference on Motion, Interaction, and Games (MIG 2019)"
+
+authors:
+  - "Farzad Abdolhosseini (1)"
+  - "Hung Yu Ling (1)"
+  - "Zhaoming Xie (1)"
+  - "Xue Bin Peng (2)"
+  - "Michiel van de Panne (1)"
+
+affiliations:
+  - "University of British Columbia"
+  - "University of California, Berkeley"
+
+thumbnail: "symloco_thumb.png"
+
+teaser: "symloco_teaser.png"
+
+paper: "SymLoco_2018.pdf"
+
+links:
+  Code:
+    GitHub: "https://github.com/UBCMOCCA/SymmetricRL"
+
+videos:
+  - "2019-MIG-symmetry.mp4"
+
+abstract: >-
+  Human and animal gaits are often symmetric in nature, which points to the use of motion symmetry as
+  a potentially useful source of structure that can be exploited for learning. By encouraging
+  symmetric motion, the learning may be faster, converge to more efficient solutions, and be more
+  aesthetically pleasing. We describe, compare, and evaluate four practical methods for encouraging
+  motion symmetry. These are implemented via particular choices of structure for the policy network,
+  data duplication, or via the loss function. We experimentally evaluate the methods in terms of
+  learning performance and achieved symmetry, and provide summary guidelines for the choice of
+  symmetry method. We further describe some practical and conceptual issues that arise. Because
+  similar implementation choices exist for other types of inductive biases, the insights gained may
+  also be relevant to other learning problems with applicable symmetry abstractions.
+
+bibtex: |
+  @inproceedings{2019-MIG-symmetry,
+  author = {Abdolhosseini, Farzad and Ling, Hung Yu and Xie, Zhaoming and Peng, Xue Bin and van de Panne, Michiel},
+  title = {On Learning Symmetric Locomotion},
+  year = {2019},
+  isbn = {9781450369947},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3359566.3360070},
+  doi = {10.1145/3359566.3360070},
+  booktitle = {Motion, Interaction and Games},
+  articleno = {19},
+  numpages = {10},
+  keywords = {locomotion, reinforcement learning, symmetry},
+  location = {Newcastle upon Tyne, United Kingdom},
+  series = {MIG '19}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		ACM SIGGRAPH Conference on Motion, Interaction, and Games (MIG 2019)<br>
-		<br>
-		<nobr>Farzad Abdolhosseini (1)</nobr> &emsp;&emsp; <nobr>Hung Yu Ling (1)</nobr> &emsp;&emsp; <nobr> Zhaoming Xie (1)</nobr> &emsp;&emsp; <nobr> Xue Bin Peng (2)</nobr> &emsp;&emsp; <nobr>Michiel van de Panne (1)</nobr><br>
-		<br>
-		<nobr>(1) University of British Columbia</nobr> &emsp;&emsp; <nobr>(2) University of California, Berkeley</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="symloco_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	Human and animal gaits are often symmetric in nature, which points to the use
-	of motion symmetry as a potentially useful source of structure that can be
-	exploited for learning. By encouraging symmetric motion, the learning may be
-	faster, converge to more efficient solutions, and be more aesthetically
-	pleasing. We describe, compare, and evaluate four practical methods for
-	encouraging motion symmetry. These are implemented via particular choices of
-	structure for the policy network, data duplication, or via the loss function.
-	We experimentally evaluate the methods in terms of learning performance and
-	achieved symmetry, and provide summary guidelines for the choice of symmetry
-	method. We further describe some practical and conceptual issues that arise.
-	Because similar implementation choices exist for other types of inductive
-	biases, the insights gained may also be relevant to other learning problems
-	with applicable symmetry abstractions.
-</td>
-
-<td>
-	<h3> Paper: [<a href="SymLoco_2018.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/UBCMOCCA/SymmetricRL">GitHub</a>] </h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Videos</h3>
-		<iframe width="560" height="315" src="2019-MIG-symmetry.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@inproceedings{2019-MIG-symmetry,
-author = {Abdolhosseini, Farzad and Ling, Hung Yu and Xie, Zhaoming and Peng, Xue Bin and van de Panne, Michiel},
-title = {On Learning Symmetric Locomotion},
-year = {2019},
-isbn = {9781450369947},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3359566.3360070},
-doi = {10.1145/3359566.3360070},
-booktitle = {Motion, Interaction and Games},
-articleno = {19},
-numpages = {10},
-keywords = {locomotion, reinforcement learning, symmetry},
-location = {Newcastle upon Tyne, United Kingdom},
-series = {MIG '19}
-}
-</pre>

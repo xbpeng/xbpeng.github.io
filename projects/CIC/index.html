@@ -1,58 +1,57 @@
 ---
-layout: default
+layout: project
+
 title: "Unsupervised Reinforcement Learning with Contrastive Intrinsic Control"
+
+venue: "Neural Information Processing Systems (NeurIPS 2022)"
+
+authors:
+  - "Michael Laskin (1)"
+  - "Hao Liu (1)"
+  - "Xue Bin Peng (1)"
+  - "Denis Yarats (2, 3)"
+  - "Aravind Rajeswaran (3)"
+  - "Pieter Abbeel (1, 4)"
+
+affiliations:
+  - "University of California, Berkeley"
+  - "New York University"
+  - "MetaAI"
+  - "Covariant."
+
+thumbnail: "cic_thumb.png"
+
+teaser: "cic_teaser.png"
+
+paper: "CIC_2022.pdf"
+
+links:
+  Webpage:
+    Link: "https://sites.google.com/view/cicneurips2022/"
+  Code:
+    GitHub: "https://github.com/rll-research/cic"
+  Preprint:
+    arXiv: "https://arxiv.org/abs/2202.00161"
+
+abstract: >-
+  We introduce Contrastive Intrinsic Control (CIC), an unsupervised reinforcement learning (RL)
+  algorithm that maximizes the mutual information between statetransitions and latent skill vectors.
+  CIC utilizes contrastive learning between state-transitions and skills vectors to learn behaviour
+  embeddings and maximizes the entropy of these embeddings as an intrinsic reward to encourage
+  behavioural diversity. We evaluate our algorithm on the Unsupervised RL Benchmark (URLB) in the
+  asymptotic state-based setting, which consists of a long reward-free pretraining phase followed by a
+  short adaptation phase to downstream tasks with extrinsic rewards. We find that CIC improves over
+  prior exploration algorithms in terms of adaptation efficiency to downstream tasks on state-based
+  URLB.
+
+bibtex: |
+  @inproceedings{
+  	laskin2022unsupervised,
+  	title={Unsupervised Reinforcement Learning with Contrastive Intrinsic Control},
+  	author={Michael Laskin and Hao Liu and Xue Bin Peng and Denis Yarats and Aravind Rajeswaran and Pieter Abbeel},
+  	booktitle={Advances in Neural Information Processing Systems},
+  	editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+  	year={2022},
+  	url={https://openreview.net/forum?id=9HBbWAsZxFt}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		Neural Information Processing Systems (NeurIPS 2022)<br>
-		<br>
-		<nobr>Michael Laskin (1)</nobr> &emsp;&emsp; <nobr>Hao Liu (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (1)</nobr> &emsp;&emsp; <nobr>Denis Yarats (2,3)</nobr> &emsp;&emsp; <nobr>Aravind Rajeswaran (3)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1,4)</nobr> <br>
-		<br>
-		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) New York University</nobr> &emsp;&emsp; <nobr>(3) MetaAI</nobr> &emsp;&emsp; <nobr>(4) Covariant.</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="cic_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	We introduce Contrastive Intrinsic Control (CIC), an unsupervised
-	reinforcement learning (RL) algorithm that maximizes the mutual
-	information between statetransitions and latent skill vectors.
-	CIC utilizes contrastive learning between state-transitions and
-	skills vectors to learn behaviour embeddings and maximizes the
-	entropy of these embeddings as an intrinsic reward to encourage
-	behavioural diversity. We evaluate our algorithm on the
-	Unsupervised RL Benchmark (URLB) in the asymptotic state-based
-	setting, which consists of a long reward-free pretraining phase
-	followed by a short adaptation phase to downstream tasks with
-	extrinsic rewards. We find that CIC improves over prior
-	exploration algorithms in terms of adaptation efficiency to
-	downstream tasks on state-based URLB.
-</td>
-
-<td>
-	<h3> Paper: [<a href="CIC_2022.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://sites.google.com/view/cicneurips2022/">Link</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/rll-research/cic">GitHub</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2202.00161">arXiv</a>] </h3>
-</td>
-
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@inproceedings{
-	laskin2022unsupervised,
-	title={Unsupervised Reinforcement Learning with Contrastive Intrinsic Control},
-	author={Michael Laskin and Hao Liu and Xue Bin Peng and Denis Yarats and Aravind Rajeswaran and Pieter Abbeel},
-	booktitle={Advances in Neural Information Processing Systems},
-	editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
-	year={2022},
-	url={https://openreview.net/forum?id=9HBbWAsZxFt}
-}
-</pre>

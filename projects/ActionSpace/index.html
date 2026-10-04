@@ -1,72 +1,56 @@
 ---
-layout: default
+layout: project
+
 title: "Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter?"
+
+venue: "ACM SIGGRAPH / Eurographics Symposium on Computer Animation 2017"
+
+award: "Best Student Paper Award"
+
+authors:
+  - "Xue Bin Peng"
+  - "Michiel van de Panne"
+
+affiliations:
+  - "University of British Columbia"
+
+thumbnail: "actionspace_thumb.png"
+
+teaser: "actionspace_teaser.png"
+
+paper: "ActionSpace_2017.pdf"
+
+videos:
+  - "https://www.youtube.com/embed/L3vDo3nLI98"
+
+abstract: >-
+  The use of deep reinforcement learning allows for high-dimensional state descriptors, but little is
+  known about how the choice of action representation impacts learning and the resulting performance.
+  We compare the impact of four different action parameterizations (torques, muscle-activations,
+  target joint angles, and target jointangle velocities) in terms of learning time, policy robustness,
+  motion quality, and policy query rates. Our results are evaluated on a gaitcycle imitation task for
+  multiple planar articulated figures and multiple gaits. We demonstrate that the local feedback
+  provided by higher-level action parameterizations can significantly impact the learning, robustness,
+  and motion quality of the resulting policies.
+
+bibtex: |
+  @inproceedings{
+  	2017-SCA-action,
+  	author = {Peng, Xue Bin and van de Panne, Michiel},
+  	title = {Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter?},
+  	booktitle = {Proceedings of the ACM SIGGRAPH / Eurographics Symposium on Computer Animation},
+  	series = {SCA '17},
+  	year = {2017},
+  	isbn = {978-1-4503-5091-4},
+  	location = {Los Angeles, California},
+  	pages = {12:1--12:13},
+  	articleno = {12},
+  	numpages = {13},
+  	url = {http://doi.acm.org/10.1145/3099564.3099567},
+  	doi = {10.1145/3099564.3099567},
+  	acmid = {3099567},
+  	publisher = {ACM},
+  	address = {New York, NY, USA},
+  	keywords = {locomotion skills, motion control, physics-based character animation},
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		ACM SIGGRAPH / Eurographics Symposium on Computer Animation 2017 <br>
-		<b> Best Student Paper Award </b> <br>
-		<br>
-		<nobr>Xue Bin Peng</nobr> &emsp;&emsp; <nobr>Michiel van de Panne</nobr> <br>
-		<br>
-		<nobr>University of British Columbia</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="actionspace_teaser.png"  width="100%" height="inherit" />		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	The use of deep reinforcement learning allows for high-dimensional
-	state descriptors, but little is known about how the choice of action
-	representation impacts learning and the resulting performance.
-	We compare the impact of four different action parameterizations
-	(torques, muscle-activations, target joint angles, and target jointangle
-	velocities) in terms of learning time, policy robustness, motion
-	quality, and policy query rates. Our results are evaluated on a gaitcycle
-	imitation task for multiple planar articulated figures and
-	multiple gaits. We demonstrate that the local feedback provided by
-	higher-level action parameterizations can significantly impact the
-	learning, robustness, and motion quality of the resulting policies.
-</td>
-
-<td>
-	<h3> Paper: [<a href="ActionSpace_2017.pdf">PDF</a>] </h3>
-</td>
-
-<tr>
-	<h3 style="margin-bottom:10px;">Video</h3>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/L3vDo3nLI98" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@inproceedings{
-	2017-SCA-action,
-	author = {Peng, Xue Bin and van de Panne, Michiel},
-	title = {Learning Locomotion Skills Using DeepRL: Does the Choice of Action Space Matter?},
-	booktitle = {Proceedings of the ACM SIGGRAPH / Eurographics Symposium on Computer Animation},
-	series = {SCA '17},
-	year = {2017},
-	isbn = {978-1-4503-5091-4},
-	location = {Los Angeles, California},
-	pages = {12:1--12:13},
-	articleno = {12},
-	numpages = {13},
-	url = {http://doi.acm.org/10.1145/3099564.3099567},
-	doi = {10.1145/3099564.3099567},
-	acmid = {3099567},
-	publisher = {ACM},
-	address = {New York, NY, USA},
-	keywords = {locomotion skills, motion control, physics-based character animation},
-} 
-</pre>

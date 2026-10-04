@@ -1,84 +1,73 @@
 ---
-layout: default
+layout: project
+
 title: "DeepLoco: Dynamic Locomotion Skills Using Hierarchical Deep Reinforcement Learning"
+
+venue: "ACM Transactions on Graphics (Proc. SIGGRAPH 2017)"
+
+authors:
+  - "Xue Bin Peng (1)"
+  - "Glen Berseth (1)"
+  - "KangKang Yin (2)"
+  - "Michiel van de Panne (1)"
+
+affiliations:
+  - "University of British Columbia"
+  - "National University of Singapore"
+
+thumbnail: "deeploco_thumb.png"
+
+teaser: "deeploco_teaser.png"
+
+paper: "DeepLoco_2017.pdf"
+
+links:
+  Code:
+    GitHub: "https://github.com/xbpeng/DeepLoco"
+  Media:
+    Popular Mechanics: "https://www.popularmechanics.com/technology/news/a27581/deeploco-deep-learning-run-bot-siggraph-2017/"
+
+videos:
+  - "https://www.youtube.com/embed/G4lT9CLyCNw"
+  - "https://www.youtube.com/embed/hd1yvLWm6oA"
+  - "https://www.youtube.com/embed/x-HrYko_MRU"
+
+abstract: >-
+  Learning physics-based locomotion skills is a difficult problem, leading to solutions that typically
+  exploit prior knowledge of various forms. In this paper we aim to learn a variety of
+  environment-aware locomotion skills with a limited amount of prior knowledge. We adopt a two-level
+  hierarchical control framework. First, low-level controllers are learned that operate at a fine
+  timescale and which achieve robust walking gaits that satisfy stepping-target and style objectives.
+  Second, high-level controllers are then learned which plan at the timescale of steps by invoking
+  desired step targets for the low-level controller. The high-level controller makes decisions
+  directly based on high-dimensional inputs, including terrain maps or other suitable representations
+  of the surroundings. Both levels of the control policy are trained using deep reinforcement
+  learning. Results are demonstrated on a simulated 3D biped. Low-level controllers are learned for a
+  variety of motion styles and demonstrate robustness with respect to forcebased disturbances, terrain
+  variations, and style interpolation. High-level controllers are demonstrated that are capable of
+  following trails through terrains, dribbling a soccer ball towards a target location, and navigating
+  through static or dynamic obstacles.
+
+bibtex: |
+  @article{
+  	2017-TOG-deepLoco,
+  	author = {Peng, Xue Bin and Berseth, Glen and Yin, Kangkang and Van De Panne, Michiel},
+  	title = {DeepLoco: Dynamic Locomotion Skills Using Hierarchical Deep Reinforcement Learning},
+  	journal = {ACM Trans. Graph.},
+  	issue_date = {July 2017},
+  	volume = {36},
+  	number = {4},
+  	month = jul,
+  	year = {2017},
+  	issn = {0730-0301},
+  	pages = {41:1--41:13},
+  	articleno = {41},
+  	numpages = {13},
+  	url = {http://doi.acm.org/10.1145/3072959.3073602},
+  	doi = {10.1145/3072959.3073602},
+  	acmid = {3073602},
+  	publisher = {ACM},
+  	address = {New York, NY, USA},
+  	keywords = {locomotion skills, motion control, physics-based character animation},
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		Transactions on Graphics (Proc. ACM SIGGRAPH 2017) <br>
-		<br>
-		<nobr>Xue Bin Peng(1)</nobr> &emsp;&emsp; <nobr>Glen Berseth(1)</nobr> &emsp;&emsp; <nobr>KangKang Yin(2)</nobr> &emsp;&emsp; <nobr>Michiel van de Panne(1)</nobr><br>
-		<br>
-		<nobr>(1)University of British Columbia</nobr> &emsp;&emsp; <nobr>(2)National University of Singapore</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="deeploco_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	Learning physics-based locomotion skills is a difficult problem, leading
-	to solutions that typically exploit prior knowledge of various forms. In
-	this paper we aim to learn a variety of environment-aware locomotion
-	skills with a limited amount of prior knowledge. We adopt a two-level
-	hierarchical control framework. First, low-level controllers are learned that
-	operate at a fine timescale and which achieve robust walking gaits that
-	satisfy stepping-target and style objectives. Second, high-level controllers
-	are then learned which plan at the timescale of steps by invoking desired
-	step targets for the low-level controller. The high-level controller makes
-	decisions directly based on high-dimensional inputs, including terrain maps
-	or other suitable representations of the surroundings. Both levels of the
-	control policy are trained using deep reinforcement learning. Results are
-	demonstrated on a simulated 3D biped. Low-level controllers are learned for
-	a variety of motion styles and demonstrate robustness with respect to forcebased
-	disturbances, terrain variations, and style interpolation. High-level
-	controllers are demonstrated that are capable of following trails through
-	terrains, dribbling a soccer ball towards a target location, and navigating
-	through static or dynamic obstacles.
-</td>
-
-<td>
-	<h3> Paper: [<a href="DeepLoco_2017.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/xbpeng/DeepLoco">GitHub</a>] &nbsp; &nbsp; &nbsp; Media: [<a href="https://www.popularmechanics.com/technology/news/a27581/deeploco-deep-learning-run-bot-siggraph-2017/">Popular Mechanics</a>]</h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Videos</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/G4lT9CLyCNw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		<br><br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/hd1yvLWm6oA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		<br><br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/x-HrYko_MRU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@article{
-	2017-TOG-deepLoco,
-	author = {Peng, Xue Bin and Berseth, Glen and Yin, Kangkang and Van De Panne, Michiel},
-	title = {DeepLoco: Dynamic Locomotion Skills Using Hierarchical Deep Reinforcement Learning},
-	journal = {ACM Trans. Graph.},
-	issue_date = {July 2017},
-	volume = {36},
-	number = {4},
-	month = jul,
-	year = {2017},
-	issn = {0730-0301},
-	pages = {41:1--41:13},
-	articleno = {41},
-	numpages = {13},
-	url = {http://doi.acm.org/10.1145/3072959.3073602},
-	doi = {10.1145/3072959.3073602},
-	acmid = {3073602},
-	publisher = {ACM},
-	address = {New York, NY, USA},
-	keywords = {locomotion skills, motion control, physics-based character animation},
-} 
-</pre>

@@ -1,69 +1,69 @@
 ---
-layout: default
+layout: project
+
 title: "Learning Agile Robotic Locomotion Skills by Imitating Animals"
+
+venue: "Robotics: Science and Systems (RSS 2020)"
+
+award: "Best Paper Award"
+
+authors:
+  - "Xue Bin Peng (1, 2)"
+  - "Erwin Coumans (1)"
+  - "Tingnan Zhang (1)"
+  - "Tsang-Wei Edward Lee (1)"
+  - "Jie Tan (1)"
+  - "Sergey Levine (1, 2)"
+
+affiliations:
+  - "Google Research"
+  - "University of California, Berkeley"
+
+thumbnail: "robotic_imitation_thumb.png"
+
+teaser: "robotic_imitation_teaser.png"
+
+paper: "Robotic_Imitation_2020.pdf"
+
+links:
+  Code:
+    GitHub: "https://github.com/google-research/motion_imitation"
+  Media:
+    Google: "https://ai.googleblog.com/2020/04/exploring-nature-inspired-robot-agility.html"
+    BAIR: "https://bair.berkeley.edu/blog/2020/04/03/laikago/"
+    WIRED: "https://www.wired.com/story/how-a-real-dog-taught-a-robot-dog-to-walk/"
+    Tech Review: "https://www.technologyreview.com/2020/04/03/998489/google-ai-robotic-dog-learns-with-imitation-reinforcement-learning/#:~:text=What%20they%20did%3A%20Using%20a,traditional%20hand%2Dcoded%20robotic%20controls."
+  Preprint:
+    arXiv: "http://arxiv.org/abs/2004.00784"
+
+videos:
+  - "https://www.youtube.com/embed/lKYh6uuCwRY"
+
+abstract: >-
+  Reproducing the diverse and agile locomotion skills of animals has been a longstanding challenge in
+  robotics. While manually-designed controllers have been able to emulate many complex behaviors,
+  building such controllers involves a timeconsuming and difficult development process, often
+  requiring substantial expertise of the nuances of each skill. Reinforcement learning provides an
+  appealing alternative for automating the manual effort involved in the development of controllers.
+  However, designing learning objectives that elicit the desired behaviors from an agent can also
+  require a great deal of skill-specific expertise. In this work, we present an imitation learning
+  system that enables legged robots to learn agile locomotion skills by imitating real-world animals.
+  We show that by leveraging reference motion data, a single learning-based approach is able to
+  automatically synthesize controllers for a diverse repertoire behaviors for legged robots. By
+  incorporating sample efficient domain adaptation techniques into the training process, our system is
+  able to learn adaptive policies in simulation that can then be quickly adapted for real-world
+  deployment. To demonstrate the effectiveness of our system, we train an 18- DoF quadruped robot to
+  perform a variety of agile behaviors ranging from different locomotion gaits to dynamic hops and
+  turns.
+
+bibtex: |
+  @inproceedings{
+  	RoboImitationPeng20,
+  	author = {Peng, Xue Bin and Coumans, Erwin and Zhang, Tingnan and Lee, Tsang-Wei Edward and Tan, Jie and Levine, Sergey},
+  	booktitle={Robotics: Science and Systems},
+  	year = {2020},
+  	month = {07},
+  	title = {Learning Agile Robotic Locomotion Skills by Imitating Animals},
+  	doi = {10.15607/RSS.2020.XVI.064}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		Robotics: Science and Systems (RSS 2020)<br>
-		<b> Best Paper Award </b> <br>
-		<br>
-		<nobr>Xue Bin Peng (1,2)</nobr> &emsp;&emsp; <nobr>Erwin Coumans (1)</nobr> &emsp;&emsp; <nobr>Tingnan Zhang (1)</nobr> &emsp;&emsp; <nobr>Tsang-Wei Edward Lee (1)</nobr> &emsp;&emsp; <nobr>Jie Tan (1)</nobr> &emsp;&emsp; <nobr>Sergey Levine (1,2)</nobr><br>
-		<br>
-		<nobr>(1) Google Research</nobr> &emsp;&emsp; <nobr> (2) University of California, Berkeley </nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="robotic_imitation_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	Reproducing the diverse and agile locomotion skills of animals has been
-	a longstanding challenge in robotics. While manually-designed controllers have
-	been able to emulate many complex behaviors, building such controllers involves
-	a timeconsuming and difficult development process, often requiring substantial
-	expertise of the nuances of each skill. Reinforcement learning provides an
-	appealing alternative for automating the manual effort involved in the
-	development of controllers. However, designing learning objectives that elicit
-	the desired behaviors from an agent can also require a great deal of skill-specific
-	expertise. In this work, we present an imitation learning system that enables
-	legged robots to learn agile locomotion skills by imitating real-world animals.
-	We show that by leveraging reference motion data, a single learning-based approach
-	is able to automatically synthesize controllers for a diverse repertoire behaviors
-	for legged robots. By incorporating sample efficient domain adaptation techniques
-	into the training process, our system is able to learn adaptive policies in
-	simulation that can then be quickly adapted for real-world deployment. To
-	demonstrate the effectiveness of our system, we train an 18- DoF quadruped robot
-	to perform a variety of agile behaviors ranging from different locomotion gaits
-	to dynamic hops and turns.
-</td>
-
-<td>
-	<h3> Paper: [<a href="Robotic_Imitation_2020.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/google-research/motion_imitation">GitHub</a>] &nbsp; &nbsp; &nbsp; Media: [<a href="https://ai.googleblog.com/2020/04/exploring-nature-inspired-robot-agility.html">Google</a> / <a href="https://bair.berkeley.edu/blog/2020/04/03/laikago/">BAIR</a> / <a href="https://www.wired.com/story/how-a-real-dog-taught-a-robot-dog-to-walk/">WIRED</a> / <a href="https://www.technologyreview.com/2020/04/03/998489/google-ai-robotic-dog-learns-with-imitation-reinforcement-learning/#:~:text=What%20they%20did%3A%20Using%20a,traditional%20hand%2Dcoded%20robotic%20controls.">Tech Review</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="http://arxiv.org/abs/2004.00784">arXiv</a>] </h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Video</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/lKYh6uuCwRY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@inproceedings{
-	RoboImitationPeng20,
-	author = {Peng, Xue Bin and Coumans, Erwin and Zhang, Tingnan and Lee, Tsang-Wei Edward and Tan, Jie and Levine, Sergey},
-	booktitle={Robotics: Science and Systems},
-	year = {2020},
-	month = {07},
-	title = {Learning Agile Robotic Locomotion Skills by Imitating Animals},
-	doi = {10.15607/RSS.2020.XVI.064}
-}
-</pre>

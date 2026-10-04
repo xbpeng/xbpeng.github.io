@@ -1,71 +1,60 @@
 ---
-layout: default
+layout: project
+
 title: "Robust and Versatile Bipedal Jumping Control through Reinforcement Learning"
+
+venue: "Robotics: Science and Systems (RSS 2023)"
+
+authors:
+  - "Zhongyu Li (1)"
+  - "Xue Bin Peng (2)"
+  - "Pieter Abbeel (1)"
+  - "Sergey Levine (1)"
+  - "Glen Berseth (3)"
+  - "Koushil Sreenath (1)"
+
+affiliations:
+  - "University of California, Berkeley"
+  - "Simon Fraser University"
+  - "Université de Montréal, Mila"
+
+thumbnail: "cassie_jump_thumb.png"
+
+teaser: "cassie_jump_teaser.png"
+
+paper: "Cassie_Jump_2023.pdf"
+
+links:
+  Preprint:
+    arXiv: "https://arxiv.org/abs/2302.09450"
+
+videos:
+  - "https://www.youtube.com/embed/aAPSZ2QFB-E"
+
+abstract: >-
+  This work aims to push the limits of agility for bipedal robots by enabling a torque-controlled
+  bipedal robot to perform robust and versatile dynamic jumps in the real world. We present a
+  reinforcement learning framework for training a robot to accomplish a large variety of jumping
+  tasks, such as jumping to different locations and directions. To improve performance on these
+  challenging tasks, we develop a new policy structure that encodes the robot’s long-term input/output
+  (I/O) history while also providing direct access to a short-term I/O history. In order to train a
+  versatile jumping policy, we utilize a multi-stage training scheme that includes different training
+  stages for different objectives. After multi-stage training, the policy can be directly transferred
+  to a real bipedal Cassie robot. Training on different tasks and exploring more diverse scenarios
+  lead to highly robust policies that can exploit the diverse set of learned maneuvers to recover from
+  perturbations or poor landings during real-world deployment. Such robustness in the proposed policy
+  enables Cassie to succeed in completing a variety of challenging jump tasks in the real world, such
+  as standing long jumps, jumping onto elevated platforms, and multi-axes jumps.
+
+bibtex: |
+  @inproceedings{
+  	CassieJumpLi2023,
+  	author={Zhongyu Li and Xue Bin Peng and Pieter Abbeel and Sergey Levine and Glen Berseth and Koushil Sreenath},
+  	editor={Kostas E. Bekris and Kris Hauser and Sylvia L. Herbert and Jingjin Yu},
+  	title={Robust and Versatile Bipedal Jumping Control through Reinforcement Learning},
+  	booktitle={Robotics: Science and Systems XIX, Daegu, Republic of Korea, July 10-14, 2023},
+  	year={2023},
+  	url={https://doi.org/10.15607/RSS.2023.XIX.052},
+  	doi={10.15607/RSS.2023.XIX.052}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		Robotics: Science and Systems (RSS 2023)<br>
-		<br>
-		<nobr> Zhongyu Li (1)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (2)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1)</nobr> &emsp;&emsp; <nobr>Sergey Levine (1)</nobr> &emsp;&emsp; <nobr>Glen Berseth (3)</nobr> &emsp;&emsp; <nobr>Koushil Sreenath (1)</nobr> <br>
-		<br>
-		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) Simon Fraser University</nobr> &emsp;&emsp; <nobr>(3) Université de Montréal, Mila</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="cassie_jump_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	This work aims to push the limits of agility for
-	bipedal robots by enabling a torque-controlled bipedal robot to
-	perform robust and versatile dynamic jumps in the real world.
-	We present a reinforcement learning framework for training
-	a robot to accomplish a large variety of jumping tasks, such
-	as jumping to different locations and directions. To improve
-	performance on these challenging tasks, we develop a new policy
-	structure that encodes the robot’s long-term input/output (I/O)
-	history while also providing direct access to a short-term I/O
-	history. In order to train a versatile jumping policy, we utilize
-	a multi-stage training scheme that includes different training
-	stages for different objectives. After multi-stage training, the
-	policy can be directly transferred to a real bipedal Cassie robot.
-	Training on different tasks and exploring more diverse scenarios
-	lead to highly robust policies that can exploit the diverse set
-	of learned maneuvers to recover from perturbations or poor
-	landings during real-world deployment. Such robustness in the
-	proposed policy enables Cassie to succeed in completing a variety
-	of challenging jump tasks in the real world, such as standing long
-	jumps, jumping onto elevated platforms, and multi-axes jumps.
-</td>
-
-<td>
-	<h3> Paper: [<a href="Cassie_Jump_2023.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2302.09450">arXiv</a>] </h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Videos</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/aAPSZ2QFB-E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@inproceedings{
-	CassieJumpLi2023,
-	author={Zhongyu Li and Xue Bin Peng and Pieter Abbeel and Sergey Levine and Glen Berseth and Koushil Sreenath},
-	editor={Kostas E. Bekris and Kris Hauser and Sylvia L. Herbert and Jingjin Yu},
-	title={Robust and Versatile Bipedal Jumping Control through Reinforcement Learning},
-	booktitle={Robotics: Science and Systems XIX, Daegu, Republic of Korea, July 10-14, 2023},
-	year={2023},
-	url={https://doi.org/10.15607/RSS.2023.XIX.052},
-	doi={10.15607/RSS.2023.XIX.052}
-}
-</pre>

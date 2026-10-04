@@ -1,69 +1,72 @@
 ---
-layout: default
+layout: project
+
 title: "RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning"
+
+venue: "Conference on Robot Learning (CoRL 2023)"
+
+authors:
+  - "Kevin Zakka (1, 2)"
+  - "Philipp Wu (1)"
+  - "Laura Smith (1)"
+  - "Nimrod Gileadi (2)"
+  - "Taylor Howell (3)"
+  - "Xue Bin Peng (4)"
+  - "Sumeet Singh (2)"
+  - "Yuval Tassa (2)"
+  - "Pete Florence (2)"
+  - "Andy Zeng (2)"
+  - "Pieter Abbeel (1)"
+
+affiliations:
+  - "University of California, Berkeley"
+  - "Google DeepMind"
+  - "Stanford University"
+  - "Simon Fraser University"
+
+thumbnail: "robo_pianist_thumb.png"
+
+teaser: "robo_pianist_teaser.png"
+
+paper: "RoboPianist_2023.pdf"
+
+links:
+  Code:
+    GitHub: "https://github.com/google-research/robopianist"
+  Webpage:
+    Link: "https://kzakka.com/robopianist/"
+  Preprint:
+    arXiv: "https://arxiv.org/abs/2304.04150"
+
+videos:
+  - "https://www.youtube.com/embed/VBFn_Gg0yD8"
+
+abstract: >-
+  Replicating human-like dexterity in robot hands represents one of the largest open problems in
+  robotics. Reinforcement learning is a promising approach that has achieved impressive progress in
+  the last few years; however, the class of problems it has typically addressed corresponds to a
+  rather narrow definition of dexterity as compared to human capabilities. To address this gap, we
+  investigate piano-playing, a skill that challenges even the human limits of dexterity, as a means to
+  test high-dimensional control, and which requires high spatial and temporal precision, and complex
+  finger coordination and planning. We introduce ROBOPIANIST, a system that enables simulated
+  anthropomorphic hands to learn an extensive repertoire of 150 piano pieces where traditional
+  model-based optimization struggles. We additionally introduce an open-sourced environment, benchmark
+  of tasks, interpretable evaluation metrics, and open challenges for future study.
+
+bibtex: |
+  @InProceedings{
+  	RoboPianistZakka2023,
+  	title={RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning},
+  	author={Zakka, Kevin and Wu, Philipp and Smith, Laura and Gileadi, Nimrod and Howell, Taylor and Peng, Xue Bin and Singh, Sumeet and Tassa, Yuval and Florence, Pete and Zeng, Andy and Abbeel, Pieter},
+  	booktitle={Proceedings of The 7th Conference on Robot Learning},
+  	pages={2975--2994},
+  	year={2023},
+  	editor={Tan, Jie and Toussaint, Marc and Darvish, Kourosh},
+  	volume={229},
+  	series={Proceedings of Machine Learning Research},
+  	month={06--09 Nov},
+  	publisher={PMLR},
+  	pdf={https://proceedings.mlr.press/v229/zakka23a/zakka23a.pdf},
+  	url={https://proceedings.mlr.press/v229/zakka23a.html}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		Conference on Robot Learning (CoRL 2023)<br>
-		<br>
-		<nobr> Kevin Zakka (1, 2)</nobr> &emsp;&emsp; <nobr>Philipp Wu (1)</nobr> &emsp;&emsp; <nobr>Laura Smith (1)</nobr> &emsp;&emsp; <nobr>Nimrod Gileadi (2)</nobr> &emsp;&emsp; <nobr>Taylor Howell (3)</nobr> &emsp;&emsp; <nobr>Xue Bin Peng (4)</nobr> &emsp;&emsp; <nobr>Sumeet Singh (2)</nobr> &emsp;&emsp; <nobr>Yuval Tassa (2)</nobr> &emsp;&emsp; <nobr>Pete Florence (2)</nobr> &emsp;&emsp; <nobr>Andy Zeng (2)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel (1)</nobr> <br>
-		<br>
-		<nobr>(1) University of California, Berkeley</nobr> &emsp;&emsp; <nobr>(2) Google DeepMind</nobr> &emsp;&emsp; <nobr>(3) Stanford University</nobr> &emsp;&emsp; <nobr>(4) Simon Fraser University</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="robo_pianist_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	Replicating human-like dexterity in robot hands represents one of the
-	largest open problems in robotics. Reinforcement learning is a promising
-	approach that has achieved impressive progress in the last few years; however, the
-	class of problems it has typically addressed corresponds to a rather narrow
-	definition of dexterity as compared to human capabilities. To address this gap, we
-	investigate piano-playing, a skill that challenges even the human limits of 
-	dexterity, as a means to test high-dimensional control, and which requires high spatial
-	and temporal precision, and complex finger coordination and planning. We 
-	introduce ROBOPIANIST, a system that enables simulated anthropomorphic hands to
-	learn an extensive repertoire of 150 piano pieces where traditional model-based
-	optimization struggles. We additionally introduce an open-sourced environment,
-	benchmark of tasks, interpretable evaluation metrics, and open challenges for
-	future study.
-</td>
-
-<td>
-	<h3> Paper: [<a href="RoboPianist_2023.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/google-research/robopianist">GitHub</a>] &nbsp; &nbsp; &nbsp; Webpage: [<a href="https://kzakka.com/robopianist/">Link</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/2304.04150">arXiv</a>] </h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Videos</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/VBFn_Gg0yD8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@InProceedings{
-	RoboPianistZakka2023,
-	title={RoboPianist: Dexterous Piano Playing with Deep Reinforcement Learning},
-	author={Zakka, Kevin and Wu, Philipp and Smith, Laura and Gileadi, Nimrod and Howell, Taylor and Peng, Xue Bin and Singh, Sumeet and Tassa, Yuval and Florence, Pete and Zeng, Andy and Abbeel, Pieter},
-	booktitle={Proceedings of The 7th Conference on Robot Learning},
-	pages={2975--2994},
-	year={2023},
-	editor={Tan, Jie and Toussaint, Marc and Darvish, Kourosh},
-	volume={229},
-	series={Proceedings of Machine Learning Research},
-	month={06--09 Nov},
-	publisher={PMLR},
-	pdf={https://proceedings.mlr.press/v229/zakka23a/zakka23a.pdf},
-	url={https://proceedings.mlr.press/v229/zakka23a.html}
-}
-</pre>

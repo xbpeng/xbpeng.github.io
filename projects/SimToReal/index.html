@@ -1,76 +1,62 @@
 ---
-layout: default
-title: Sim-to-Real Transfer of Robotic Control with Dynamics Randomization
+layout: project
+
+title: "Sim-to-Real Transfer of Robotic Control with Dynamics Randomization"
+
+venue: "IEEE International Conference on Robotics and Automation (ICRA 2018)"
+
+authors:
+  - "Xue Bin Peng (1, 2)"
+  - "Marcin Andrychowicz (1)"
+  - "Wojciech Zaremba (1)"
+  - "Pieter Abbeel (1, 2)"
+
+affiliations:
+  - "OpenAI"
+  - "University of California, Berkeley"
+
+thumbnail: "simtoreal_thumb.png"
+
+teaser: "simtoreal_teaser.png"
+
+paper: "SimToReal_2018.pdf"
+
+links:
+  Preprint:
+    arXiv: "https://arxiv.org/abs/1710.06537"
+
+videos:
+  - "https://www.youtube.com/embed/XUW0cnvqbwM"
+
+abstract: >-
+  Simulations are attractive environments for training agents as they provide an abundant source of
+  data and alleviate certain safety concerns during the training process. But the behaviours developed
+  by agents in simulation are often specific to the characteristics of the simulator. Due to modeling
+  error, strategies that are successful in simulation may not transfer to their real world
+  counterparts. In this paper, we demonstrate a simple method to bridge this “reality gap.” By
+  randomizing the dynamics of the simulator during training, we are able to develop policies that are
+  capable of adapting to very different dynamics, including ones that differ significantly from the
+  dynamics on which the policies were trained. This adaptivity enables the policies to generalize to
+  the dynamics of the real world without any training on the physical system. Our approach is
+  demonstrated on an object pushing task using a robotic arm. Despite being trained exclusively in
+  simulation, our policies are able to maintain a similar level of performance when deployed on a real
+  robot, reliably moving an object to a desired location from random initial configurations. We
+  explore the impact of various design decisions and show that the resulting policies are robust to
+  significant calibration error.
+
+bibtex: |
+  @inproceedings{
+  	Sim2Real2018,
+  	author={Xue Bin Peng and Marcin Andrychowicz and Wojciech Zaremba and Pieter Abbeel},
+  	booktitle={2018 IEEE International Conference on Robotics and Automation (ICRA)},
+  	title={Sim-to-Real Transfer of Robotic Control with Dynamics Randomization},
+  	year={2018},
+  	volume={},
+  	number={},
+  	pages={1-8},
+  	keywords={Robots;Training;Adaptation models;Task analysis;Trajectory;Data models;Robustness},
+  	doi={10.1109/ICRA.2018.8460528},
+  	ISSN={2577-087X},
+  	month={May}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		IEEE International Conference on Robotics and Automation (ICRA 2018)<br>
-		<br>
-		<nobr>Xue Bin Peng(1,2)</nobr> &emsp;&emsp; <nobr>Marcin Andrychowicz(1)</nobr> &emsp;&emsp; <nobr>Wojciech Zaremba(1)</nobr> &emsp;&emsp; <nobr>Pieter Abbeel(1,2)</nobr><br>
-		<br>
-		<nobr>(1)OpenAI</nobr> &emsp;&emsp; <nobr>(2)University of California, Berkeley</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="simtoreal_teaser.png"  width="100%" height="inherit" />		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	Simulations are attractive environments for training
-	agents as they provide an abundant source of data and
-	alleviate certain safety concerns during the training process.
-	But the behaviours developed by agents in simulation are often
-	specific to the characteristics of the simulator. Due to modeling
-	error, strategies that are successful in simulation may not
-	transfer to their real world counterparts. In this paper, we
-	demonstrate a simple method to bridge this “reality gap.” By
-	randomizing the dynamics of the simulator during training, we
-	are able to develop policies that are capable of adapting to
-	very different dynamics, including ones that differ significantly
-	from the dynamics on which the policies were trained. This
-	adaptivity enables the policies to generalize to the dynamics of
-	the real world without any training on the physical system. Our
-	approach is demonstrated on an object pushing task using a
-	robotic arm. Despite being trained exclusively in simulation, our
-	policies are able to maintain a similar level of performance when
-	deployed on a real robot, reliably moving an object to a desired
-	location from random initial configurations. We explore the
-	impact of various design decisions and show that the resulting
-	policies are robust to significant calibration error.
-</td>
-
-<td>
-	<h3> Paper: [<a href="SimToReal_2018.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="https://arxiv.org/abs/1710.06537">arXiv</a>] </h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Video</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/XUW0cnvqbwM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@inproceedings{
-	Sim2Real2018, 
-	author={Xue Bin Peng and Marcin Andrychowicz and Wojciech Zaremba and Pieter Abbeel}, 
-	booktitle={2018 IEEE International Conference on Robotics and Automation (ICRA)}, 
-	title={Sim-to-Real Transfer of Robotic Control with Dynamics Randomization}, 
-	year={2018}, 
-	volume={}, 
-	number={}, 
-	pages={1-8}, 
-	keywords={Robots;Training;Adaptation models;Task analysis;Trajectory;Data models;Robustness}, 
-	doi={10.1109/ICRA.2018.8460528}, 
-	ISSN={2577-087X}, 
-	month={May}
-}
-</pre>

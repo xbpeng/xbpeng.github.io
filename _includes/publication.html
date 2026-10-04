@@ -1,0 +1,22 @@
+{% comment %}
+	Renders one row of the publication list on the home page.
+	Usage: {% include publication.html name="GPC" %}
+	where name is the directory in projects/. All info is read from that project's front matter.
+{% endcomment %}
+{% assign pub_dir = "/projects/" | append: include.name | append: "/" %}
+{% assign pub = site.pages | where: "dir", pub_dir | where: "layout", "project" | first %}
+{% assign pub_path = "projects/" | append: include.name | append: "/" %}
+{% if pub %}
+	<tr>
+		<td><a href="{{ pub_path }}index.html"><img style="vertical-align:middle" src="{{ pub_path }}{{ pub.thumbnail }}" width="200" height="inherit" border="1px" alt=""/></a></td>
+		<td>
+			<b>{{ pub.title }}</b><br>
+			{% for author in pub.authors %}{% assign author_name = author | split: " (" | first | remove: "*" | remove: "†" | strip %}{% if author_name == site.data.publications.highlight_author %}<b>{{ author_name }}</b>{% else %}{{ author_name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}<br>
+			<em> {{ pub.venue }} </em> <br>
+			{% if pub.award %}<b> {{ pub.award }} </b> <br>{% endif %}
+			[<a href="{{ pub_path }}index.html">Project page</a>] [<a href="{{ pub_path }}{{ pub.paper }}">Paper</a>]
+		</td>
+	</tr>
+{% else %}
+	<tr><td colspan="2" style="color:red;"><b>Missing project page: projects/{{ include.name }}/index.html</b></td></tr>
+{% endif %}

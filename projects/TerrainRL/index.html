@@ -1,75 +1,57 @@
 ---
-layout: default
-title: Dynamic Terrain Traversal Skills Using Reinforcement Learning
+layout: project
+
+title: "Dynamic Terrain Traversal Skills Using Reinforcement Learning"
+
+venue: "ACM Transactions on Graphics (Proc. SIGGRAPH 2015)"
+
+authors:
+  - "Xue Bin Peng"
+  - "Glen Berseth"
+  - "Michiel van de Panne"
+
+affiliations:
+  - "University of British Columbia"
+
+thumbnail: "terrainrl_thumb.png"
+
+teaser: "terrainrl_teaser.png"
+
+paper: "TerrainRL_2015.pdf"
+
+videos:
+  - "https://www.youtube.com/embed/mazfn4dHPRM"
+  - "https://www.youtube.com/embed/RTuSHI5FNzg"
+
+abstract: >-
+  The locomotion skills developed for physics-based characters most often target flat terrain.
+  However, much of their potential lies with the creation of dynamic, momentum-based motions across
+  more complex terrains. In this paper, we learn controllers that allow simulated characters to
+  traverse terrains with gaps, steps, and walls using highly dynamic gaits. This is achieved using
+  reinforcement learning, with careful attention given to the action representation, non-parametric
+  approximation of both the value function and the policy; epsilon-greedy exploration; and the
+  learning of a good state distance metric. The methods enable a 21-link planar dog and a 7-link
+  planar biped to navigate challenging sequences of terrain using bounding and running gaits. We
+  evaluate the impact of the key features of our skill learning pipeline on the resulting performance.
+
+bibtex: |
+  @article{
+  	2015-TOG-terrainRL,
+  	author = {Peng, Xue Bin and Berseth, Glen and van de Panne, Michiel},
+  	title = {Dynamic Terrain Traversal Skills Using Reinforcement Learning},
+  	journal = {ACM Trans. Graph.},
+  	issue_date = {August 2015},
+  	volume = {34},
+  	number = {4},
+  	month = jul,
+  	year = {2015},
+  	issn = {0730-0301},
+  	pages = {80:1--80:11},
+  	articleno = {80},
+  	numpages = {11},
+  	url = {http://doi.acm.org/10.1145/2766910},
+  	doi = {10.1145/2766910},
+  	acmid = {2766910},
+  	publisher = {ACM}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		Transactions on Graphics (Proc. ACM SIGGRAPH 2015) <br>
-		<br>
-		<nobr>Xue Bin Peng</nobr> &emsp;&emsp; <nobr>Glen Berseth</nobr> &emsp;&emsp; <nobr>Michiel van de Panne</nobr><br>
-		<br>
-		<nobr>University of British Columbia</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="terrainrl_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	The locomotion skills developed for physics-based characters most
-	often target flat terrain. However, much of their potential lies with
-	the creation of dynamic, momentum-based motions across more
-	complex terrains. In this paper, we learn controllers that allow
-	simulated characters to traverse terrains with gaps, steps, and walls
-	using highly dynamic gaits. This is achieved using reinforcement
-	learning, with careful attention given to the action representation,
-	non-parametric approximation of both the value function and the
-	policy; epsilon-greedy exploration; and the learning of a good state
-	distance metric. The methods enable a 21-link planar dog and a
-	7-link planar biped to navigate challenging sequences of terrain using
-	bounding and running gaits. We evaluate the impact of the key
-	features of our skill learning pipeline on the resulting performance.
-</td>
-
-<td>
-	<h3> Paper: [<a href="TerrainRL_2015.pdf">PDF</a>] </h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Videos</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/mazfn4dHPRM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		<br><br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/RTuSHI5FNzg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@article{
-	2015-TOG-terrainRL,
-	author = {Peng, Xue Bin and Berseth, Glen and van de Panne, Michiel},
-	title = {Dynamic Terrain Traversal Skills Using Reinforcement Learning},
-	journal = {ACM Trans. Graph.},
-	issue_date = {August 2015},
-	volume = {34},
-	number = {4},
-	month = jul,
-	year = {2015},
-	issn = {0730-0301},
-	pages = {80:1--80:11},
-	articleno = {80},
-	numpages = {11},
-	url = {http://doi.acm.org/10.1145/2766910},
-	doi = {10.1145/2766910},
-	acmid = {2766910},
-	publisher = {ACM}
-}
-</pre>

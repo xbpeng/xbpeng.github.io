@@ -1,77 +1,70 @@
 ---
-layout: default
+layout: project
+
 title: "SFV: Reinforcement Learning of Physical Skills from Videos"
+
+venue: "ACM Transactions on Graphics (Proc. SIGGRAPH Asia 2018)"
+
+authors:
+  - "Xue Bin Peng"
+  - "Angjoo Kanazawa"
+  - "Jitendra Malik"
+  - "Pieter Abbeel"
+  - "Sergey Levine"
+
+affiliations:
+  - "University of California, Berkeley"
+
+thumbnail: "sfv_thumb.png"
+
+teaser: "sfv_teaser.png"
+
+paper: "SFV_2018.pdf"
+
+links:
+  Media:
+    BAIR: "https://bair.berkeley.edu/blog/2018/10/09/sfv/"
+    ScienceNews: "https://www.sciencenews.org/article/virtual-avatars-learned-cartwheels-and-other-stunts-videos-people"
+  Preprint:
+    arXiv: "http://arxiv.org/abs/1810.03599"
+  Code:
+    GitHub: "https://github.com/akanazawa/motion_reconstruction"
+
+videos:
+  - "https://www.youtube.com/embed/4Qg5I5vhX7Q"
+  - "https://www.youtube.com/embed/_iXt7by4nU4"
+
+abstract: >-
+  Data-driven character animation based on motion capture can produce highly naturalistic behaviors
+  and, when combined with physics simulation, can provide for natural procedural responses to physical
+  perturbations, environmental changes, and morphological discrepancies. Motion capture remains the
+  most popular source of motion data, but collecting mocap data typically requires heavily
+  instrumented environments and actors. In this paper, we propose a method that enables physically
+  simulated characters to learn skills from videos (SFV). Our approach, based on deep pose estimation
+  and deep reinforcement learning, allows data-driven animation to leverage the abundance of publicly
+  available video clips from the web, such as those from YouTube. This has the potential to enable
+  fast and easy design of character controllers simply by querying for video recordings of the desired
+  behavior. The resulting controllers are robust to perturbations, can be adapted to new settings, can
+  perform basic object interactions, and can be retargeted to new morphologies via reinforcement
+  learning. We further demonstrate that our method can predict potential human motions from still
+  images, by forward simulation of learned controllers initialized from the observed pose. Our
+  framework is able to learn a broad range of dynamic skills, including locomotion, acrobatics, and
+  martial arts.
+
+bibtex: |
+  @article{
+  	2018-TOG-SFV,
+  	author = {Peng, Xue Bin and Kanazawa, Angjoo and Malik, Jitendra and Abbeel, Pieter and Levine, Sergey},
+  	title = {SFV: Reinforcement Learning of Physical Skills from Videos},
+  	journal = {ACM Trans. Graph.},
+  	volume = {37},
+  	number = {6},
+  	month = nov,
+  	year = {2018},
+  	articleno = {178},
+  	numpages = {14},
+  	publisher = {ACM},
+  	address = {New York, NY, USA},
+  	keywords = {physics-based character animation, computer vision, video imitation, reinforcement learning, motion reconstruction}
+  }
 ---
-
-<center><h1>{{ page.title }}</h1></center>
-
-<td>
-	<center>
-		Transactions on Graphics (Proc. ACM SIGGRAPH Asia 2018)<br>
-		<br>
-		<nobr>Xue Bin Peng</nobr> &emsp;&emsp; <nobr>Angjoo Kanazawa</nobr> &emsp;&emsp; <nobr>Jitendra Malik</nobr> &emsp;&emsp; <nobr>Pieter Abbeel</nobr> &emsp;&emsp; <nobr>Sergey Levine</nobr><br>
-		<br>
-		<nobr>University of California, Berkeley</nobr><br>
-		<br>
-		<img style="vertical-align:middle" src="sfv_teaser.png"  width="100%" height="inherit"/>		
-	</center>
-</td>
-
-<br>
-	
-<td>
-	<hr>
-	<h3 style="margin-bottom:10px;">Abstract</h3>
-	Data-driven character animation based on motion capture can produce
-	highly naturalistic behaviors and, when combined with physics simulation,
-	can provide for natural procedural responses to physical perturbations,
-	environmental changes, and morphological discrepancies. Motion capture
-	remains the most popular source of motion data, but collecting mocap data
-	typically requires heavily instrumented environments and actors. In this
-	paper, we propose a method that enables physically simulated characters
-	to learn skills from videos (SFV). Our approach, based on deep pose estimation
-	and deep reinforcement learning, allows data-driven animation to
-	leverage the abundance of publicly available video clips from the web, such
-	as those from YouTube. This has the potential to enable fast and easy design
-	of character controllers simply by querying for video recordings of the
-	desired behavior. The resulting controllers are robust to perturbations, can
-	be adapted to new settings, can perform basic object interactions, and can
-	be retargeted to new morphologies via reinforcement learning. We further
-	demonstrate that our method can predict potential human motions from
-	still images, by forward simulation of learned controllers initialized from
-	the observed pose. Our framework is able to learn a broad range of dynamic
-	skills, including locomotion, acrobatics, and martial arts.
-</td>
-
-<td>
-	<h3> Paper: [<a href="SFV_2018.pdf">PDF</a>] &nbsp; &nbsp; &nbsp; Media: [<a href="https://bair.berkeley.edu/blog/2018/10/09/sfv/">BAIR</a> / <a href="https://www.sciencenews.org/article/virtual-avatars-learned-cartwheels-and-other-stunts-videos-people">ScienceNews</a>] &nbsp; &nbsp; &nbsp; Preprint: [<a href="http://arxiv.org/abs/1810.03599">arXiv</a>]  &nbsp; &nbsp; &nbsp; Code: [<a href="https://github.com/akanazawa/motion_reconstruction">GitHub</a>] </h3>
-</td>
-
-<tr>
-		<h3 style="margin-bottom:10px;">Videos</h3>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/4Qg5I5vhX7Q" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		<br><br>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/_iXt7by4nU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</tr>
-	
-<br>
-<br>
-
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-@article{
-	2018-TOG-SFV,
-	author = {Peng, Xue Bin and Kanazawa, Angjoo and Malik, Jitendra and Abbeel, Pieter and Levine, Sergey},
-	title = {SFV: Reinforcement Learning of Physical Skills from Videos},
-	journal = {ACM Trans. Graph.},
-	volume = {37},
-	number = {6},
-	month = nov,
-	year = {2018},
-	articleno = {178},
-	numpages = {14},
-	publisher = {ACM},
-	address = {New York, NY, USA},
-	keywords = {physics-based character animation, computer vision, video imitation, reinforcement learning, motion reconstruction}
-} 
-</pre>

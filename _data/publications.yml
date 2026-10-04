@@ -1,0 +1,87 @@
+# Publication list shown on the home page, in display order.
+# Each entry is the name of a directory in projects/ whose index.html holds the project info.
+
+highlight_author: "Xue Bin Peng"
+
+years:
+  - year: 2026
+    projects:
+      - HIL
+      - SMP
+      - GPC
+      - MotionBricks
+      - RoboSaber
+      - Kimodo
+  - year: 2025
+    projects:
+      - MaskedManipulator
+      - ADD
+      - StableMotion
+      - TWIST
+      - LCP
+      - Diffusion_Humanoid_Manipulation
+      - PARC
+      - CLoSD
+  - year: 2024
+    projects:
+      - Cassie_Locomotion
+      - HiLMa-Res
+      - MaskedMimic
+      - AMDM
+      - SuperPADL
+      - CondMDI
+      - TeSMo
+      - STMC
+      - Trajeglish
+  - year: 2023
+    projects:
+      - Vid2Player3D
+      - InterPhys
+      - CALM
+      - VIPER
+      - A1Goalkeeping
+      - TWiRL
+      - RoboPianist
+      - Trace_Pace
+      - Cassie_Jump
+      - GenLoco
+  - year: 2022
+    projects:
+      - CIC
+      - PADL
+      - AMP_Locomotion
+      - A1SoccerShooting
+      - ASE
+      - Finetuning_Locomotion
+  - year: 2021
+    projects:
+      - Learn_to_Move
+      - MACAW
+      - AMP
+      - Cassie_Walking
+  - year: 2020
+    projects:
+      - Robotic_Imitation
+      - CICP
+  - year: 2019
+    projects:
+      - RCP
+      - SymLoco
+      - AWR
+      - MCP
+      - VDB
+  - year: 2018
+    projects:
+      - SFV
+      - DeepMimic
+      - SimToReal
+  - year: 2017
+    projects:
+      - DeepLoco
+      - ActionSpace
+  - year: 2016
+    projects:
+      - DeepTerrainRL
+  - year: 2015
+    projects:
+      - TerrainRL

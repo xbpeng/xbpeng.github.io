@@ -99,7 +99,7 @@ pre {
 	font-weight: 650;
 	color: var(--text);
 }
-.site-nav ul, .site-footer ul {
+.site-nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -116,20 +116,7 @@ pre {
 	color: var(--accent);
 	text-decoration: none;
 }
-.site-nav iframe {
-	vertical-align: middle;
-}
 
-.site-footer {
-	max-width: var(--max-width);
-	margin: 0 auto;
-	padding: 1.5rem 1.5rem 3rem;
-	border-top: 1px solid var(--border);
-	font-size: 0.85rem;
-}
-.site-footer a {
-	color: var(--muted);
-}
 
 /* ---------- Shared components ---------- */
 .pill {
@@ -171,6 +158,21 @@ pre {
 }
 .intro-text h1 {
 	margin-top: 0;
+	margin-bottom: 0.4rem;
+}
+.profile-links {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem 0;
+	font-size: 0.95rem;
+}
+.profile-links li + li::before {
+	content: "·";
+	margin: 0 0.6rem;
+	color: var(--faint);
 }
 .callout {
 	padding: 0.75rem 1rem;
@@ -184,6 +186,9 @@ pre {
 	padding: 0.5rem 1.5rem 0.75rem;
 	background: var(--bg-soft);
 	border-radius: 8px;
+}
+.intro + .panel {
+	margin-top: 2rem;
 }
 .panel h2 {
 	margin-top: 1rem;
@@ -211,10 +216,11 @@ h3.year {
 	width: 100%;
 	border: 1px solid var(--border);
 	border-radius: 6px;
-	transition: opacity 0.15s;
+	transition: transform 0.2s, box-shadow 0.2s;
 }
 .pub-thumb:hover img, .pub-thumb:hover video {
-	opacity: 0.85;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 .pub-info {
 	display: flex;
@@ -326,6 +332,11 @@ h3.year {
 	border-radius: 6px;
 }
 
+.project-section {
+	max-width: 42rem;  /* about 75 characters per line, easier to read */
+	margin-left: auto;
+	margin-right: auto;
+}
 .project-section h2 {
 	margin-top: 2.5rem;
 }
@@ -462,7 +473,7 @@ h3.year {
 	.container {
 		padding: 1.5rem 1rem 2rem;
 	}
-	.site-nav, .site-footer {
+	.site-nav {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}

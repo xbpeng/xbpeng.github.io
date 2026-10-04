@@ -1,0 +1,215 @@
+---
+layout: default
+title: "CPSC 532I: Topics in AI: Reinforcement Learning"
+
+# Lecture schedule. Each lecture has a date, a topic, and optionally a list of slides.
+# Each slide entry has a file to link to and a thumbnail image to show, both relative to this
+# folder. Lectures without slides (e.g. "No Class") are shown greyed out.
+schedule:
+  - date: "Sep 3"
+    topic: "Introduction"
+    slides:
+      - file: "slides/00_Intro.pdf"
+        thumb: "slide_thumbs/00_Intro.png"
+  - date: "Sep 8"
+    topic: "MDP"
+    slides:
+      - file: "slides/01_MDP.pdf"
+        thumb: "slide_thumbs/01_MDP.png"
+  - date: "Sep 10"
+    topic: "Policy Evaluation"
+    slides:
+      - file: "slides/02_Policy_Evaluation.pdf"
+        thumb: "slide_thumbs/02_Policy_Evaluation.png"
+  - date: "Sep 15"
+    topic: "Policy Evaluation, Behavioral Cloning"
+    slides:
+      - file: "slides/02_Policy_Evaluation.pdf"
+        thumb: "slide_thumbs/02_Policy_Evaluation.png"
+      - file: "slides/03_Behavioral_Cloning.pdf"
+        thumb: "slide_thumbs/03_Behavioral_Cloning.png"
+  - date: "Sep 17"
+    topic: "No Class"
+  - date: "Sep 22"
+    topic: "Behavioral Cloning"
+    slides:
+      - file: "slides/03_Behavioral_Cloning.pdf"
+        thumb: "slide_thumbs/03_Behavioral_Cloning.png"
+  - date: "Sep 24"
+    topic: "Policy Search"
+    slides:
+      - file: "slides/04_Policy_Search.pdf"
+        thumb: "slide_thumbs/04_Policy_Search.png"
+  - date: "Sep 29"
+    topic: "Policy Gradient"
+    slides:
+      - file: "slides/06_Policy_Gradient.pdf"
+        thumb: "slide_thumbs/06_Policy_Gradient.png"
+  - date: "Oct 1"
+    topic: "No Class"
+  - date: "Oct 6"
+    topic: "Policy Gradient"
+    slides:
+      - file: "slides/06_Policy_Gradient.pdf"
+        thumb: "slide_thumbs/06_Policy_Gradient.png"
+  - date: "Oct 8"
+    topic: "Q-Learning"
+    slides:
+      - file: "slides/07_Q_Learning.pdf"
+        thumb: "slide_thumbs/07_Q_Learning.png"
+  - date: "Oct 13"
+    topic: "No Class - Thanksgiving"
+  - date: "Oct 15"
+    topic: "Q-Learning"
+    slides:
+      - file: "slides/07_Q_Learning.pdf"
+        thumb: "slide_thumbs/07_Q_Learning.png"
+  - date: "Oct 20"
+    topic: "Actor-Critic Algorithms"
+    slides:
+      - file: "slides/08_Actor_Critic.pdf"
+        thumb: "slide_thumbs/08_Actor_Critic.png"
+  - date: "Oct 22"
+    topic: "Model-Based RL"
+    slides:
+      - file: "slides/09_Model_Based_RL.pdf"
+        thumb: "slide_thumbs/09_Model_Based_RL.png"
+  - date: "Oct 27"
+    topic: "Model-Based RL, On-Policy vs Off-Policy Algorithms"
+    slides:
+      - file: "slides/09_Model_Based_RL.pdf"
+        thumb: "slide_thumbs/09_Model_Based_RL.png"
+      - file: "slides/10_On_Policy_Off_Policy.pdf"
+        thumb: "slide_thumbs/10_On_Policy_Off_Policy.png"
+  - date: "Oct 29"
+    topic: "Advance Policy Gradient"
+    slides:
+      - file: "slides/11_Advance_Policy_Gradient.pdf"
+        thumb: "slide_thumbs/11_Advance_Policy_Gradient.png"
+  - date: "Nov 3"
+    topic: "Advance Policy Gradient, Advance Q-Learning"
+    slides:
+      - file: "slides/11_Advance_Policy_Gradient.pdf"
+        thumb: "slide_thumbs/11_Advance_Policy_Gradient.png"
+      - file: "slides/12_Advance_Q_Learning.pdf"
+        thumb: "slide_thumbs/12_Advance_Q_Learning.png"
+  - date: "Nov 5"
+    topic: "Advance Q-Learning"
+    slides:
+      - file: "slides/12_Advance_Q_Learning.pdf"
+        thumb: "slide_thumbs/12_Advance_Q_Learning.png"
+  - date: "Nov 10"
+    topic: "Exploration"
+    slides:
+      - file: "slides/13_Exploration.pdf"
+        thumb: "slide_thumbs/13_Exploration.png"
+  - date: "Nov 12"
+    topic: "Domain Transfer"
+    slides:
+      - file: "slides/16_Domain_Transfer.pdf"
+        thumb: "slide_thumbs/16_Domain_Transfer.png"
+  - date: "Nov 17"
+    topic: "Domain Transfer, Project Presentations"
+    slides:
+      - file: "slides/16_Domain_Transfer.pdf"
+        thumb: "slide_thumbs/16_Domain_Transfer.png"
+      - file: "docs/Project_Presentation.pdf"
+        thumb: "slide_thumbs/presentations.png"
+  - date: "Nov 19"
+    topic: "Project Presentations"
+    slides:
+      - file: "docs/Project_Presentation.pdf"
+        thumb: "slide_thumbs/presentations.png"
+  - date: "Nov 24"
+    topic: "Project Presentations"
+    slides:
+      - file: "docs/Project_Presentation.pdf"
+        thumb: "slide_thumbs/presentations.png"
+  - date: "Nov 26"
+    topic: "Project Presentations"
+    slides:
+      - file: "docs/Project_Presentation.pdf"
+        thumb: "slide_thumbs/presentations.png"
+  - date: "Dec 1"
+    topic: "Project Presentations"
+    slides:
+      - file: "docs/Project_Presentation.pdf"
+        thumb: "slide_thumbs/presentations.png"
+---
+
+<h1>{{ page.title }}</h1>
+
+<figure class="course-banner">
+	<img src="figs/walker.gif" style="width: 26.5%;" alt="Walker">
+	<img src="figs/cheetah.gif" style="width: 26.5%;" alt="Cheetah">
+	<img src="figs/pong.gif" style="width: 20%;" alt="Pong">
+	<img src="figs/breakout.gif" style="width: 20%;" alt="Breakout">
+</figure>
+
+<p>
+	Reinforcement learning is the branch of machine learning that studies learning to act. Agents observe, predict, and act to change their environment. Reinforcement learning has notable success in learning to play games and control robots. In this course, we will cover fundamental concepts and algorithms, and introduce techniques that underlie many of the successes from reinforcement learning.
+</p>
+
+<dl class="course-info">
+	<dt>Instructor</dt>
+	<dd><a href="mailto:xbpeng@sfu.ca">Jason Peng</a></dd>
+	<dt>TA</dt>
+	<dd>TBD</dd>
+	<dt>Lectures</dt>
+	<dd><b>Wednesday</b> 11:00am-12:30pm<br><b>Friday</b> 11:00am-12:30pm</dd>
+</dl>
+
+<h2>Grading</h2>
+
+<h3>3 programming assignments <span class="weight">(40%)</span></h3>
+<ul>
+	<li><a href="https://github.com/xbpeng/rl_assignments/blob/main/a1/a1.pdf">A1</a> (10%) - Due Oct 5</li>
+	<li><a href="https://github.com/xbpeng/rl_assignments/blob/main/a2/a2.pdf">A2</a> (15%) - Due Oct 26</li>
+	<li><a href="https://github.com/xbpeng/rl_assignments/blob/main/a3/a3.pdf">A3</a> (15%) - Due Nov 23</li>
+</ul>
+
+<h3>Course project <span class="weight">(60%)</span></h3>
+<ul>
+	<li><a href="docs/Course_Project.pdf">Info</a></li>
+	<li>Proposal (10%) - Due Oct 19
+		<ul>
+			<li><a href="docs/CPSC_532I_Report_Template.zip">Template</a></li>
+		</ul>
+	</li>
+	<li>Presentation (25%)
+		<ul>
+			<li><a href="docs/Project_Presentation.pdf">Info</a></li>
+			<li><a href="https://1sfu-my.sharepoint.com/:x:/g/personal/xbpeng_sfu_ca/ETSME9IMA45JgesWbfBg-aIB4CMz0BOgCxZWcDaAGm9NDA?e=crWg4r">Signup Sheet</a></li>
+		</ul>
+	</li>
+	<li>Report (25%) - Due Dec 7
+		<ul>
+			<li><a href="docs/Project_Report.pdf">Info</a></li>
+			<li><a href="docs/CPSC_532I_Report_Template.zip">Template</a></li>
+		</ul>
+	</li>
+</ul>
+
+<p class="callout">
+	<b>Late days:</b> You have 3 late days that you can use for any assignment. You can distribute the late days however you like, but they can only be applied to programming assignments. Once you run out of late days, any late assignments will no longer be accepted.
+</p>
+
+<h2>Syllabus</h2>
+
+<div class="schedule">
+	{% for lecture in page.schedule %}
+	<div class="lecture{% unless lecture.slides %} no-slides{% endunless %}">
+		<div class="lecture-date">{{ lecture.date }}</div>
+		<div class="lecture-body">
+			<div class="lecture-topic">{{ lecture.topic }}</div>
+			{% if lecture.slides %}
+			<div class="lecture-slides">
+				{% for slide in lecture.slides %}
+				<a href="{{ slide.file }}"><img src="{{ slide.thumb }}" alt="{{ lecture.topic }}" loading="lazy"></a>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
+</div>

@@ -2,7 +2,7 @@
 :root {
 	--text: #1f2328;
 	--muted: #5f6b76;
-	--faint: #8c959f;
+	--faint: #6e7781;  /* lightest text color; keep contrast with white at least 4.5:1 */
 	--border: #e3e6ea;
 	--bg-soft: #f6f8fa;
 	--accent: #2b5fab;
@@ -360,6 +360,90 @@ h3.year {
 	border: 0;
 }
 
+/* ---------- Teaching page ---------- */
+.course-banner {
+	margin: 1.5rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5%;
+}
+.course-banner img {
+	border-radius: 4px;
+}
+.course-info {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 0.4rem 1.5rem;
+	margin: 1.5rem 0 0;
+}
+.course-info dt {
+	font-weight: 600;
+}
+.course-info dd {
+	margin: 0;
+}
+.weight {
+	font-weight: 400;
+	color: var(--muted);
+}
+.lecture {
+	display: grid;
+	grid-template-columns: 5rem 1fr;
+	gap: 1rem;
+	padding: 0.9rem 0;
+	border-bottom: 1px solid var(--border);
+}
+.lecture-date {
+	font-weight: 600;
+}
+.lecture-topic {
+	margin-bottom: 0.5rem;
+}
+.lecture.no-slides .lecture-date,
+.lecture.no-slides .lecture-topic {
+	color: var(--faint);
+	margin-bottom: 0;
+}
+.lecture-slides {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+.lecture-slides img {
+	display: block;
+	width: 200px;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	transition: opacity 0.15s;
+}
+.lecture-slides a:hover img {
+	opacity: 0.85;
+}
+
+/* ---------- Art page ---------- */
+.art-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	gap: 1rem;
+	margin-top: 2rem;
+}
+.art-item {
+	margin: 0;
+}
+.art-item img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1 / 2;
+	object-fit: cover;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	transition: opacity 0.15s;
+}
+.art-item a:hover img {
+	opacity: 0.85;
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
 	.container {
@@ -386,17 +470,19 @@ h3.year {
 	.project-title {
 		font-size: 1.5rem;
 	}
+	.lecture {
+		grid-template-columns: 1fr;
+		gap: 0.25rem;
+	}
+	.lecture-slides img {
+		width: 150px;
+	}
+	.art-grid {
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	}
 }
 
 /* ---------- Legacy (used by other pages) ---------- */
-div.art_thumbnail_box {
-	float: left;
-	width: 100px;
-	height: 200px;
-	margin: 10px;
-	border: 1px solid #000000;
-}
-
 div.video-responsive {
 	overflow: hidden;
 	padding-bottom: 56.25%;

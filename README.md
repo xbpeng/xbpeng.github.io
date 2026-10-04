@@ -60,7 +60,7 @@ author_note: "*Joint first authors."     # optional
 
 thumbnail: "Name_thumb.png"              # image on the home page
 
-teaser: "Name_teaser.png"                # one image, or a list of images
+teaser: "Name_teaser.png"                # one image or .mp4 video, or a list of them
 teaser_width: "49%"                      # optional, default 100% (e.g. for two images side by side)
 
 paper: "Name_2026.pdf"                   # the "Paper: PDF" link, and [Paper] on the home page

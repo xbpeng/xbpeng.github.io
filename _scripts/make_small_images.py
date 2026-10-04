@@ -2,7 +2,7 @@
 
 For every projects/<Name>/*_thumb.<ext> and projects/<Name>/*teaser*.<ext> image, writes a
 compressed JPEG copy next to it with "_small.jpg" appended to the name, e.g.
-GPC_thumb.png -> GPC_thumb_small.jpg. Originals are left untouched, and animated GIFs are
+GPC_thumb.png -> GPC_thumb_small.jpg. Originals are left untouched, and GIFs and videos are
 skipped. The site automatically uses the _small.jpg version when it exists, and falls back
 to the original otherwise.
 
@@ -23,6 +23,7 @@ IMAGE_TYPES = [
     ("*_thumb.*", 480, 82),
     ("*teaser*.*", 1760, 85),
 ]
+IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".webp")  # GIFs and videos are skipped
 BACKGROUND = (255, 255, 255)  # transparent areas are filled with the page background
 
 
@@ -46,7 +47,7 @@ def main():
     before = after = 0
     for pattern, max_width, quality in IMAGE_TYPES:
         for src in sorted(glob.glob(os.path.join(root, "projects", "*", pattern))):
-            if src.endswith("_small.jpg") or src.lower().endswith(".gif"):
+            if src.endswith("_small.jpg") or not src.lower().endswith(IMAGE_EXTENSIONS):
                 continue
             dst = small_path(src)
             if not force and os.path.exists(dst) and os.path.getmtime(dst) >= os.path.getmtime(src):

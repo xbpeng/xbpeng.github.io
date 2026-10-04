@@ -11,6 +11,14 @@
 	{% assign meta_teaser_small_path = page.dir | append: meta_teaser_small %}
 	{% assign meta_teaser_small_file = site.static_files | where: "path", meta_teaser_small_path | first %}
 	{% if meta_teaser_small_file %}{% assign meta_image = meta_teaser_small_path %}{% else %}{% assign meta_image = page.dir | append: meta_teaser %}{% endif %}
+	{% comment %} Link previews need an image, so video teasers fall back to the thumbnail. {% endcomment %}
+	{% assign meta_teaser_ext = meta_teaser | split: "." | last | downcase %}
+	{% if meta_teaser_ext == "mp4" %}
+		{% assign meta_thumb_small = page.thumbnail | split: "." | pop | join: "." | append: "_small.jpg" %}
+		{% assign meta_thumb_small_path = page.dir | append: meta_thumb_small %}
+		{% assign meta_thumb_small_file = site.static_files | where: "path", meta_thumb_small_path | first %}
+		{% if meta_thumb_small_file %}{% assign meta_image = meta_thumb_small_path %}{% else %}{% assign meta_image = page.dir | append: page.thumbnail %}{% endif %}
+	{% endif %}
 {% else %}
 	{% assign meta_description = page.description | default: site.description %}
 	{% assign meta_image = "/images/profile.png" %}

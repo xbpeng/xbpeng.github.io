@@ -5,7 +5,7 @@ layout: default
 	Shared template for all project pages in projects/<Name>/index.html.
 	Each project page only contains YAML front matter.
 	Optional fields: award, affiliations, author_note, teaser_width, paper_label (default "Paper"),
-	links, videos. teaser can be a single image or a list. abstract can be a single paragraph or a
+	links, videos. teaser can be a single image or video (.mp4), or a list of them. abstract can be a single paragraph or a
 	list of paragraphs. videos entries are .mp4 files (shown with <video>) or embed URLs
 	such as https://www.youtube.com/embed/<id> (shown with <iframe>).
 	Relative file paths are relative to the project directory.
@@ -45,10 +45,15 @@ layout: default
 <figure class="teaser">
 	{% for teaser in teasers %}
 	{% comment %} Show the compressed copy made by _scripts/make_small_images.py if it exists; clicking opens the original. {% endcomment %}
+	{% assign teaser_ext = teaser | split: "." | last | downcase %}
+	{% if teaser_ext == "mp4" %}
+	<video src="{{ teaser }}" style="width: {{ teaser_width }};" autoplay muted loop playsinline aria-label="{{ page.title }}"></video>
+	{% else %}
 	{% assign teaser_small = teaser | split: "." | pop | join: "." | append: "_small.jpg" %}
 	{% assign teaser_small_path = page.dir | append: teaser_small %}
 	{% assign teaser_small_file = site.static_files | where: "path", teaser_small_path | first %}
 	<a href="{{ teaser }}"><img src="{% if teaser_small_file %}{{ teaser_small }}{% else %}{{ teaser }}{% endif %}" style="width: {{ teaser_width }};" alt="{{ page.title }}"></a>
+	{% endif %}
 	{% endfor %}
 </figure>
 

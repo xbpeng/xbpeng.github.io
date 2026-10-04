@@ -179,11 +179,11 @@ pre {
 }
 
 h3.year {
-	font-size: 0.85rem;
+	font-size: 1.4rem;
 	font-weight: 600;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.04em;
 	color: var(--faint);
-	margin: 2rem 0 0.5rem;
+	margin: 2.5rem 0 0.5rem;
 }
 
 .pub {

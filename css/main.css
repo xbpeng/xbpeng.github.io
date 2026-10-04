@@ -424,7 +424,7 @@ h3.year {
 /* ---------- Art page ---------- */
 .art-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+	grid-template-columns: repeat(6, 1fr);  /* images per row; phones use fewer, see the mobile section */
 	gap: 1rem;
 	margin-top: 2rem;
 }

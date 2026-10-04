@@ -178,6 +178,20 @@ pre {
 	border-radius: 6px;
 }
 
+/* Highlighted home page sections (Codebase, Thesis) */
+.panel {
+	margin-top: 3rem;
+	padding: 0.5rem 1.5rem 0.75rem;
+	background: var(--bg-soft);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+}
+.panel h2 {
+	margin-top: 1rem;
+	margin-bottom: 0.25rem;
+	border-bottom-color: #dde1e6;
+}
+
 h3.year {
 	font-size: 1.4rem;
 	font-weight: 600;

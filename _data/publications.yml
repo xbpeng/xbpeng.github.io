@@ -44,9 +44,9 @@ years:
       - RoboPianist
       - Trace_Pace
       - Cassie_Jump
-      - GenLoco
   - year: 2022
     projects:
+      - GenLoco
       - CIC
       - PADL
       - AMP_Locomotion

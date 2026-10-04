@@ -41,12 +41,12 @@ abstract: >-
   However, the majority of these motion diffusion models are primarily designed for offline
   applications, where space-time models are used to synthesize an entire sequence of frames
   simultaneously with a pre-specified length. To enable real-time motion synthesis with diffusion
-  model that allows timevarying controls, we propose A-MDM (Auto-regressive Motion Diffusion Model).
+  model that allows time-varying controls, we propose A-MDM (Auto-regressive Motion Diffusion Model).
   Our conditional diffusion model takes an initial pose as input, and auto-regressively generates
   successive motion frames conditioned on the previous frame. Despite its streamlined network
   architecture, which uses simple MLPs, our framework is capable of generating diverse, long-horizon,
   and high-fidelity motion sequences. Furthermore, we introduce a suite of techniques for
-  incorporating interactive controls into A-MDM, such as taskoriented sampling, in-painting, and
+  incorporating interactive controls into A-MDM, such as task-oriented sampling, in-painting, and
   hierarchical reinforcement learning (See Figure 1). These techniques enable a pre-trained A-MDM to
   be efficiently adapted for a variety of new downstream tasks. We conduct a comprehensive suite of
   experiments to demonstrate the effectiveness of A-MDM, and compare its performance against

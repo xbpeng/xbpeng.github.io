@@ -4,8 +4,9 @@ layout: default
 {% comment %}
 	Shared template for all project pages in projects/<Name>/index.html.
 	Each project page only contains YAML front matter.
-	Optional fields: award, author_note, teaser_width, links, videos. teaser can be a single
-	image or a list. videos entries are .mp4 files (shown with <video>) or embed URLs
+	Optional fields: award, affiliations, author_note, teaser_width, paper_label (default "Paper"),
+	links, videos. teaser can be a single image or a list. abstract can be a single paragraph or a
+	list of paragraphs. videos entries are .mp4 files (shown with <video>) or embed URLs
 	such as https://www.youtube.com/embed/<id> (shown with <iframe>).
 	Relative file paths are relative to the project directory.
 	Styles are in css/main.css.
@@ -22,15 +23,17 @@ layout: default
 		<li>{{ author_parts[0] }}{% if author_parts[1] %}<sup>{{ author_parts[1] | remove: ")" | remove: " " }}</sup>{% endif %}</li>
 		{% endfor %}
 	</ul>
+	{% if page.affiliations %}
 	<ul class="project-affiliations">
 		{% for affiliation in page.affiliations %}
 		<li>{% if page.affiliations.size > 1 %}<sup>{{ forloop.index }}</sup>{% endif %}{{ affiliation }}</li>
 		{% endfor %}
 	</ul>
+	{% endif %}
 	{% if page.author_note %}<div class="author-note">{{ page.author_note }}</div>{% endif %}
 
 	<div class="project-links">
-		<span class="link-group"><span class="link-label">Paper</span><a class="pill" href="{{ page.paper }}">PDF</a></span>
+		<span class="link-group"><span class="link-label">{{ page.paper_label | default: "Paper" }}</span><a class="pill" href="{{ page.paper }}">PDF</a></span>
 		{% for group in page.links %}
 		<span class="link-group"><span class="link-label">{{ group[0] }}</span>{% for link in group[1] %}<a class="pill" href="{{ link[1] }}">{{ link[0] }}</a>{% endfor %}</span>
 		{% endfor %}
@@ -45,7 +48,10 @@ layout: default
 
 <section class="project-section">
 	<h2>Abstract</h2>
-	<p class="abstract">{{ page.abstract }}</p>
+	{% if page.abstract.first %}{% assign paragraphs = page.abstract %}{% else %}{% assign paragraphs = page.abstract | split: "|" %}{% endif %}
+	<div class="abstract">
+		{% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+	</div>
 </section>
 
 {% if page.videos %}
@@ -66,5 +72,32 @@ layout: default
 
 <section class="project-section">
 	<h2>BibTeX</h2>
-	<pre class="bibtex">{{ page.bibtex }}</pre>
+	<div class="bibtex-box">
+		<button class="copy-button" type="button" onclick="copyBibtex(this)">Copy</button>
+		<pre class="bibtex">{{ page.bibtex }}</pre>
+	</div>
 </section>
+
+<script>
+	function copyBibtex(button) {
+		var text = button.parentNode.querySelector("pre").innerText;
+		var done = function () {
+			button.textContent = "Copied!";
+			setTimeout(function () { button.textContent = "Copy"; }, 1500);
+		};
+		var fallback = function () {
+			var area = document.createElement("textarea");
+			area.value = text;
+			document.body.appendChild(area);
+			area.select();
+			document.execCommand("copy");
+			document.body.removeChild(area);
+			done();
+		};
+		if (navigator.clipboard && window.isSecureContext) {
+			navigator.clipboard.writeText(text).then(done, fallback);
+		} else {
+			fallback();
+		}
+	}
+</script>

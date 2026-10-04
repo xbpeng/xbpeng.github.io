@@ -316,8 +316,32 @@ h3.year {
 .project-section h2 {
 	margin-top: 2.5rem;
 }
-.abstract {
-	margin: 0;
+.abstract p {
+	margin: 0 0 1rem;
+}
+.abstract p:last-child {
+	margin-bottom: 0;
+}
+.bibtex-box {
+	position: relative;
+}
+.copy-button {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	font-family: var(--font);
+	font-size: 0.8rem;
+	padding: 0.2rem 0.75rem;
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	background: #fff;
+	color: var(--muted);
+	cursor: pointer;
+	transition: border-color 0.15s, color 0.15s;
+}
+.copy-button:hover {
+	border-color: var(--accent);
+	color: var(--accent);
 }
 .video {
 	position: relative;
@@ -365,14 +389,6 @@ h3.year {
 }
 
 /* ---------- Legacy (used by other pages) ---------- */
-ul.posts {
-	margin: 20px auto 40px;
-	font-size: 1.5em;
-}
-ul.posts li {
-	list-style: none;
-}
-
 div.art_thumbnail_box {
 	float: left;
 	width: 100px;

@@ -1,4 +1,4 @@
 name: Xue Bin (Jason) Peng
+url: "https://xbpeng.github.io"
+description: "Xue Bin (Jason) Peng is an Assistant Professor at Simon Fraser University and a Research Scientist at NVIDIA, working on reinforcement learning and motion control for simulated characters and robots."
 markdown: kramdown
-
-permalink: /blog/:year/:month/:day/:title

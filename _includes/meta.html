@@ -1,0 +1,54 @@
+{% comment %}
+	Search, link-preview (Open Graph / Twitter), and Google Scholar tags for every page.
+	Project pages use their abstract, teaser, and paper info; other pages use the
+	site description and profile photo from _config.yml / images/.
+{% endcomment %}
+{% if page.layout == "project" %}
+	{% if page.abstract.first %}{% assign abstract_text = page.abstract | join: " " %}{% else %}{% assign abstract_text = page.abstract %}{% endif %}
+	{% assign meta_description = abstract_text | strip_html | normalize_whitespace | truncate: 200 %}
+	{% if page.teaser.first %}{% assign meta_teaser = page.teaser.first %}{% else %}{% assign meta_teaser = page.teaser %}{% endif %}
+	{% assign meta_teaser_small = meta_teaser | split: "." | pop | join: "." | append: "_small.jpg" %}
+	{% assign meta_teaser_small_path = page.dir | append: meta_teaser_small %}
+	{% assign meta_teaser_small_file = site.static_files | where: "path", meta_teaser_small_path | first %}
+	{% if meta_teaser_small_file %}{% assign meta_image = meta_teaser_small_path %}{% else %}{% assign meta_image = page.dir | append: meta_teaser %}{% endif %}
+{% else %}
+	{% assign meta_description = page.description | default: site.description %}
+	{% assign meta_image = "/images/profile.png" %}
+{% endif %}
+<meta name="description" content="{{ meta_description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.name | escape }}">
+<meta property="og:type" content="{% if page.layout == 'project' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ meta_description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ meta_image | absolute_url }}">
+<meta name="twitter:card" content="{% if page.layout == 'project' %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:site" content="@xbpeng4">
+{% if page.layout == "project" %}
+	{% comment %} Year: from the group in _data/publications.yml, otherwise the 4-digit year in the venue. {% endcomment %}
+	{% assign meta_name = page.dir | remove_first: "/projects/" | remove: "/" %}
+	{% assign meta_year = nil %}
+	{% for group in site.data.publications.years %}{% if group.projects contains meta_name %}{% assign meta_year = group.year %}{% endif %}{% endfor %}
+	{% unless meta_year %}
+		{% assign venue_words = page.venue | split: " " %}
+		{% for word in venue_words %}{% assign w = word | remove: "(" | remove: ")" | remove: "," %}{% if w.size == 4 and w > "1900" and w < "2100" %}{% assign meta_year = w %}{% endif %}{% endfor %}
+	{% endunless %}
+<meta name="citation_title" content="{{ page.title | escape }}">
+	{% for author in page.authors %}
+<meta name="citation_author" content="{{ author | split: ' (' | first | remove: '*' | remove: '†' | strip | escape }}">
+	{% endfor %}
+	{% if meta_year %}
+<meta name="citation_publication_date" content="{{ meta_year }}">
+	{% endif %}
+	{% assign venue_name = page.venue | remove: meta_year | strip %}
+	{% if page.paper_label == "Thesis" %}
+<meta name="citation_dissertation_institution" content="{{ venue_name | escape }}">
+	{% elsif page.venue contains "arXiv" %}
+	{% elsif page.venue contains "Transactions" or page.venue contains "Journal" %}
+<meta name="citation_journal_title" content="{{ page.venue | escape }}">
+	{% else %}
+<meta name="citation_conference_title" content="{{ page.venue | escape }}">
+	{% endif %}
+<meta name="citation_pdf_url" content="{{ page.dir | append: page.paper | absolute_url }}">
+{% endif %}

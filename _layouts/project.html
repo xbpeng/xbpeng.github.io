@@ -43,7 +43,13 @@ layout: default
 {% assign teaser_width = page.teaser_width | default: "100%" %}
 {% if page.teaser.first %}{% assign teasers = page.teaser %}{% else %}{% assign teasers = page.teaser | split: "|" %}{% endif %}
 <figure class="teaser">
-	{% for teaser in teasers %}<img src="{{ teaser }}" style="width: {{ teaser_width }};" alt="{{ page.title }}">{% endfor %}
+	{% for teaser in teasers %}
+	{% comment %} Show the compressed copy made by _scripts/make_small_images.py if it exists; clicking opens the original. {% endcomment %}
+	{% assign teaser_small = teaser | split: "." | pop | join: "." | append: "_small.jpg" %}
+	{% assign teaser_small_path = page.dir | append: teaser_small %}
+	{% assign teaser_small_file = site.static_files | where: "path", teaser_small_path | first %}
+	<a href="{{ teaser }}"><img src="{% if teaser_small_file %}{{ teaser_small }}{% else %}{{ teaser }}{% endif %}" style="width: {{ teaser_width }};" alt="{{ page.title }}"></a>
+	{% endfor %}
 </figure>
 
 <section class="project-section">

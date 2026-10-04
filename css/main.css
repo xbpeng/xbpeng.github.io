@@ -1,8 +1,7 @@
-/* ---------- Theme ---------- */
 :root {
 	--text: #1f2328;
 	--muted: #5f6b76;
-	--faint: #6e7781;  /* lightest text color; keep contrast with white at least 4.5:1 */
+	--faint: #6e7781;
 	--border: #e3e6ea;
 	--bg-soft: #f6f8fa;
 	--accent: #2b5fab;
@@ -13,7 +12,8 @@
 	--mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
-/* ---------- Base ---------- */
+/* Base */
+
 * {
 	box-sizing: border-box;
 }
@@ -23,7 +23,7 @@ html {
 body {
 	margin: 0;
 	font-family: var(--font);
-	font-size: 17px;  /* Carlito runs small, so the base size is slightly larger */
+	font-size: 17px;
 	line-height: 1.6;
 	color: var(--text);
 	background: #fff;
@@ -60,11 +60,6 @@ h3 {
 p {
 	margin: 0 0 1rem;
 }
-hr {
-	border: 0;
-	border-top: 1px solid var(--border);
-	margin: 2rem 0;
-}
 pre {
 	font-family: var(--mono);
 	font-size: 0.8rem;
@@ -77,13 +72,13 @@ pre {
 	overflow-x: auto;
 }
 
-/* ---------- Layout ---------- */
+/* Layout */
+
 .container {
 	max-width: var(--max-width);
 	margin: 0 auto;
 	padding: 2.5rem 1.5rem 3rem;
 }
-
 .site-nav {
 	max-width: var(--max-width);
 	margin: 0 auto;
@@ -105,7 +100,6 @@ pre {
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 	gap: 0.25rem 1.25rem;
 }
 .site-nav ul a {
@@ -117,8 +111,8 @@ pre {
 	text-decoration: none;
 }
 
+/* Shared components */
 
-/* ---------- Shared components ---------- */
 .pill {
 	display: inline-block;
 	font-size: 0.8rem;
@@ -144,8 +138,14 @@ pre {
 	background: var(--award-bg);
 	color: var(--award-text);
 }
+.callout {
+	padding: 0.75rem 1rem;
+	background: var(--bg-soft);
+	border-radius: 6px;
+}
 
-/* ---------- Home page ---------- */
+/* Home page */
+
 .intro {
 	display: flex;
 	gap: 2rem;
@@ -157,8 +157,7 @@ pre {
 	border-radius: 8px;
 }
 .intro-text h1 {
-	margin-top: 0;
-	margin-bottom: 0.4rem;
+	margin: 0 0 0.4rem;
 }
 .profile-links {
 	list-style: none;
@@ -166,7 +165,7 @@ pre {
 	margin: 0 0 1rem;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 0.25rem 0;
+	row-gap: 0.25rem;
 	font-size: 0.95rem;
 }
 .profile-links li + li::before {
@@ -174,13 +173,6 @@ pre {
 	margin: 0 0.6rem;
 	color: var(--faint);
 }
-.callout {
-	padding: 0.75rem 1rem;
-	background: var(--bg-soft);
-	border-radius: 6px;
-}
-
-/* Highlighted home page sections (Codebase, Thesis) */
 .panel {
 	margin-top: 3rem;
 	padding: 0.5rem 1.5rem 0.75rem;
@@ -191,11 +183,9 @@ pre {
 	margin-top: 2rem;
 }
 .panel h2 {
-	margin-top: 1rem;
-	margin-bottom: 0.25rem;
+	margin: 1rem 0 0.25rem;
 	border-bottom-color: #dde1e6;
 }
-
 h3.year {
 	font-size: 1.4rem;
 	font-weight: 600;
@@ -216,11 +206,10 @@ h3.year {
 	width: 100%;
 	border: 1px solid var(--border);
 	border-radius: 6px;
-	transition: transform 0.2s, box-shadow 0.2s;
+	transition: opacity 0.15s;
 }
 .pub-thumb:hover img, .pub-thumb:hover video {
-	transform: translateY(-2px);
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+	opacity: 0.85;
 }
 .pub-info {
 	display: flex;
@@ -237,7 +226,7 @@ h3.year {
 	color: var(--accent);
 	text-decoration: none;
 }
-.pub-authors {
+.pub-authors, .pub-venue {
 	font-size: 0.92rem;
 	color: var(--muted);
 }
@@ -246,9 +235,7 @@ h3.year {
 	font-weight: 600;
 }
 .pub-venue {
-	font-size: 0.92rem;
 	font-style: italic;
-	color: var(--muted);
 }
 .pub-links {
 	display: flex;
@@ -262,7 +249,8 @@ h3.year {
 	font-weight: 600;
 }
 
-/* ---------- Project pages ---------- */
+/* Project pages */
+
 .project-header {
 	text-align: center;
 }
@@ -306,7 +294,7 @@ h3.year {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 0.6rem 1.5rem;
-	margin: 1.5rem 0 0;
+	margin-top: 1.5rem;
 }
 .link-group {
 	display: inline-flex;
@@ -322,7 +310,6 @@ h3.year {
 	color: var(--faint);
 	margin-right: 0.15rem;
 }
-
 .teaser {
 	margin: 2rem 0 0;
 	text-align: center;
@@ -331,17 +318,12 @@ h3.year {
 	vertical-align: middle;
 	border-radius: 6px;
 }
-
 .project-section {
-	max-width: 42rem;  /* about 75 characters per line, easier to read */
-	margin-left: auto;
-	margin-right: auto;
+	max-width: 42rem;
+	margin: 0 auto;
 }
 .project-section h2 {
 	margin-top: 2.5rem;
-}
-.abstract p {
-	margin: 0 0 1rem;
 }
 .abstract p:last-child {
 	margin-bottom: 0;
@@ -353,23 +335,12 @@ h3.year {
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
-	font-family: var(--font);
-	font-size: 0.8rem;
-	padding: 0.2rem 0.75rem;
-	border: 1px solid var(--border);
-	border-radius: 999px;
-	background: #fff;
+	font-family: inherit;
 	color: var(--muted);
 	cursor: pointer;
-	transition: border-color 0.15s, color 0.15s;
-}
-.copy-button:hover {
-	border-color: var(--accent);
-	color: var(--accent);
 }
 .video {
 	position: relative;
-	width: 100%;
 	aspect-ratio: 16 / 9;
 	margin-bottom: 1.25rem;
 	background: #000;
@@ -384,7 +355,8 @@ h3.year {
 	border: 0;
 }
 
-/* ---------- Teaching page ---------- */
+/* Teaching page */
+
 .course-banner {
 	margin: 1.5rem 0;
 	display: flex;
@@ -392,7 +364,7 @@ h3.year {
 	align-items: center;
 	gap: 0.5%;
 }
-.course-banner img, .course-banner video {
+.course-banner video {
 	border-radius: 4px;
 }
 .course-info {
@@ -416,7 +388,6 @@ h3.year {
 	grid-template-columns: 5rem 1fr;
 	gap: 1rem;
 	padding: 0.9rem 0;
-	border-bottom: 1px solid var(--border);
 }
 .lecture-date {
 	font-weight: 600;
@@ -435,20 +406,14 @@ h3.year {
 	gap: 0.75rem;
 }
 .lecture-slides img {
-	display: block;
 	width: 200px;
-	border: 1px solid var(--border);
-	border-radius: 6px;
-	transition: opacity 0.15s;
-}
-.lecture-slides a:hover img {
-	opacity: 0.85;
 }
 
-/* ---------- Art page ---------- */
+/* Art page */
+
 .art-grid {
 	display: grid;
-	grid-template-columns: repeat(6, 1fr);  /* images per row; phones use fewer, see the mobile section */
+	grid-template-columns: repeat(6, 1fr);
 	gap: 1rem;
 	margin-top: 2rem;
 }
@@ -456,19 +421,23 @@ h3.year {
 	margin: 0;
 }
 .art-item img {
-	display: block;
 	width: 100%;
 	aspect-ratio: 1 / 2;
 	object-fit: cover;
+}
+
+.lecture-slides img, .art-item img {
+	display: block;
 	border: 1px solid var(--border);
 	border-radius: 6px;
 	transition: opacity 0.15s;
 }
-.art-item a:hover img {
+.lecture-slides a:hover img, .art-item a:hover img {
 	opacity: 0.85;
 }
 
-/* ---------- Mobile ---------- */
+/* Phones */
+
 @media (max-width: 640px) {
 	.container {
 		padding: 1.5rem 1rem 2rem;
@@ -504,25 +473,4 @@ h3.year {
 	.art-grid {
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 	}
-}
-
-/* ---------- Legacy (used by other pages) ---------- */
-div.video-responsive {
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	position: relative;
-	height: 0;
-	width: 100%;
-	height: 100%;
-	max-width: 560px;
-	max-height: 315px;
-}
-div.video-responsive iframe {
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	max-width: 560px;
-	max-height: 315px;
-	position: absolute;
 }

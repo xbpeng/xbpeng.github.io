@@ -7,21 +7,18 @@
 		{% include meta.html %}
 		<link rel="icon" href="/favicon.ico" sizes="any">
 		<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-		<!-- Site font: Carlito (Google Fonts) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap">
-		<!-- The ?v= build timestamp makes browsers fetch the new stylesheet after every update -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css?v={{ site.time | date: '%s' }}">
+		<!-- ?v= changes on every build, so browsers don't keep a stale cached stylesheet -->
+		<link rel="stylesheet" href="/css/main.css?v={{ site.time | date: '%s' }}">
 
-		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-H77JS1DFCE"></script>
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'G-H77JS1DFCE');
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag("js", new Date());
+			gtag("config", "G-H77JS1DFCE");
 		</script>
 	</head>
 
@@ -39,6 +36,5 @@
 		<main class="container">
 			{{ content }}
 		</main>
-
 	</body>
 </html>

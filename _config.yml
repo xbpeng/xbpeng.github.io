@@ -4,7 +4,7 @@ description: "Xue Bin (Jason) Peng is an Assistant Professor at Simon Fraser Uni
 markdown: kramdown
 
 plugins:
-  - jekyll-sitemap   # generates /sitemap.xml so search engines can find every project page
+  - jekyll-sitemap
 
 exclude:
   - README.md

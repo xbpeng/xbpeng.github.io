@@ -1,0 +1,5 @@
+{% comment %} Sets small_image to the _small.jpg copy of include.file (see _scripts/make_small_images.py) if it exists, else to include.file. {% endcomment %}
+{% assign small_image = include.file | split: "." | pop | join: "." | append: "_small.jpg" %}
+{% assign small_image_path = include.dir | append: small_image %}
+{% assign small_image_file = site.static_files | where: "path", small_image_path | first %}
+{% unless small_image_file %}{% assign small_image = include.file %}{% endunless %}

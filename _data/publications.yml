@@ -1,5 +1,4 @@
-# Publication list shown on the home page, in display order.
-# Each entry is the name of a directory in projects/ whose index.html holds the project info.
+# Home page publication list, in display order. Each entry is a directory in projects/.
 
 highlight_author: "Xue Bin Peng"
 

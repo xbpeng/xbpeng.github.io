@@ -1,24 +1,20 @@
-{% comment %}
-	Renders one entry of the publication list on the home page.
-	Usage: {% include publication.html name="GPC" %}
-	where name is the directory in projects/. All info is read from that project's front matter.
-	Styles are in css/main.css.
-{% endcomment %}
+{% comment %} Home page entry for projects/<include.name>/, built from that project's front matter. {% endcomment %}
 {% assign pub_dir = "/projects/" | append: include.name | append: "/" %}
-{% assign pub = site.pages | where: "dir", pub_dir | where: "layout", "project" | first %}
 {% assign pub_path = "projects/" | append: include.name | append: "/" %}
+{% assign pub = site.pages | where: "dir", pub_dir | where: "layout", "project" | first %}
 {% if pub %}
-{% comment %} Use the compressed copy made by _scripts/make_thumbnails.py if it exists. {% endcomment %}
-{% assign thumb = pub.thumbnail %}
-{% assign thumb_small = pub.thumbnail | split: "." | pop | join: "." | append: "_small.jpg" %}
-{% assign thumb_small_path = pub_dir | append: thumb_small %}
-{% assign thumb_small_file = site.static_files | where: "path", thumb_small_path | first %}
-{% if thumb_small_file %}{% assign thumb = thumb_small %}{% endif %}
+{% include small_image.html dir=pub_dir file=pub.thumbnail %}
 <article class="pub">
-	<a class="pub-thumb" href="{{ pub_path }}index.html"><img src="{{ pub_path }}{{ thumb }}" alt="{{ pub.title }}" loading="lazy"></a>
+	<a class="pub-thumb" href="{{ pub_path }}index.html"><img src="{{ pub_path }}{{ small_image }}" alt="{{ pub.title }}" loading="lazy"></a>
 	<div class="pub-info">
 		<a class="pub-title" href="{{ pub_path }}index.html">{{ pub.title }}</a>
-		<div class="pub-authors">{% for author in pub.authors %}{% assign author_name = author | split: " (" | first | remove: "*" | remove: "†" | strip %}{% if author_name == site.data.publications.highlight_author %}<b>{{ author_name }}</b>{% else %}{{ author_name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
+		<div class="pub-authors">
+			{%- for author in pub.authors -%}
+			{%- assign author_name = author | split: " (" | first | remove: "*" | remove: "†" | strip -%}
+			{%- if author_name == site.data.publications.highlight_author %}<b>{{ author_name }}</b>{% else %}{{ author_name }}{% endif -%}
+			{%- unless forloop.last %}, {% endunless -%}
+			{%- endfor -%}
+		</div>
 		<div class="pub-venue">{{ pub.venue }}</div>
 		{% if pub.award %}<div class="award">{{ pub.award }}</div>{% endif %}
 		<div class="pub-links">

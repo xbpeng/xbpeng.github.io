@@ -1,16 +1,9 @@
 ---
 layout: default
 ---
-{% comment %}
-	Shared template for all project pages in projects/<Name>/index.html.
-	Each project page only contains YAML front matter.
-	Optional fields: award, affiliations, author_note, teaser_width, paper_label (default "Paper"),
-	links, videos. teaser can be a single image or video (.mp4), or a list of them. abstract can be a single paragraph or a
-	list of paragraphs. videos entries are .mp4 files (shown with <video>) or embed URLs
-	such as https://www.youtube.com/embed/<id> (shown with <iframe>).
-	Relative file paths are relative to the project directory.
-	Styles are in css/main.css.
-{% endcomment %}
+{% if page.teaser.first %}{% assign teasers = page.teaser %}{% else %}{% assign teasers = page.teaser | split: "|" %}{% endif %}
+{% if page.abstract.first %}{% assign paragraphs = page.abstract %}{% else %}{% assign paragraphs = page.abstract | split: "|" %}{% endif %}
+{% assign teaser_width = page.teaser_width | default: "100%" %}
 
 <header class="project-header">
 	<h1 class="project-title">{{ page.title }}</h1>
@@ -19,8 +12,8 @@ layout: default
 
 	<ul class="project-authors">
 		{% for author in page.authors %}
-		{% assign author_parts = author | split: " (" %}
-		<li>{{ author_parts[0] }}{% if author_parts[1] %}<sup>{{ author_parts[1] | remove: ")" | remove: " " }}</sup>{% endif %}</li>
+		{% assign parts = author | split: " (" %}
+		<li>{{ parts[0] }}{% if parts[1] %}<sup>{{ parts[1] | remove: ")" | remove: " " }}</sup>{% endif %}</li>
 		{% endfor %}
 	</ul>
 	{% if page.affiliations %}
@@ -40,26 +33,20 @@ layout: default
 	</div>
 </header>
 
-{% assign teaser_width = page.teaser_width | default: "100%" %}
-{% if page.teaser.first %}{% assign teasers = page.teaser %}{% else %}{% assign teasers = page.teaser | split: "|" %}{% endif %}
 <figure class="teaser">
 	{% for teaser in teasers %}
-	{% comment %} Show the compressed copy made by _scripts/make_small_images.py if it exists; clicking opens the original. {% endcomment %}
-	{% assign teaser_ext = teaser | split: "." | last | downcase %}
-	{% if teaser_ext == "mp4" %}
+	{% assign ext = teaser | split: "." | last | downcase %}
+	{% if ext == "mp4" %}
 	<video src="{{ teaser }}" style="width: {{ teaser_width }};" autoplay muted loop playsinline aria-label="{{ page.title }}"></video>
 	{% else %}
-	{% assign teaser_small = teaser | split: "." | pop | join: "." | append: "_small.jpg" %}
-	{% assign teaser_small_path = page.dir | append: teaser_small %}
-	{% assign teaser_small_file = site.static_files | where: "path", teaser_small_path | first %}
-	<a href="{{ teaser }}"><img src="{% if teaser_small_file %}{{ teaser_small }}{% else %}{{ teaser }}{% endif %}" style="width: {{ teaser_width }};" alt="{{ page.title }}"></a>
+	{% include small_image.html dir=page.dir file=teaser %}
+	<a href="{{ teaser }}"><img src="{{ small_image }}" style="width: {{ teaser_width }};" alt="{{ page.title }}"></a>
 	{% endif %}
 	{% endfor %}
 </figure>
 
 <section class="project-section">
 	<h2>Abstract</h2>
-	{% if page.abstract.first %}{% assign paragraphs = page.abstract %}{% else %}{% assign paragraphs = page.abstract | split: "|" %}{% endif %}
 	<div class="abstract">
 		{% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
 	</div>
@@ -84,25 +71,25 @@ layout: default
 <section class="project-section">
 	<h2>BibTeX</h2>
 	<div class="bibtex-box">
-		<button class="copy-button" type="button" onclick="copyBibtex(this)">Copy</button>
-		<pre class="bibtex">{{ page.bibtex }}</pre>
+		<button class="pill copy-button" type="button" onclick="copyBibtex(this)">Copy</button>
+		<pre>{{ page.bibtex }}</pre>
 	</div>
 </section>
 
 <script>
 	function copyBibtex(button) {
-		var text = button.parentNode.querySelector("pre").innerText;
-		var done = function () {
+		const text = button.parentNode.querySelector("pre").innerText;
+		const done = () => {
 			button.textContent = "Copied!";
-			setTimeout(function () { button.textContent = "Copy"; }, 1500);
+			setTimeout(() => { button.textContent = "Copy"; }, 1500);
 		};
-		var fallback = function () {
-			var area = document.createElement("textarea");
+		const fallback = () => {
+			const area = document.createElement("textarea");
 			area.value = text;
 			document.body.appendChild(area);
 			area.select();
 			document.execCommand("copy");
-			document.body.removeChild(area);
+			area.remove();
 			done();
 		};
 		if (navigator.clipboard && window.isSecureContext) {

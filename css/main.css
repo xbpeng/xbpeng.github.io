@@ -193,14 +193,14 @@ h3.year {
 	align-items: center;
 	padding: 1rem 0;
 }
-.pub-thumb img {
+.pub-thumb img, .pub-thumb video {
 	display: block;
 	width: 100%;
 	border: 1px solid var(--border);
 	border-radius: 6px;
 	transition: opacity 0.15s;
 }
-.pub-thumb:hover img {
+.pub-thumb:hover img, .pub-thumb:hover video {
 	opacity: 0.85;
 }
 .pub-info {
@@ -464,7 +464,7 @@ h3.year {
 		grid-template-columns: 1fr;
 		gap: 0.75rem;
 	}
-	.pub-thumb img {
+	.pub-thumb img, .pub-thumb video {
 		max-width: 320px;
 	}
 	.project-title {

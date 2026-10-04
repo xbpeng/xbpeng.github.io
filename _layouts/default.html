@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ page.title }}</title>
+		<!-- Site font: Carlito (Google Fonts) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-H77JS1DFCE"></script>
 		<script>
@@ -15,39 +19,30 @@
 
 		  gtag('config', 'G-H77JS1DFCE');
 		</script>
-		
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-	        		<li><a href="/docs/jason_peng_cv.pdf">CV</a></li>
-	        		<li><a href="/team">Team</a></li>
-	        		<li><a href="/teaching/cmpt_729">Teaching</a></li>
-					<li><a href="/art">Art</a></li>
-					<li><a href="https://twitter.com/xbpeng4?ref_src=twsrc%5Etfw" data-show-screen-name="false" class="twitter-follow-button" data-show-count="false">Follow @xbpeng4</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-		</body>
-		
-		<script>
-			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	</head>
 
-			  ga('create', 'UA-89363010-1', 'auto');
-			  ga('send', 'pageview');
-		</script>
-		
-		<footer>
-	    	<ul>
+	<body>
+		<nav class="site-nav">
+			<a class="site-name" href="/">Xue Bin (Jason) Peng</a>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/docs/jason_peng_cv.pdf">CV</a></li>
+				<li><a href="/team">Team</a></li>
+				<li><a href="/teaching/cmpt_729">Teaching</a></li>
+				<li><a href="/art">Art</a></li>
+				<li><a href="https://twitter.com/xbpeng4?ref_src=twsrc%5Etfw" data-show-screen-name="false" class="twitter-follow-button" data-show-count="false">Follow @xbpeng4</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li>
+			</ul>
+		</nav>
+
+		<main class="container">
+			{{ content }}
+		</main>
+
+		<footer class="site-footer">
+			<ul>
 				<li><a href="mailto:xbpeng@sfu.ca">email</a></li>
-	        	<li><a href="https://github.com/xbpeng">github.com/xbpeng</a></li>
+				<li><a href="https://github.com/xbpeng">github.com/xbpeng</a></li>
 			</ul>
 		</footer>
-	</html>
+	</body>
+</html>

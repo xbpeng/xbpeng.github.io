@@ -3,86 +3,75 @@ layout: default
 title: Xue Bin (Jason) Peng
 ---
 
-<h1> 
-	Xue Bin (Jason) Peng
-</h1>
+<section class="intro">
+	<img class="intro-photo" src="images/profile.png" alt="Xue Bin (Jason) Peng">
+	<div class="intro-text">
+		<h1>Xue Bin (Jason) Peng</h1>
+		<p>
+			I'm an Assistant Professor at Simon Fraser University (SFU) and a Research Scientist at NVIDIA. I hold a Canada CIFAR AI Chair through Amii. I will be moving to the University of British Columbia (UBC) in 2027.
+		</p>
+		<p>
+			I received a Ph.D. from UC Berkeley, advised by Professor <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
+			and Professor <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>.
+			Prior to that, I received an M.Sc from the University of British Columbia, advised by Professor <a href="https://www.cs.ubc.ca/~van/">Michiel van de Panne</a>.
+			My work lies in the intersection between computer graphics and machine learning, with a focus on reinforcement learning
+			for motion control of simulated characters. I have previously worked for Sony, Google Brain, OpenAI, Adobe Research, Disney Research,
+			Microsoft (343 Industries), and Capcom.
+		</p>
+		<p class="callout">
+			<b>Prospective students:</b> Information is available <a href="prospective_students/index.html">here</a>.
+		</p>
+	</div>
+</section>
 
-<table border="0" cellpadding="3" cellspacing="10">
-	<tr>
-	<td style="vertical-align:top">
-		<img padding="0px 20px 15px 0px" src="images/profile.png"  width="110" height="inherit" border="1px" alt="">
-	</td>
-	<td>
-		I'm an Assistant Professor at Simon Fraser University (SFU) and a Research Scientist at NVIDIA. I hold a Canada CIFAR AI Chair through Amii. I will be moving to the University of British Columbia (UBC) in 2027.
-		<br><br>
-		
-		I received a Ph.D. from UC Berkeley, advised by Professor <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
-		and Professor <a href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>.
-		Prior to that, I received an M.Sc from the University of British Columbia, advised by Professor <a href="https://www.cs.ubc.ca/~van/">Michiel van de Panne</a>. 
-		My work lies in the intersection between computer graphics and machine learning, with a focus on reinforcement learning 
-		for motion control of simulated characters. I have previously worked for Sony, Google Brain, OpenAI, Adobe Research, Disney Research, 
-		Microsoft (343 Industries), and Capcom.
-	</td>
-	</tr>
-</table>
+<section>
+	<h2>Codebase</h2>
+	<article class="pub">
+		<a class="pub-thumb" href="https://github.com/xbpeng/MimicKit"><img src="projects/MimicKit/MimicKit_teaser.gif" alt="MimicKit"></a>
+		<div class="pub-info">
+			<a class="pub-title" href="https://github.com/xbpeng/MimicKit">MimicKit</a>
+			<div class="pub-authors">A framework with implementations of our motion imitation methods in one convenient place.</div>
+			<div class="pub-links">
+				<a class="pill" href="https://github.com/xbpeng/MimicKit">Code</a>
+			</div>
+		</div>
+	</article>
+</section>
 
-<p>
-<b>Prospective students:</b> Information is available <a href="prospective_students/index.html">here</a>.
-</p>
-<br>
-
-<hr>
-
-<h2>Codebase</h2>
-<table border="0" cellpadding="3" cellspacing="10">
-	<tr>
-		<td><a href="https://github.com/xbpeng/MimicKit"><img style="vertical-align:middle" src="projects/MimicKit/MimicKit_teaser.gif"  width="200" height="inherit" border="1px" alt="" /></a></td>
-		<td>
-			<b>MimicKit</b> <br>
-			A framework with implementations of our motion imitation methods in one convenient place.<br>
-			[<a href="https://github.com/xbpeng/MimicKit">Code</a>]
-		</td>
-	</tr>
-</table>
-<hr>
-
-<h2>Publications</h2>
-{% for group in site.data.publications.years %}
-<p style="color:#898989;"><b> &nbsp; &mdash; {{ group.year }} &mdash; </b></p>
-<table border="0" cellpadding="3" cellspacing="10">
+<section>
+	<h2>Publications</h2>
+	{% for group in site.data.publications.years %}
+	<h3 class="year">{{ group.year }}</h3>
 	{% for name in group.projects %}
 	{% include publication.html name=name %}
 	{% endfor %}
-</table>
-{% endfor %}
-<br><br><br>
+	{% endfor %}
+</section>
 
-<hr>
-
-<h2>Thesis</h2>
-
-<table border="0" cellpadding="3" cellspacing="10">
-	<tr>
-		<td><a href="projects/PhD_Thesis/index.html"><img style="vertical-align:middle" src="projects/PhD_Thesis/phd_thesis_thumb.png"  width="150" height="inherit" border="1px" alt="" /></a></td>
-		<td>
-			<b>Ph.D. Thesis</b> <br> 
-			<b>Acquiring Motor Skills Through Motion Imitation and Reinforcement Learning</b> <br> 
-			<em> University of California, Berkeley 2021 </em> <br> 
-			[<a href="projects/PhD_Thesis/index.html">Project page</a>] [<a href="projects/PhD_Thesis/PhD_Thesis.pdf">Thesis</a>]
-		</td>
-	</tr>
-	
-	<tr>
-		<br>
-	</tr>
-	
-	<tr>
-		<td><a href="projects/MSc_Thesis/index.html"><img style="vertical-align:middle" src="projects/MSc_Thesis/msc_thesis_thumb.png"  width="150" height="inherit" border="1px" alt="" /></a></td>
-		<td>
-			<b>M.Sc. Thesis</b> <br> 
-			<b>Developing Locomotion Skills with Deep Reinforcement Learning</b> <br> 
-			<em> University of British Columbia 2017 </em> <br> 
-			[<a href="projects/MSc_Thesis/index.html">Project page</a>] [<a href="projects/MSc_Thesis/MSc_Thesis.pdf">Thesis</a>]
-		</td>
-	</tr>
-</table>
+<section>
+	<h2>Thesis</h2>
+	<article class="pub">
+		<a class="pub-thumb" href="projects/PhD_Thesis/index.html"><img src="projects/PhD_Thesis/phd_thesis_thumb.png" alt="Ph.D. Thesis" loading="lazy"></a>
+		<div class="pub-info">
+			<a class="pub-title" href="projects/PhD_Thesis/index.html">Acquiring Motor Skills Through Motion Imitation and Reinforcement Learning</a>
+			<div class="pub-authors">Ph.D. Thesis</div>
+			<div class="pub-venue">University of California, Berkeley 2021</div>
+			<div class="pub-links">
+				<a class="pill" href="projects/PhD_Thesis/index.html">Project page</a>
+				<a class="pill" href="projects/PhD_Thesis/PhD_Thesis.pdf">Thesis</a>
+			</div>
+		</div>
+	</article>
+	<article class="pub">
+		<a class="pub-thumb" href="projects/MSc_Thesis/index.html"><img src="projects/MSc_Thesis/msc_thesis_thumb.png" alt="M.Sc. Thesis" loading="lazy"></a>
+		<div class="pub-info">
+			<a class="pub-title" href="projects/MSc_Thesis/index.html">Developing Locomotion Skills with Deep Reinforcement Learning</a>
+			<div class="pub-authors">M.Sc. Thesis</div>
+			<div class="pub-venue">University of British Columbia 2017</div>
+			<div class="pub-links">
+				<a class="pill" href="projects/MSc_Thesis/index.html">Project page</a>
+				<a class="pill" href="projects/MSc_Thesis/MSc_Thesis.pdf">Thesis</a>
+			</div>
+		</div>
+	</article>
+</section>

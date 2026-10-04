@@ -8,51 +8,63 @@ layout: default
 	image or a list. videos entries are .mp4 files (shown with <video>) or embed URLs
 	such as https://www.youtube.com/embed/<id> (shown with <iframe>).
 	Relative file paths are relative to the project directory.
+	Styles are in css/main.css.
 {% endcomment %}
 
-<center><h1>{{ page.title }}</h1></center>
+<header class="project-header">
+	<h1 class="project-title">{{ page.title }}</h1>
+	<div class="project-venue">{{ page.venue }}</div>
+	{% if page.award %}<div class="award">{{ page.award }}</div>{% endif %}
 
-<center>
-	{{ page.venue }}<br>
-	{% if page.award %}<b> {{ page.award }} </b> <br>{% endif %}
-	<br>
-	{% for author in page.authors %}<nobr>{{ author }}</nobr>{% unless forloop.last %} &emsp;&emsp; {% endunless %}{% endfor %}<br>
-	<br>
-	{% for affiliation in page.affiliations %}<nobr>{% if page.affiliations.size > 1 %}({{ forloop.index }}) {% endif %}{{ affiliation }}</nobr>{% unless forloop.last %} &emsp;&emsp; {% endunless %}{% endfor %}<br>
-	<br>
-	{% if page.author_note %}<nobr>{{ page.author_note }}</nobr><br>
-	<br>
-	{% endif %}
-	{% assign teaser_width = page.teaser_width | default: "100%" %}
-	{% if page.teaser.first %}{% assign teasers = page.teaser %}{% else %}{% assign teasers = page.teaser | split: "|" %}{% endif %}
-	{% for teaser in teasers %}<img style="vertical-align:middle" src="{{ teaser }}" width="{{ teaser_width }}" height="inherit"/>
-	{% endfor %}
-</center>
+	<ul class="project-authors">
+		{% for author in page.authors %}
+		{% assign author_parts = author | split: " (" %}
+		<li>{{ author_parts[0] }}{% if author_parts[1] %}<sup>{{ author_parts[1] | remove: ")" | remove: " " }}</sup>{% endif %}</li>
+		{% endfor %}
+	</ul>
+	<ul class="project-affiliations">
+		{% for affiliation in page.affiliations %}
+		<li>{% if page.affiliations.size > 1 %}<sup>{{ forloop.index }}</sup>{% endif %}{{ affiliation }}</li>
+		{% endfor %}
+	</ul>
+	{% if page.author_note %}<div class="author-note">{{ page.author_note }}</div>{% endif %}
 
-<br>
-<hr>
-<h3 style="margin-bottom:10px;">Abstract</h3>
-{{ page.abstract }}
+	<div class="project-links">
+		<span class="link-group"><span class="link-label">Paper</span><a class="pill" href="{{ page.paper }}">PDF</a></span>
+		{% for group in page.links %}
+		<span class="link-group"><span class="link-label">{{ group[0] }}</span>{% for link in group[1] %}<a class="pill" href="{{ link[1] }}">{{ link[0] }}</a>{% endfor %}</span>
+		{% endfor %}
+	</div>
+</header>
 
-<h3> Paper: [<a href="{{ page.paper }}">PDF</a>]{% for group in page.links %} &nbsp; &nbsp; &nbsp; {{ group[0] }}: [{% for link in group[1] %}<a href="{{ link[1] }}">{{ link[0] }}</a>{% unless forloop.last %} / {% endunless %}{% endfor %}]{% endfor %}</h3>
+{% assign teaser_width = page.teaser_width | default: "100%" %}
+{% if page.teaser.first %}{% assign teasers = page.teaser %}{% else %}{% assign teasers = page.teaser | split: "|" %}{% endif %}
+<figure class="teaser">
+	{% for teaser in teasers %}<img src="{{ teaser }}" style="width: {{ teaser_width }};" alt="{{ page.title }}">{% endfor %}
+</figure>
+
+<section class="project-section">
+	<h2>Abstract</h2>
+	<p class="abstract">{{ page.abstract }}</p>
+</section>
 
 {% if page.videos %}
-<h3 style="margin-bottom:10px;">Video{% if page.videos.size > 1 %}s{% endif %}</h3>
-{% for video in page.videos %}
-	{% unless forloop.first %}<br><br>{% endunless %}
+<section class="project-section">
+	<h2>Video{% if page.videos.size > 1 %}s{% endif %}</h2>
+	{% for video in page.videos %}
 	{% assign ext = video | split: "." | last | downcase %}
-	{% if ext == "mp4" %}
-	<video width="560px" height="315px" controls="controls">
-		<source src="{{ video }}" type="video/mp4" />
-	</video>
-	{% else %}
-	<iframe width="560" height="315" src="{{ video }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	{% endif %}
-{% endfor %}
-<br>
-<br>
+	<div class="video">
+		{% if ext == "mp4" %}
+		<video controls preload="metadata"><source src="{{ video }}" type="video/mp4"></video>
+		{% else %}
+		<iframe src="{{ video }}" title="{{ page.title }}" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+		{% endif %}
+	</div>
+	{% endfor %}
+</section>
 {% endif %}
 
-<h3 style="margin-bottom:0px;">Bibtex</h3>
-<pre>
-{{ page.bibtex }}</pre>
+<section class="project-section">
+	<h2>BibTeX</h2>
+	<pre class="bibtex">{{ page.bibtex }}</pre>
+</section>

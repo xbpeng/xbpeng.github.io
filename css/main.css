@@ -332,6 +332,9 @@ h3.year {
 	margin-left: 1px;
 	color: var(--muted);
 }
+.project-affiliations sup {
+	margin-right: 0.25em;
+}
 .author-note {
 	font-size: 0.85rem;
 	color: var(--faint);

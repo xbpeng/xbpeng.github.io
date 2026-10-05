@@ -144,7 +144,9 @@ pre {
 	text-decoration: none;
 }
 .pill {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
 	font-size: 0.8rem;
 	line-height: 1.4;
 	padding: 0.2rem 0.75rem;
@@ -463,6 +465,42 @@ h3.year {
 	opacity: 0.85;
 }
 
+/* Team page */
+
+.people {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem 2.5rem;
+	max-width: 700px;
+}
+.person {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.person img {
+	display: block;
+	width: 100px;
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	transition: opacity 0.15s;
+}
+.person a:hover img {
+	opacity: 0.85;
+}
+.person-name {
+	font-weight: 600;
+}
+.person-years {
+	font-size: 0.92rem;
+	color: var(--muted);
+}
+.invisible-box {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+
 /* Phones */
 
 @media (max-width: 640px) {
@@ -499,5 +537,8 @@ h3.year {
 	}
 	.art-grid {
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+	}
+	.people {
+		grid-template-columns: 1fr;
 	}
 }

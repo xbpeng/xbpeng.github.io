@@ -14,11 +14,13 @@ Personal website, built by GitHub Pages with Jekyll. Pushing to `master` publish
 | `_includes/publication.html` | Template for one publication entry on the home page |
 | `_includes/meta.html` | Search, link-preview, and Google Scholar tags (generated automatically) |
 | `_includes/small_image.html` | Picks the compressed `_small.jpg` copy of an image when it exists |
-| `_includes/icon.html` | Icons for the project page buttons |
+| `_includes/icon.html` | Icons for buttons and links |
+| `_includes/people.html` | Grid of people on the team page |
 | `_layouts/default.html` | Shared page frame: navigation bar, fonts, analytics |
 | `css/main.css` | All styling. Colors and fonts are variables at the top |
 | `_scripts/make_small_images.py` | Makes compressed copies of thumbnails and teasers |
 | `teaching/cpsc_532i/index.html` | Course page. The lecture schedule is YAML at the top of the file |
+| `team/index.html` | Team page. Students and alumni are YAML at the top of the file |
 
 ## Adding a new publication
 

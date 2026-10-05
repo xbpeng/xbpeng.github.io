@@ -1,0 +1,11 @@
+<div class="people">
+	{% for person in include.people %}
+	<div class="person">
+		<a href="{{ person.url }}"><img src="{{ person.photo }}" alt="{{ person.name }}"></a>
+		<div>
+			<a class="person-name" href="{{ person.url }}">{{ person.name }}</a>
+			<div class="person-years">{{ person.years }}</div>
+		</div>
+	</div>
+	{% endfor %}
+</div>

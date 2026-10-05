@@ -1,129 +1,51 @@
 ---
 layout: default
 title: Team
+
+students:
+  - name: "Yi Shi"
+    url: "https://yi-shi94.github.io/"
+    photo: "photos/yi_shi.png"
+    years: "2023 - Present"
+  - name: "Dun Yang"
+    url: "https://sites.google.com/view/dunyang"
+    photo: "photos/dun_yang.png"
+    years: "2024 - Present"
+  - name: "Yuxuan Mu"
+    url: "https://yxmu.foo/"
+    photo: "photos/yuxuan_mu.png"
+    years: "2024 - Present"
+  - name: "Ziyu (Charlotte) Zhang"
+    url: "https://ziyu-charlotte-zhang.github.io/"
+    photo: "photos/ziyu_zhang.png"
+    years: "2024 - Present"
+  - name: "Sunwoo Kim"
+    url: "https://pulsekim.github.io"
+    photo: "photos/sunwoo_kim.png"
+    years: "2025 - Present"
+  - name: "Ruiyu Gou"
+    url: "http://www.electricgreywhale.com/"
+    photo: "photos/ruiyu_gou.png"
+    years: "2025 - Present"
+  - name: "Nicholas Ioannidis"
+    url: "https://nickioan.github.io/"
+    photo: "photos/nicholas_ioannidis.png"
+    years: "2026 - Present"
+
+alumni:
+  - name: "Michael Xu"
+    url: "https://michaelx.io/"
+    photo: "photos/michael_xu.png"
+    years: "M.Sc. 2023 - 2025"
+
 ---
 
 <h1>{{ page.title }}</h1>
 
 <h2>Ph.D. Students</h2>
-
-<style>
-  .students-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Exactly two columns */
-    column-gap: 40px; /* Keeps increased spacing between columns */
-    row-gap: 20px; /* Reduced spacing between rows */
-    max-width: 700px; /* Prevents excessive spacing */
-    justify-content: start; /* Aligns columns to the left */
-  }
-  
-  .student {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .student img {
-    width: 100px;
-    height: auto;
-    border: 1px solid black;
-  }
-
-  /* Switch to single column on smaller screens */
-  @media (max-width: 750px) {
-    .students-container {
-      grid-template-columns: 1fr; /* Single column */
-    }
-  }
-  
-  .invisible-box {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    border: none;
-  }
-</style>
-
-<div class="students-container">
-  <div class="student">
-    <a href="https://yi-shi94.github.io/">
-      <img src="photos/yi_shi.png" alt="Yi Shi" />
-    </a>
-    <div>
-      <b><a href="https://yi-shi94.github.io/">Yi Shi</a></b> <br>
-      <em>2023 - Present</em>
-    </div>
-  </div>
-
-  <div class="student">
-    <a href="https://sites.google.com/view/dunyang">
-      <img src="photos/dun_yang.png" alt="Dun Yang" />
-    </a>
-    <div>
-      <b><a href="https://sites.google.com/view/dunyang">Dun Yang</a></b> <br>
-      <em>2024 - Present</em>
-    </div>
-  </div>
-  <div class="student">
-    <a href="https://yxmu.foo/">
-      <img src="photos/yuxuan_mu.png" alt="Yuxuan Mu" />
-    </a>
-    <div>
-      <b><a href="https://yxmu.foo/">Yuxuan Mu</a></b> <br>
-      <em>2024 - Present</em>
-    </div>
-  </div>
-  <div class="student">
-    <a href="https://ziyu-charlotte-zhang.github.io/">
-      <img src="photos/ziyu_zhang.png" alt="Ziyu (Charlotte) Zhang" />
-    </a>
-    <div>
-      <b><a href="https://ziyu-charlotte-zhang.github.io/">Ziyu (Charlotte) Zhang</a></b> <br>
-      <em>2024 - Present</em>
-    </div>
-  </div>
-  <div class="student">
-    <a href="https://pulsekim.github.io">
-      <img src="photos/sunwoo_kim.png" alt="Sunwoo Kim" />
-    </a>
-    <div>
-      <b><a href="https://pulsekim.github.io">Sunwoo Kim</a></b> <br>
-      <em>2025 - Present</em>
-    </div>
-  </div>
-  <div class="student">
-    <a href="https://electricgreywhale.com/cv">
-      <img src="photos/ruiyu_gou.png" alt="Ruiyu Gou" />
-    </a>
-    <div>
-      <b><a href="http://www.electricgreywhale.com/">Ruiyu Gou</a></b> <br>
-      <em>2025 - Present</em>
-    </div>
-  </div>
-  <div class="student">
-    <a href="https://nickioan.github.io/">
-      <img src="photos/nicholas_ioannidis.png" alt="Nicholas Ioannidis" />
-    </a>
-    <div>
-      <b><a href="https://nickioan.github.io/">Nicholas Ioannidis</a></b> <br>
-      <em>2026 - Present</em>
-    </div>
-  </div>
-</div>
+{% include people.html people=page.students %}
 
 <h2>Alumni</h2>
-
-<div class="students-container">
-  <div class="student">
-    <a href="https://michaelx.io/">
-      <img src="photos/michael_xu.png" alt="Michael Xu" />
-    </a>
-    <div>
-      <b><a href="https://michaelx.io/">Michael Xu</a></b> <br>
-      <em>M.Sc. 2023 - 2025</em>
-    </div>
-  </div>
-</div>
+{% include people.html people=page.alumni %}
 
 <a href="photos/mellow.png" class="invisible-box"></a>

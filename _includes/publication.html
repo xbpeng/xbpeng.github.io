@@ -18,8 +18,8 @@
 		<div class="pub-venue">{{ pub.venue }}</div>
 		{% if pub.award %}<div class="award">{{ pub.award }}</div>{% endif %}
 		<div class="pub-links">
-			<a class="pill" href="{{ pub_path }}index.html">Project page</a>
-			<a class="pill" href="{{ pub_path }}{{ pub.paper }}">Paper</a>
+			<a class="pill" href="{{ pub_path }}index.html">{% include icon.html name="project" size=13 %}Project page</a>
+			<a class="pill" href="{{ pub_path }}{{ pub.paper }}">{% include icon.html name="paper" size=13 %}Paper</a>
 		</div>
 	</div>
 </article>

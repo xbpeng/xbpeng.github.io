@@ -239,6 +239,14 @@ h3.year {
 	letter-spacing: 0.04em;
 	color: var(--faint);
 	margin: 2.5rem 0 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+h3.year::after {
+	content: "";
+	flex: 1;
+	border-top: 1px solid var(--border);
 }
 
 .pub {

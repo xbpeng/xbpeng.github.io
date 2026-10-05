@@ -25,12 +25,18 @@ layout: default
 	{% endif %}
 	{% if page.author_note %}<div class="author-note">{{ page.author_note }}</div>{% endif %}
 
-	<div class="project-links">
-		<span class="link-group"><span class="link-label">{{ page.paper_label | default: "Paper" }}</span><a class="pill" href="{{ page.paper }}">PDF</a></span>
+	{% assign paper_label = page.paper_label | default: "Paper" %}
+	<nav class="project-links">
+		<a class="button button-primary" href="{{ page.paper }}">{% include icon.html name=paper_label %}{{ paper_label }}</a>
 		{% for group in page.links %}
-		<span class="link-group"><span class="link-label">{{ group[0] }}</span>{% for link in group[1] %}<a class="pill" href="{{ link[1] }}">{{ link[0] }}</a>{% endfor %}</span>
+		{% assign group_name = group[0] %}
+		{% for link in group[1] %}
+		{% assign label = link[0] %}
+		{% if label == "Link" %}{% assign label = group_name %}{% elsif label == "GitHub" %}{% assign label = "Code" %}{% endif %}
+		<a class="button" href="{{ link[1] }}">{% include icon.html name=group_name %}{{ label }}</a>
 		{% endfor %}
-	</div>
+		{% endfor %}
+	</nav>
 </header>
 
 <figure class="teaser">

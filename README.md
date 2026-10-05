@@ -67,8 +67,9 @@ teaser_width: "49%"                      # optional, default 100% (e.g. for two 
 paper: "Name_2026.pdf"                   # the "Paper: PDF" link, and [Paper] on the home page
 paper_label: "Thesis"                    # optional, default "Paper"
 
-# Optional extra links, shown in this order. Each group is a label followed by
-# "link text: url" entries.
+# Optional extra links, shown as buttons in this order. The group name (Code, Webpage, Preprint,
+# Media) picks the button's icon, and the link text is the button's label ("Link" shows the group
+# name instead, and "GitHub" shows "Code").
 links:
   Code:
     GitHub: "https://github.com/..."

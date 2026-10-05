@@ -113,21 +113,44 @@ pre {
 
 /* Shared components */
 
+.pill, .button {
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	color: var(--text);
+	background: #fff;
+	transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.pill:hover, .button:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+	text-decoration: none;
+}
 .pill {
 	display: inline-block;
 	font-size: 0.8rem;
 	line-height: 1.4;
 	padding: 0.2rem 0.75rem;
-	border: 1px solid var(--border);
-	border-radius: 999px;
-	color: var(--text);
-	background: #fff;
-	transition: border-color 0.15s, color 0.15s;
 }
-.pill:hover {
-	border-color: var(--accent);
-	color: var(--accent);
-	text-decoration: none;
+.button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	padding: 0.5rem 1rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.button-primary {
+	color: #fff;
+	background: var(--text);
+	border-color: var(--text);
+}
+.button-primary:hover {
+	color: #fff;
+	background: var(--accent);
+}
+.icon {
+	flex-shrink: 0;
 }
 .award {
 	display: inline-block;
@@ -295,37 +318,6 @@ h3.year {
 	justify-content: center;
 	gap: 0.6rem;
 	margin-top: 1.5rem;
-}
-.button {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.45rem;
-	padding: 0.5rem 1rem;
-	font-size: 0.9rem;
-	font-weight: 600;
-	color: var(--text);
-	background: #fff;
-	border: 1px solid var(--border);
-	border-radius: 999px;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-	transition: border-color 0.15s, color 0.15s, background 0.15s;
-}
-.button:hover {
-	border-color: var(--accent);
-	color: var(--accent);
-	text-decoration: none;
-}
-.button-primary {
-	color: #fff;
-	background: var(--text);
-	border-color: var(--text);
-}
-.button-primary:hover {
-	color: #fff;
-	background: var(--accent);
-}
-.icon {
-	flex-shrink: 0;
 }
 .teaser {
 	margin: 2rem 0 0;

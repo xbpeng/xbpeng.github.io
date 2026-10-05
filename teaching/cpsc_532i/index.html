@@ -194,20 +194,18 @@ schedule:
 
 <h2>Syllabus</h2>
 
-<div class="schedule">
-	{% for lecture in page.schedule %}
-	<div class="lecture{% unless lecture.slides %} no-slides{% endunless %}">
-		<div class="lecture-date">{{ lecture.date }}</div>
-		<div class="lecture-body">
-			<div class="lecture-topic">{{ lecture.topic }}</div>
-			{% if lecture.slides %}
-			<div class="lecture-slides">
-				{% for slide in lecture.slides %}
-				<a href="{{ slide.file }}"><img src="{{ slide.thumb }}" alt="{{ lecture.topic }}" loading="lazy"></a>
-				{% endfor %}
-			</div>
-			{% endif %}
+{% for lecture in page.schedule %}
+<div class="lecture{% unless lecture.slides %} no-slides{% endunless %}">
+	<div class="lecture-date">{{ lecture.date }}</div>
+	<div class="lecture-body">
+		<div class="lecture-topic">{{ lecture.topic }}</div>
+		{% if lecture.slides %}
+		<div class="lecture-slides">
+			{% for slide in lecture.slides %}
+			<a href="{{ slide.file }}"><img src="{{ slide.thumb }}" alt="{{ lecture.topic }}" loading="lazy"></a>
+			{% endfor %}
 		</div>
+		{% endif %}
 	</div>
-	{% endfor %}
 </div>
+{% endfor %}

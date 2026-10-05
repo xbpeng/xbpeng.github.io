@@ -60,7 +60,7 @@ affiliations:                            # optional; numbered automatically when
   - "Simon Fraser University"
   - "NVIDIA"
 
-author_note: "*Joint first authors."     # optional
+author_note: "*Joint first authors"      # optional
 
 thumbnail: "Name_thumb.png"              # image on the home page
 

@@ -125,7 +125,7 @@ pre {
 }
 .site-nav ul a {
 	color: var(--muted);
-	font-size: 0.95rem;
+	font-size: 1.05rem;
 }
 .site-nav ul a:hover {
 	color: var(--accent);

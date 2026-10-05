@@ -200,6 +200,7 @@ pre {
 .intro-photo {
 	width: 150px;
 	flex-shrink: 0;
+	border: 1px solid var(--border);
 	border-radius: 8px;
 }
 .intro-text h1 {

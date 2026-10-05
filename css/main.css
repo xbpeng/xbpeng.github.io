@@ -248,6 +248,9 @@ h3.year::after {
 	flex: 1;
 	border-top: 1px solid var(--border);
 }
+h2 + h3.year::after {
+	content: none;
+}
 
 .pub {
 	display: grid;

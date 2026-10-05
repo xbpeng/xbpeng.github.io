@@ -28,6 +28,9 @@
 		--award-bg: #3a2a12;
 		--award-text: #f0b45a;
 	}
+	img, video {
+		filter: brightness(0.9);
+	}
 }
 
 /* Base */

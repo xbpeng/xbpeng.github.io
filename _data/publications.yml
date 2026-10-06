@@ -5,6 +5,7 @@ highlight_author: "Xue Bin Peng"
 years:
   - year: 2026
     projects:
+      - Humanoid_Parkour
       - DMP
       - HIL
       - SMP

@@ -1,0 +1,86 @@
+---
+layout: project
+
+title: "DMP: Directable Motion Retargeting through Motion Paraphrasing"
+
+venue: "ACM Transactions on Graphics (TOG 2026)"
+
+authors:
+  - "Sunmin Lee (1)"
+  - "Davis Rempe (2)"
+  - "Yifeng Jiang (2)"
+  - "Haotian Zhang (2)"
+  - "Tingwu Wang (2)"
+  - "Jungdam Won (1)"
+  - "Xue Bin Peng (2, 3)"
+
+affiliations:
+  - "Seoul National University"
+  - "NVIDIA"
+  - "Simon Fraser University"
+
+thumbnail: "dmp_thumb.png"
+
+teaser: "dmp_teaser.png"
+
+paper: "DMP_2026.pdf"
+
+links:
+  Webpage:
+    Link: "https://sunny-codes.github.io/projects/dmp.html"
+
+videos:
+  - "https://www.youtube.com/embed/vAH21PsOzVo"
+
+abstract: >-
+  Creating diverse and realistic human motions is a fundamental
+  cornerstone of computer animation, with numerous applications 
+  in games, movies, and AR/VR. While motion capture is a valuable 
+  tool for capturing motions across varied body sizes, obtaining 
+  unique motion data for a variety of characters is often 
+  prohibitively expensive. Motion retargeting addresses this 
+  limitation by adapting existing motions to different character 
+  morphologies, however, existing approaches often involve 
+  trade-offs between motion realism, user control, and 
+  adaptability to artistic needs. In this work, we propose 
+  Directable Motion Paraphrasing, a novel motion retargeting 
+  framework based on the concept of motion paraphrasing, 
+  analogous to text paraphrasing, where the core semantics of a
+  motion are preserved while allowing expressive, user-directed 
+  variations. Our framework constructs a large-scale motion 
+  paraphrasing dataset, which captures the diversity of human 
+  motion across different body shapes, and trains a 
+  diffusion-based generative model that learns both invariances 
+  and variations in motion. To enable user control during 
+  inference, we introduce a flexible mechanism for specifying 
+  spatio-temporal constraints, such as joint positions, 
+  rotations, and object interactions, which can be incorporated 
+  into the generative process through masked inpainting and loss 
+  guidance. We demonstrate the effectiveness of our framework 
+  through various examples, showing its ability to produce 
+  realistic, diverse, and controllable retargeted motions that 
+  meet the artistic demands of animation pipelines. Extensive 
+  experiments demonstrate the system’s flexibility, motion 
+  plausibility, and directability, highlighting its potential as 
+  a tool for intuitive and high-quality motion retargeting.
+
+bibtex: |
+  @article{
+    lee2026dmp,
+    author = {Lee, Sunmin and Rempe, Davis and Jiang, Yifeng and Zhang, Haotian and Wang, Tingwu and Won, Jungdam and Peng, Xue Bin},
+    title = {DMP: Directable Motion Retargeting through Motion Paraphrasing},
+    year = {2026},
+    issue_date = {February 2027},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {46},
+    number = {1},
+    issn = {0730-0301},
+    url = {https://doi.org/10.1145/3829359},
+    doi = {10.1145/3829359},
+    journal = {ACM Trans. Graph.},
+    month = sep,
+    articleno = {8},
+    numpages = {16}
+}
+---

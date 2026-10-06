@@ -27,6 +27,7 @@ years:
   - year: 2024
     projects:
       - Cassie_Locomotion
+      - DiffuseLoco
       - HiLMa-Res
       - MaskedMimic
       - AMDM

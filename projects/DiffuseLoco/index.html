@@ -1,0 +1,88 @@
+---
+layout: project
+
+title: "DiffuseLoco: Real-Time Legged Locomotion Control with Diffusion from Offline Datasets"
+
+venue: "Conference on Robot Learning (CoRL 2024)"
+
+authors:
+  - "Xiaoyu Huang∗ (1)"
+  - "Yufeng Chi∗ (1)"
+  - "Ruofeng Wang∗ (1)"
+  - "Zhongyu Li (1)"
+  - "Xue Bin Peng (2)"
+  - "Sophia Shao (1)"
+  - "Borivoje Nikolic (1)"
+  - "Koushil Sreenath (1)"
+
+affiliations:
+  - "University of California, Berkeley"
+  - "Simon Fraser University"
+
+author_note: "*Joint first authors"
+
+thumbnail: "DiffuseLoco_thumb.png"
+
+teaser: "DiffuseLoco_teaser.png"
+
+paper: "DiffuseLoco_2024.pdf"
+
+links:
+  Code:
+    GitHub: "https://github.com/HybridRobotics/DiffuseLoco"
+  Webpage:
+    Link: "https://diffuselo.co/"
+  Preprint:
+    arXiv: "https://arxiv.org/abs/2404.19264"
+
+videos:
+  - "https://www.youtube.com/embed/JAWPT5oWID4"
+
+abstract: >-
+  This work introduces DiffuseLoco, a framework for training
+  multi-skill diffusion-based policies for dynamic legged
+  locomotion from offline datasets, enabling real-time control
+  of diverse skills on robots in the real world. Offline
+  learning at scale has led to breakthroughs in computer
+  vision, natural language processing, and robotic manipulation
+  domains. However, scaling up learning for legged robot
+  locomotion, especially with multiple skills in a single
+  policy, presents significant challenges for prior online
+  reinforcement learning methods. To address this challenge,
+  we propose a novel, scalable framework that leverages
+  diffusion models to directly learn from offline multimodal
+  datasets with a diverse set of locomotion skills. With design
+  choices tailored for real-time control in dynamical systems,
+  including receding horizon control and delayed inputs,
+  DiffuseLoco is capable of reproducing multimodality in
+  performing various locomotion skills, zero-shot transfer to
+  real quadrupedal robots, and it can be deployed on edge
+  computing devices. Furthermore, DiffuseLoco demonstrates
+  free transitions between skills and robustness against
+  environmental variations. Through extensive benchmarking in
+  real-world experiments, DiffuseLoco exhibits better stability
+  and velocity tracking performance compared to prior
+  reinforcement learning and non-diffusion-based behavior
+  cloning baselines. The design choices are validated via
+  comprehensive ablation studies. This work opens new
+  possibilities for scaling up learning-based legged locomotion
+  controllers through the scaling of large, expressive models
+  and diverse offline datasets.
+
+bibtex: |
+  @InProceedings{
+    HuangDiffuseLoco2024,
+    title = {DiffuseLoco: Real-Time Legged Locomotion Control with Diffusion from Offline Datasets},
+    author = {Huang, Xiaoyu and Chi, Yufeng and Wang, Ruofeng and Li, Zhongyu and Peng, Xue Bin and Shao, Sophia and Nikolic, Borivoje and Sreenath, Koushil},
+    booktitle = {Proceedings of The 8th Conference on Robot Learning},
+    pages = {1567--1589},
+    year = {2025},
+    editor = {Agrawal, Pulkit and Kroemer, Oliver and Burgard, Wolfram},
+    volume = {270},
+    series = {Proceedings of Machine Learning Research},
+    month = {06--09 Nov},
+    publisher = {PMLR},
+    pdf = {https://raw.githubusercontent.com/mlresearch/v270/main/assets/huang25a/huang25a.pdf},
+    url = {https://proceedings.mlr.press/v270/huang25a.html},
+  }
+---

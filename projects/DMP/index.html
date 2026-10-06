@@ -1,98 +1,86 @@
 ---
 layout: project
 
-title: "Humanoid Locomotion and Manipulation: Current Progress and Challenges in Control, Planning, and Learning"
+title: "DMP: Directable Motion Retargeting through Motion Paraphrasing"
 
-venue: "IEEE/ASME Transactions on Mechatronics (TMECH 2026)"
+venue: "ACM Transactions on Graphics (TOG 2026)"
 
 authors:
-  - "Zhaoyuan Gu (1)"
-  - "Junheng Li (2)"
-  - "Wenlan Shen (3)"
-  - "Wenhao Yu (4)"
-  - "Zhaoming Xie (5)"
-  - "Stephen McCrory (6)"
-  - "Xianyi Cheng (7)"
-  - "Abdulaziz Shamsah (1, 8)"
-  - "Robert Griffin (6)"
-  - "C. Karen Liu (9)"
-  - "Abderrahmane Kheddar (10, 11)"
-  - "Xue Bin Peng (12)"
-  - "Yuke Zhu (13, 14)"
-  - "Guanya Shi (15)"
-  - "Quan Nguyen (2)"
-  - "Gordon Cheng (3)"
-  - "Huijun Gao (16)"
-  - "Ye Zhao (1)"
+  - "Sunmin Lee (1)"
+  - "Davis Rempe (2)"
+  - "Yifeng Jiang (2)"
+  - "Haotian Zhang (2)"
+  - "Tingwu Wang (2)"
+  - "Jungdam Won (1)"
+  - "Xue Bin Peng (2, 3)"
 
 affiliations:
-  - "Georgia Institute of Technology"
-  - "The University of Southern California"
-  - "Technische Universität München"
-  - "Google DeepMind"
-  - "The Robotics AI Institute"
-  - "The Institute for Human and Machine Cognition"
-  - "Duke University"
-  - "Kuwait University"
-  - "Stanford University"
-  - "CNRS-University of Montpellier LIRMM"
-  - "CNRS-AIST Joint Robotics Laboratory"
-  - "Simon Fraser University"
-  - "The University of Texas at Austin"
+  - "Seoul National University"
   - "NVIDIA"
-  - "Carnegie Mellon University"
-  - "Harbin Institute of Technology"
+  - "Simon Fraser University"
 
-thumbnail: "humanoid_review_thumb.png"
+thumbnail: "dmp_thumb.png"
 
-teaser: "humanoid_review_teaser.png"
+teaser: "dmp_teaser.png"
 
-paper: "Humanoid_Review_2026.pdf"
+paper: "DMP_2026.pdf"
 
 links:
-  Preprint:
-    arXiv: "https://arxiv.org/abs/2501.02116"
+  Webpage:
+    Link: "https://sunny-codes.github.io/projects/dmp.html"
+
+videos:
+  - "https://www.youtube.com/embed/vAH21PsOzVo"
 
 abstract: >-
-  Humanoid robots hold great potential to perform various 
-  human-level skills, involving unified locomotion and 
-  manipulation in real-world settings. Driven by advances
-  in machine learning and the strength of existing 
-  model-based approaches, these capabilities have
-  progressed rapidly, but often separately. This survey
-  offers a comprehensive overview of the state-ofthe-art
-  in humanoid locomotion and manipulation (HLM), with a
-  focus on control, planning, and learning methods. We
-  first review the model-based methods that have been the
-  backbone of humanoid robotics for the past three decades.
-  We discuss contact planning, motion planning, and 
-  whole-body control, highlighting the trade-offs between
-  model fidelity and computational efficiency. Then the
-  focus is shifted to examine emerging learningbased methods,
-  with an emphasis on reinforcement and imitation learning
-  that enhance the robustness and versatility of
-  locomanipulation skills. Furthermore, we assess the
-  potential of integrating foundation models with humanoid
-  embodiments to enable the development of generalist
-  humanoid agents. This survey also highlights the emerging
-  role of tactile sensing, particularly whole-body tactile
-  feedback, as a crucial modality for handling contact-rich
-  interactions. Finally, we compare the strengths and
-  limitations of model-based and learning-based paradigms
-  from multiple perspectives, such as robustness,
-  computational efficiency, versatility, and generalizability
-  and suggest potential solutions to existing challenges.
+  Creating diverse and realistic human motions is a fundamental
+  cornerstone of computer animation, with numerous applications 
+  in games, movies, and AR/VR. While motion capture is a valuable 
+  tool for capturing motions across varied body sizes, obtaining 
+  unique motion data for a variety of characters is often 
+  prohibitively expensive. Motion retargeting addresses this 
+  limitation by adapting existing motions to different character 
+  morphologies, however, existing approaches often involve 
+  trade-offs between motion realism, user control, and 
+  adaptability to artistic needs. In this work, we propose 
+  Directable Motion Paraphrasing, a novel motion retargeting 
+  framework based on the concept of motion paraphrasing, 
+  analogous to text paraphrasing, where the core semantics of a
+  motion are preserved while allowing expressive, user-directed 
+  variations. Our framework constructs a large-scale motion 
+  paraphrasing dataset, which captures the diversity of human 
+  motion across different body shapes, and trains a 
+  diffusion-based generative model that learns both invariances 
+  and variations in motion. To enable user control during 
+  inference, we introduce a flexible mechanism for specifying 
+  spatio-temporal constraints, such as joint positions, 
+  rotations, and object interactions, which can be incorporated 
+  into the generative process through masked inpainting and loss 
+  guidance. We demonstrate the effectiveness of our framework 
+  through various examples, showing its ability to produce 
+  realistic, diverse, and controllable retargeted motions that 
+  meet the artistic demands of animation pipelines. Extensive 
+  experiments demonstrate the system’s flexibility, motion 
+  plausibility, and directability, highlighting its potential as 
+  a tool for intuitive and high-quality motion retargeting.
 
 bibtex: |
   @article{
-    Gu2026HumanoidReview,
-    author = {Gu, Zhaoyuan and Li, Junheng and Shen, Wenlan and Yu, Wenhao and Xie, Zhaoming and McCrory, Stephen and Cheng, Xianyi and Shamsah, Abdulaziz and Griffin, Robert and Liu, C. Karen and Kheddar, Abderrahmane and Peng, Xue Bin and Zhu, Yuke and Shi, Guanya and Nguyen, Quan and Cheng, Gordon and Gao, Huijun and Zhao, Ye},
-    journal = {IEEE/ASME Transactions on Mechatronics}, 
-    title = {Humanoid Locomotion and Manipulation: Current Progress and Challenges in Control, Planning, and Learning}, 
+    lee2026dmp,
+    author = {Lee, Sunmin and Rempe, Davis and Jiang, Yifeng and Zhang, Haotian and Wang, Tingwu and Won, Jungdam and Peng, Xue Bin},
+    title = {DMP: Directable Motion Retargeting through Motion Paraphrasing},
     year = {2026},
-    volume = {31},
-    number = {2},
-    pages = {2300-2330},
-    doi = {10.1109/TMECH.2025.3579247}
+    issue_date = {February 2027},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {46},
+    number = {1},
+    issn = {0730-0301},
+    url = {https://doi.org/10.1145/3829359},
+    doi = {10.1145/3829359},
+    journal = {ACM Trans. Graph.},
+    month = sep,
+    articleno = {8},
+    numpages = {16}
   }
 ---

@@ -1,0 +1,80 @@
+---
+layout: project
+
+title: "Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking"
+
+venue: "IEEE Robotics and Automation Letters (RA-L 2026)"
+
+authors:
+  - "Zewei Zhang (1, 2)"
+  - "Kehan Wen (1)"
+  - "Michael Xu (3)"
+  - "Junzhe He (1)"
+  - "Chenhao Li (1, 4)"
+  - "Takahiro Miki (1)"
+  - "Clemens Schwarke (1, 5)"
+  - "Chong Zhang (1, 4)"
+  - "Xue Bin Peng (3)"
+  - "Marco Hutter (1)"
+
+affiliations:
+  - "Robotic Systems Lab"
+  - "ETH Zurich"
+  - "EPFL"
+  - "Simon Fraser University"
+  - "ETH AI Center"
+  - "NVIDIA"
+
+thumbnail: "Humanoid_Parkour_thumb.png"
+
+teaser: "Humanoid_Parkour_teaser.png"
+
+paper: "Humanoid_Parkour_2026.pdf"
+
+links:
+  Webpage:
+    Link: "https://wholebodylocomotion.github.io/"
+  Preprint:
+    arXiv: "https://arxiv.org/abs/2604.17335"
+
+videos:
+  - "https://www.youtube.com/embed/jOY61TiDoj4I"
+
+abstract: >-
+  Whole-body humanoid locomotion is challenging due to high-dimensional
+  control, morphological instability, and the need for real-time
+  adaptation to various terrains using onboard perception. Directly
+  applying reinforcement learning (RL) with reward shaping to humanoid
+  locomotion often leads to lower-body-dominated behaviors, whereas
+  imitation-based RL can learn more coordinated whole-body skills but
+  is typically limited to replaying reference motions without a
+  mechanism to adapt them online from perception for terrain-aware
+  locomotion. To address this gap, we propose a whole-body humanoid
+  locomotion framework that combines skills learned from reference
+  motions with terrain-aware adaptation. We first train a diffusion
+  model on retargeted human motions for real-time prediction of
+  terrain- aware reference motions. Concurrently, we train a
+  whole-body reference tracker with RL using this motion data. To
+  improve robustness under imperfectly generated references, we
+  further fine-tune the tracker with a frozen motion generator in
+  a closed-loop setting. The resulting system supports directional
+  goal-reaching control with terrain-aware whole-body adaptation,
+  and can be deployed on a Unitree G1 humanoid robot with onboard
+  perception and computation. The hardware experiments demonstrate
+  successful traversal over boxes, hurdles, stairs, and mixed
+  terrain combinations. Quantitative results further show the
+  benefits of incorporating online motion generation and fine-tuning
+  the motion tracker for improved generalization and robustness.
+
+bibtex: |
+  @misc{
+    zhang2026learningwholebodyhumanoidlocomotion,
+    title={Learning Whole-Body Humanoid Locomotion via Motion Generation and Motion Tracking}, 
+    author={Zewei Zhang and Kehan Wen and Michael Xu and Junzhe He and Chenhao Li and Takahiro Miki and Clemens Schwarke and Chong Zhang and Xue Bin Peng and Marco Hutter},
+    year={2026},
+    eprint={2604.17335},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO},
+    url={https://arxiv.org/abs/2604.17335}, 
+  }
+---

@@ -20,6 +20,7 @@ Personal website, built by GitHub Pages with Jekyll. Pushing to `master` publish
 | `css/main.css` | All styling. Colors and fonts are variables at the top |
 | `_scripts/make_small_images.py` | Makes compressed copies of thumbnails and teasers |
 | `_scripts/check_site.py` | Checks project pages, files, and links for mistakes |
+| `_scripts/gen_bibtex.py` | Collects all project BibTeX into `_scripts/publications.bib`, in home page order |
 | `teaching/cpsc_532i/index.html` | Course page. The lecture schedule is YAML at the top of the file |
 | `team/index.html` | Team page. Students and alumni are YAML at the top of the file |
 

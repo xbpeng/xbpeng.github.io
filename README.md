@@ -19,6 +19,7 @@ Personal website, built by GitHub Pages with Jekyll. Pushing to `master` publish
 | `_layouts/default.html` | Shared page frame: navigation bar, fonts, analytics |
 | `css/main.css` | All styling. Colors and fonts are variables at the top |
 | `_scripts/make_small_images.py` | Makes compressed copies of thumbnails and teasers |
+| `_scripts/check_site.py` | Checks project pages, files, and links for mistakes |
 | `teaching/cpsc_532i/index.html` | Course page. The lecture schedule is YAML at the top of the file |
 | `team/index.html` | Team page. Students and alumni are YAML at the top of the file |
 
@@ -35,7 +36,13 @@ Personal website, built by GitHub Pages with Jekyll. Pushing to `master` publish
    ```
    This creates `*_small.jpg` files next to the originals; commit them too. If you skip this
    step, the site still works but uses the full-size images.
-5. Preview locally (see below), then commit and push.
+5. Check for mistakes (requires `pip install pyyaml pillow`):
+   ```
+   python _scripts/check_site.py          # add --links to also check external links
+   ```
+   It reports problems such as YAML indentation errors, missing files, a project missing from
+   `_data/publications.yml`, or affiliation numbers that don't match.
+6. Preview locally (see below), then commit and push.
 
 ## Project page fields
 

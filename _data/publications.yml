@@ -12,6 +12,7 @@ years:
       - MotionBricks
       - RoboSaber
       - Kimodo
+      - Humanoid_Review
   - year: 2025
     projects:
       - MaskedManipulator

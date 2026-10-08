@@ -1,7 +1,7 @@
-"""Make compressed copies of project thumbnails and teasers for the website.
+"""Make compressed copies of thumbnails and teasers for the website.
 
-For each projects/<Name>/*_thumb.* and *teaser*.* image, writes a "<name>_small.jpg" next to it.
-The site uses the small copy when it exists. Originals, GIFs and videos are left untouched.
+For each *_thumb.* and *teaser*.* image in projects/<Name>/ and prospective_students/, writes a
+"<name>_small.jpg" next to it. The site uses the small copy when it exists. Originals, GIFs and videos are left untouched.
 
 Usage (requires Pillow):
     python _scripts/make_small_images.py          # only new or changed images
@@ -21,6 +21,7 @@ IMAGE_TYPES = [
     ("*teaser*.*", 1760, 85),
 ]
 IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".webp")
+IMAGE_DIRS = ["projects/*", "prospective_students"]
 
 
 def small_path(path):
@@ -46,7 +47,8 @@ def main():
     total_before = total_after = 0
 
     for pattern, max_width, quality in IMAGE_TYPES:
-        for src in sorted(glob(os.path.join(ROOT, "projects", "*", pattern))):
+        sources = [src for folder in IMAGE_DIRS for src in glob(os.path.join(ROOT, folder, pattern))]
+        for src in sorted(sources):
             if src.endswith("_small.jpg") or not src.lower().endswith(IMAGE_EXTENSIONS):
                 continue
             dst = small_path(src)

@@ -2,7 +2,8 @@
 layout: default
 title: "CPSC 532I: Topics in AI: Reinforcement Learning"
 
-# Lectures without slides (e.g. "No Class") are greyed out. Slide paths are relative to this folder.
+# Slide paths are relative to this folder. A slide without a file shows its thumbnail without a link,
+# and lectures without any slide files (e.g. "No Class") are greyed out.
 schedule:
   - date: "Sep 3"
     topic: "Introduction"
@@ -28,6 +29,8 @@ schedule:
         thumb: "slide_thumbs/03_Behavioral_Cloning.png"
   - date: "Sep 17"
     topic: "No Class"
+    slides:
+      - thumb: "slide_thumbs/no_class.png"
   - date: "Sep 22"
     topic: "Behavioral Cloning"
     slides:
@@ -45,6 +48,8 @@ schedule:
         thumb: "slide_thumbs/06_Policy_Gradient.png"
   - date: "Oct 1"
     topic: "No Class"
+    slides:
+      - thumb: "slide_thumbs/no_class.png"
   - date: "Oct 6"
     topic: "Policy Gradient"
     slides:
@@ -57,6 +62,8 @@ schedule:
         thumb: "slide_thumbs/07_Q_Learning.png"
   - date: "Oct 13"
     topic: "No Class - Thanksgiving"
+    slides:
+      - thumb: "slide_thumbs/no_class.png"
   - date: "Oct 15"
     topic: "Q-Learning"
     slides:
@@ -195,14 +202,19 @@ schedule:
 <h2>Syllabus</h2>
 
 {% for lecture in page.schedule %}
-<div class="lecture{% unless lecture.slides %} no-slides{% endunless %}">
+{% assign slide_files = lecture.slides | map: "file" | compact %}
+<div class="lecture{% if slide_files.size == 0 %} no-slides{% endif %}">
 	<div class="lecture-date">{{ lecture.date }}</div>
 	<div class="lecture-body">
 		<div class="lecture-topic">{{ lecture.topic }}</div>
 		{% if lecture.slides %}
 		<div class="lecture-slides">
 			{% for slide in lecture.slides %}
+			{% if slide.file %}
 			<a href="{{ slide.file }}"><img src="{{ slide.thumb }}" alt="{{ lecture.topic }}" loading="lazy"></a>
+			{% else %}
+			<img src="{{ slide.thumb }}" alt="{{ lecture.topic }}" loading="lazy">
+			{% endif %}
 			{% endfor %}
 		</div>
 		{% endif %}

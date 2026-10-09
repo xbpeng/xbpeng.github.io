@@ -228,7 +228,7 @@ def check_listed_pages():
         if key == "schedule":
             for lecture in page.get("schedule") or []:
                 for slide in lecture.get("slides") or []:
-                    paths += [slide.get("file"), slide.get("thumb")]
+                    paths += [slide.get("thumb")] + ([slide["file"]] if slide.get("file") else [])
         elif key == "artworks":
             for art in page.get("artworks") or []:
                 paths += [art.get(f) for f in fields]

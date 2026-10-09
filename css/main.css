@@ -442,10 +442,12 @@ h2 + h3.year::after {
 .lecture-topic {
 	margin-bottom: 0.5rem;
 }
+.lecture-topic:last-child {
+	margin-bottom: 0;
+}
 .lecture.no-slides .lecture-date,
 .lecture.no-slides .lecture-topic {
 	color: var(--faint);
-	margin-bottom: 0;
 }
 .lecture-slides {
 	display: flex;
